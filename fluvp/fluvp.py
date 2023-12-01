@@ -385,10 +385,10 @@ def generate_combinations(group):
     mutation_dict = defaultdict(list)
     for spec_type, g in spec_type_groups:
         for _, row in g.iterrows():
-            if type(row["Mutation"]) == str:
-                mutation_dict[spec_type].append({row['Protein']: row['Mutation'].strip()})
+            if type(row["Amino acid site"]) == str:
+                mutation_dict[spec_type].append({row['Protein']: row['Amino acid site'].strip()})
             else:
-                mutation_dict[spec_type].append({row['Protein']: row['Mutation']})
+                mutation_dict[spec_type].append({row['Protein']: row['Amino acid site']})
     # 提取每个键对应的字典列表
     values_lists = [mutation_dict[key] for key in mutation_dict]
     # 生成所有可能的组合并合并字典
@@ -404,7 +404,7 @@ def generate_protein_dict(grouped_data):
             new_protein_dict[name] = generate_combinations(group)
         else:
             new_protein_dict[name].extend(
-                {row['Protein']: row['Mutation'].strip() if isinstance(row['Mutation'], str) else row['Mutation']}
+                {row['Protein']: row['Amino acid site'].strip() if isinstance(row['Amino acid site'], str) else row['Amino acid site']}
                 for _, row in group.iterrows()
             )
     return new_protein_dict
