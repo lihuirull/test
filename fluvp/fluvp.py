@@ -17,7 +17,6 @@ from Bio import pairwise2
 from pathlib import Path
 from . import predict_virulence
 import pkg_resources
-from . import test_deal_markerfile
 
 pd.set_option('display.max_columns', None)
 
