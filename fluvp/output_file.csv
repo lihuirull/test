@@ -1,0 +1,717 @@
+Protein Type,Mutation,Protein,PMID,Phenotypic consequences,doi,source,suspicious
+PB2,109V,PB2,,,,,
+PB2,133V,PB2,,,,,
+PB2-combination_2_0,147L,PB2,PMID:22808250,The combination of M147L and E627K significantly enhanced viral replication ability and virulence in mice. The combination of PB2 amino acids at position 147 and 627 is critical for the increased pathogenicity of H9N2 influenza virus in mammalian host.,,,
+PB2-combination_2_1,627K,PB2,PMID:22808250,The combination of M147L and E627K significantly enhanced viral replication ability and virulence in mice. The combination of PB2 amino acids at position 147 and 627 is critical for the increased pathogenicity of H9N2 influenza virus in mammalian host.,,,
+PB2,147T,PB2,,,,,
+PB2,147L,PB2,,,,,
+PB2,158G,PB2,,,,,
+PB2,158K,PB2,,,,,
+PB2,191E,PB2,,,,,
+PB2,192K,PB2,,,,,
+PB2,195N,PB2,,,,,
+PB2,199S,PB2,,,,,
+PB2,249G,PB2,,,,,
+PB2,251K,PB2,,,,,
+PB2,253N,PB2,,,,,
+PB2,253N,PB2,,,,,
+PB2,256G,PB2,,,,,
+PB2,25A,PB2,,,,,
+PB2,271A,PB2,,,,,
+PB2,271A,PB2,,,,,
+PB2,279F,PB2,,,,,
+PB2-combination_19_0,28I,PB2,CDC&PMID:20211480,Decreased polymerase activity.,,,1.polymeraseactivity
+PB2-combination_19_1,274T,PB2,CDC&PMID:20211480,Decreased polymerase activity.,,,1.polymeraseactivity
+PB2-combination_19_2,526R,PB2,CDC&PMID:20211480,Decreased polymerase activity.,,,1.polymeraseactivity
+PB2-combination_19_3,553V,PB2,CDC&PMID:20211480,Decreased polymerase activity.,,,1.polymeraseactivity
+PB2-combination_19_4,607V,PB2,CDC&PMID:20211480,Decreased polymerase activity.,,,1.polymeraseactivity
+PB2-combination_20_0,283M,PB2,PMID:29070059,Enhanced virulence of H5N8 influenza viruses in mice,,,
+PB2-combination_20_1,526R,PB2,PMID:29070059,Enhanced virulence of H5N8 influenza viruses in mice,,,
+PB2,282S,PB2,,,,,
+PB2,283L,PB2,,,,,
+PB2,288Q,PB2,,,,,
+PB2,292V,PB2,,,,,
+PB2,309D,PB2,,,,,
+PB2,318K,PB2,,,,,
+PB2,339T,PB2,,,,,
+PB2,339T,PB2,,,,,
+PB2,339M,PB2,,,,,
+PB2,340K,PB2,,,,,
+PB2,340K,PB2,,,,,
+PB2,631L,PB2,,,,,
+PB2,355K,PB2,,,,,
+PB2,357N,PB2,,,,,
+PB2,358V,PB2,,,,,
+PB2-combination_35_0,368Q,PB2,CDC&PMID:16533883,Reduction in replication efficiency in cell culture and virulence in mice and ferrets.,,,
+PB2-combination_35_1,391E,PB2,CDC&PMID:16533883,Reduction in replication efficiency in cell culture and virulence in mice and ferrets.,,,
+PB2-combination_35_2,447H,PB2,CDC&PMID:16533883,Reduction in replication efficiency in cell culture and virulence in mice and ferrets.,,,
+PB2-combination_35_3,627E,PB2,CDC&PMID:16533883,Reduction in replication efficiency in cell culture and virulence in mice and ferrets.,,,
+PB2-combination_36_0,368K,PB2,PMID:20016035,Enhanced pathogenicity in mice only in combination with PB2-627K,,,
+PB2-combination_36_1,627K,PB2,PMID:20016035,Enhanced pathogenicity in mice only in combination with PB2-627K,,,
+PB2,389R,PB2,,,,,
+PB2,404L,PB2,,,,,
+PB2,431M,PB2,,,,,
+PB2,482R,PB2,,,,,
+PB2,483K,PB2,,,,,
+PB2-combination_42_0,489P,PB2,,Increased polymerase activity.,https://doi.org/10.3390/v11100915, Polymerase Activity in Mammalian Cells Is Enhanced by Either PB2 627K or the Combination of PB2 S489P and NP V408I.,1.polymerase activity
+PB2-combination_42_1,408I,PB2,,Increased polymerase activity.,https://doi.org/10.3390/v11100915, Polymerase Activity in Mammalian Cells Is Enhanced by Either PB2 627K or the Combination of PB2 S489P and NP V408I.,1.polymerase activity
+PB2,504V,PB2,,,,,
+PB2,504V,PB2,,,,,
+PB2-combination_45_0,526R,PB2,PMID:25409547,"H7N9 viruses carrying both 526R and 627K replicate more efficiently in mammalian (but not avian) cells and in mouse lung tissues, and cause greater body weight loss and mortality in infected mice.",,,
+PB2-combination_45_1,627K,PB2,PMID:25409547,"H7N9 viruses carrying both 526R and 627K replicate more efficiently in mammalian (but not avian) cells and in mouse lung tissues, and cause greater body weight loss and mortality in infected mice.",,,
+PB2-combination_46_0,526E,PB2,,Enhanced virus replication in the CK2A background .,https://doi.org/10.3390/v11030292,Examination of growth properties in A549 cells further demonstrated that R288Q and K526R together enhance virus replication in the CK2A background .,
+PB2-combination_46_1,288Q,PB2,,Enhanced virus replication in the CK2A background .,https://doi.org/10.3390/v11030292,Examination of growth properties in A549 cells further demonstrated that R288Q and K526R together enhance virus replication in the CK2A background .,
+PB2,526R,PB2,,,,,
+PB2,526R,PB2,,,,,
+PB2,529N,PB2,,,,,
+PB2,535T,PB2,,,,,
+PB2,535L,PB2,,,,,
+PB2,559T,PB2,,,,,
+PB2,588V,PB2,,,,,
+PB2,588I,PB2,,,,,
+PB2,588T,PB2,,,,,
+PB2,588V,PB2,,,,,
+PB2-combination_54_0,590S,PB2,PMID:29593225,"Increased polymerase activity, enhanced pathogenicity in mice",,,
+PB2-combination_54_1,591R,PB2,PMID:29593225,"Increased polymerase activity, enhanced pathogenicity in mice",,,
+PB2,591K,PB2,,,,,
+PB2,598T,PB2,,,,,
+PB2,598I,PB2,,,,,
+PB2,309N,PB2,,,,,
+PB2-combination_58_0,627K,PB2,PMID:19625397&PMID:19119420,"When PB2 627 is a glutamic acid residue, the D701N mutation not only improves viral growth in mammalian cells, but enhances transmission between guinea pigs.",,,
+PB2-combination_58_1,701N,PB2,PMID:19625397&PMID:19119420,"When PB2 627 is a glutamic acid residue, the D701N mutation not only improves viral growth in mammalian cells, but enhances transmission between guinea pigs.",,,
+PB2,627K,PB2,,,,,
+PB2-combination_60_0,63T,PB2,CDC&PMID:21367983,The mutations I63T in PB2 and T677M in PB1 co-mediated the reduced pathogenicity in mice,,,1.combined
+PB2-combination_60_1,677M,PB2,CDC&PMID:21367983,The mutations I63T in PB2 and T677M in PB1 co-mediated the reduced pathogenicity in mice,,,1.combined
+PB2,636F,PB2,,,,,
+PB2,661A,PB2,,,,,
+PB2,66M,PB2,,,,,
+PB2,676V,PB2,,,,,
+PB2-combination_65_0,683T,PB2,PMID:29593225,Increased polymerase activity at low temperature,,,1.polymerase activity
+PB2-combination_65_1,684S,PB2,PMID:29593225,Increased polymerase activity at low temperature,,,1.polymerase activity
+PB2,701N,PB2,,,,,
+PB2,701N,PB2,,,,,
+PB2,702R,PB2,,,,,
+PB2,714R,PB2,,,,,
+PB2,715N,PB2,,,,,
+PB2,82S,PB2,,,,,
+PB2-combination_72_0,89V,PB2,CDC&PMID:19393699,Enhanced polymerase activity and increased virulence in mice.,,,
+PB2-combination_72_1,309D,PB2,CDC&PMID:19393699,Enhanced polymerase activity and increased virulence in mice.,,,
+PB2-combination_72_2,339K,PB2,CDC&PMID:19393699,Enhanced polymerase activity and increased virulence in mice.,,,
+PB2-combination_72_3,477G,PB2,CDC&PMID:19393699,Enhanced polymerase activity and increased virulence in mice.,,,
+PB2-combination_72_4,495V,PB2,CDC&PMID:19393699,Enhanced polymerase activity and increased virulence in mice.,,,
+PB2-combination_72_5,627E,PB2,CDC&PMID:19393699,Enhanced polymerase activity and increased virulence in mice.,,,
+PB2-combination_72_6,676T,PB2,CDC&PMID:19393699,Enhanced polymerase activity and increased virulence in mice.,,,
+PB2,89V,PB2,,,,,
+PB2,9N,PB2,,,,,
+PB1-F2-combination_75_0,51T,PB1-F2,PMID:20383540,"In cultured cells, repairing three mutations in PB1-F2 increased viral polymerase activity and expression levels of viral RNA.",,,
+PB1-F2-combination_75_1,56V,PB1-F2,PMID:20383540,"In cultured cells, repairing three mutations in PB1-F2 increased viral polymerase activity and expression levels of viral RNA.",,,
+PB1-F2-combination_75_2,87E,PB1-F2,PMID:20383540,"In cultured cells, repairing three mutations in PB1-F2 increased viral polymerase activity and expression levels of viral RNA.",,,
+PB1-F2,66S,PB1-F2,,,,,
+PB1-F2,66S,PB1-F2,,,,,
+PB1-combination_78_0,113A,PB1,,The four mutations acted cooperatively that had an increased replication capacity in vitro and in vivo at an early stage of infection,https://doi.org/10.1111/tbed.14161,The PB1 V709I or PB1 V113A/K586R/D619N/V709I induced higher polymerase activity of HK/68 in human cells. And the four mutations acted cooperatively that had an increased replication capacity in vitro and in vivo at an early stage of infection. ,
+PB1-combination_78_1,586R,PB1,,The four mutations acted cooperatively that had an increased replication capacity in vitro and in vivo at an early stage of infection,https://doi.org/10.1111/tbed.14161,The PB1 V709I or PB1 V113A/K586R/D619N/V709I induced higher polymerase activity of HK/68 in human cells. And the four mutations acted cooperatively that had an increased replication capacity in vitro and in vivo at an early stage of infection. ,
+PB1-combination_78_2,619N,PB1,,The four mutations acted cooperatively that had an increased replication capacity in vitro and in vivo at an early stage of infection,https://doi.org/10.1111/tbed.14161,The PB1 V709I or PB1 V113A/K586R/D619N/V709I induced higher polymerase activity of HK/68 in human cells. And the four mutations acted cooperatively that had an increased replication capacity in vitro and in vivo at an early stage of infection. ,
+PB1-combination_78_3,709I,PB1,,The four mutations acted cooperatively that had an increased replication capacity in vitro and in vivo at an early stage of infection,https://doi.org/10.1111/tbed.14161,The PB1 V709I or PB1 V113A/K586R/D619N/V709I induced higher polymerase activity of HK/68 in human cells. And the four mutations acted cooperatively that had an increased replication capacity in vitro and in vivo at an early stage of infection. ,
+PB1,115Q,PB1,,,,,
+PB1,C38Y,PB1,,,,,
+PB1,319Q,PB1,,,,,
+PB1,120G,PB1,,,,,
+PB1,13P,PB1,,,,,
+PB1,207R,PB1,,,,,
+PB1,208R,PB1,,,,,
+PB1,215K,PB1,,,,,
+PB1-combination_87_0,3A,PB1,CDC&PMID:16533883,Decreased replication efficiency and virulence in ferrets.,,,
+PB1-combination_87_1,328K,PB1,CDC&PMID:16533883,Decreased replication efficiency and virulence in ferrets.,,,
+PB1-combination_87_2,375S,PB1,CDC&PMID:16533883,Decreased replication efficiency and virulence in ferrets.,,,
+PB1,317I,PB1,,,,,
+PB1,3D,PB1,,,,,
+PB1,436H,PB1,,,,,
+PB1,436H,PB1,,,,,
+PB1,469T,PB1,,,,,
+PB1,375S,PB1,,,,,
+PB1-combination_94_0,473L,PB1,CDC&PMID:22090209,Decreased polymerase activity and replication efficiency.,,,1.polymerase activity; 2.replication efficiency
+PB1-combination_94_1,598L,PB1,CDC&PMID:22090209,Decreased polymerase activity and replication efficiency.,,,1.polymerase activity; 2.replication efficiency
+PB1-combination_95_0,473V,PB1,PMID:22090209,The results from recombinant virus experiments demonstrated the contribution of PB1 amino acids 473V and 598P to polymerase activity in mammalian cells and in mice.Amino acids 473V and 598P contribute to replication efficiency of Cam virus in mammalian cells.,,,1.polymerase activity; 2.replication efficiency
+PB1-combination_95_1,598P,PB1,PMID:22090209,The results from recombinant virus experiments demonstrated the contribution of PB1 amino acids 473V and 598P to polymerase activity in mammalian cells and in mice.Amino acids 473V and 598P contribute to replication efficiency of Cam virus in mammalian cells.,,,1.polymerase activity; 2.replication efficiency
+PB1,524G,PB1,,,,,
+PB1,577E,PB1,,,,,
+PB1,577E,PB1,,,,,
+PB1,612R,PB1,,,,,
+PB1,622D,PB1,,,,,
+PB1,622D,PB1,,,,,
+PB1,652A,PB1,,,,,
+PB1,677M,PB1,,,,,
+PB1-combination_104_0,298L,PB1,36423573,Resulted in a decrease in viral growth.,,"We generate PB1-mutated viruses introducing I298L, K386R and V517I mutations in PB1 and evaluate their phenotypic impact on viral growth and on antigen yield. ",1.viral growth
+PB1-combination_104_1,386R,PB1,36423573,Resulted in a decrease in viral growth.,,"We generate PB1-mutated viruses introducing I298L, K386R and V517I mutations in PB1 and evaluate their phenotypic impact on viral growth and on antigen yield. ",1.viral growth
+PB1-combination_104_2,517I,PB1,36423573,Resulted in a decrease in viral growth.,,"We generate PB1-mutated viruses introducing I298L, K386R and V517I mutations in PB1 and evaluate their phenotypic impact on viral growth and on antigen yield. ",1.viral growth
+PB1,678N,PB1,,,,,
+PB1,709I,PB1,,,,,
+PB1,82C,PB1,,,,,
+PB1-combination_108_0,99Y,PB1,CDC&PMID:22723413,H5 virus transmissible among ferrets.,,,1.transimissible
+PB1-combination_108_1,368V,PB1,CDC&PMID:22723413,H5 virus transmissible among ferrets.,,,1.transimissible
+PB1,99Y,PB1,,,,,
+PA-X,195K,PA-X,,,,,
+PA-X,206R,PA-X,,,,,
+PA-X,210L,PA-X,,,,,
+PA,142N,PA,,,,,
+PA,421I,PA,,,,,
+PA,100V,PA,,,,,
+PA-combination_116_0,101G,PA,PMID:25070354,Associated with the high viral load and intense innate immune response in the brain and the increased virulence in ducks.,,,1.ducks
+PA-combination_116_1,237E,PA,PMID:25070354,Associated with the high viral load and intense innate immune response in the brain and the increased virulence in ducks.,,,1.ducks
+PA-combination_117_0,103H,PA,PMID:27525812,PA mutations P103H and S659L can cooperatively reduce polymerase activity and viral replication in mammalian cells and attenuate pathogenicity in mice,,,
+PA-combination_117_1,659L,PA,PMID:27525812,PA mutations P103H and S659L can cooperatively reduce polymerase activity and viral replication in mammalian cells and attenuate pathogenicity in mice,,,
+PA,127I,PA,,,,,
+PA,133G,PA,,,,,
+PA-combination_120_0,142R,PA,PMID:31213560,They are critical in determining the low polymerase activity of H7N9 AIVs and the emergence of the mammalian-adaptive PB2 E627K mutation.,,,
+PA-combination_120_1,147V,PA,PMID:31213560,They are critical in determining the low polymerase activity of H7N9 AIVs and the emergence of the mammalian-adaptive PB2 E627K mutation.,,,
+PA-combination_120_2,171V,PA,PMID:31213560,They are critical in determining the low polymerase activity of H7N9 AIVs and the emergence of the mammalian-adaptive PB2 E627K mutation.,,,
+PA-combination_120_3,182L,PA,PMID:31213560,They are critical in determining the low polymerase activity of H7N9 AIVs and the emergence of the mammalian-adaptive PB2 E627K mutation.,,,
+PA,142E,PA,,,,,
+PA-combination_122_0,149S,PA,CDC&PMID:20211480,Decreased polymerase activity in mammalian cells.,,,1.polymeraseactivity
+PA-combination_122_1,266H,PA,CDC&PMID:20211480,Decreased polymerase activity in mammalian cells.,,,1.polymeraseactivity
+PA-combination_122_2,357I,PA,CDC&PMID:20211480,Decreased polymerase activity in mammalian cells.,,,1.polymeraseactivity
+PA-combination_122_3,515S,PA,CDC&PMID:20211480,Decreased polymerase activity in mammalian cells.,,,1.polymeraseactivity
+PA,158R,PA,,,,,
+PA,190S,PA,,,,,
+PA,221T,PA,,,,,
+PA-combination_126_0,224P,PA,PMID:25070354,The S224P is associated with the increased viral replication in duck embryo fibroblast and the N383D leads to the increased polymerase activity and delayed nuclear accumulation of the PA and PB1 proteins.,,,1.ducks
+PA-combination_126_1,383D,PA,PMID:25070354,The S224P is associated with the increased viral replication in duck embryo fibroblast and the N383D leads to the increased polymerase activity and delayed nuclear accumulation of the PA and PB1 proteins.,,,1.ducks
+PA,224P,PA,,,,,
+PA,35L,PA,,,,,
+PA,227S,PA,,,,,
+PA,26K,PA,,,,,
+PA,321K,PA,,,,,
+PA,328N,PA,,,,,
+PA,330I,PA,,,,,
+PA,321N,PA,,,,,
+PA,100V,PA,,,,,
+PA,639A,PA,,,,,
+PA-combination_137_0,100V,PA,35969783,Attenuated the virus in mice.,,"According to the MLD50 values, the pathogenicity of rLN265-PA/I100V, rLN265-PA/K321N, rLN265-PA/V330I, rLN265-PA/T639A, and rLN265-PA/mut was attenuated by 100-fold, 16-fold, 10-fold, 63-fold, and 7,943-fold, respectively, compared with that of rLN265.",
+PA-combination_137_1,330I,PA,35969783,Attenuated the virus in mice.,,"According to the MLD50 values, the pathogenicity of rLN265-PA/I100V, rLN265-PA/K321N, rLN265-PA/V330I, rLN265-PA/T639A, and rLN265-PA/mut was attenuated by 100-fold, 16-fold, 10-fold, 63-fold, and 7,943-fold, respectively, compared with that of rLN265.",
+PA-combination_137_2,321N,PA,35969783,Attenuated the virus in mice.,,"According to the MLD50 values, the pathogenicity of rLN265-PA/I100V, rLN265-PA/K321N, rLN265-PA/V330I, rLN265-PA/T639A, and rLN265-PA/mut was attenuated by 100-fold, 16-fold, 10-fold, 63-fold, and 7,943-fold, respectively, compared with that of rLN265.",
+PA-combination_137_3,639A,PA,35969783,Attenuated the virus in mice.,,"According to the MLD50 values, the pathogenicity of rLN265-PA/I100V, rLN265-PA/K321N, rLN265-PA/V330I, rLN265-PA/T639A, and rLN265-PA/mut was attenuated by 100-fold, 16-fold, 10-fold, 63-fold, and 7,943-fold, respectively, compared with that of rLN265.",
+PA,336M,PA,,,,,
+PA,336M,PA,,,,,
+PA,342S,PA,,,,,
+PA-combination_141_0,343S,PA,PMID:29212927,The PA-343S/347E mutations increased the polymerase activity of QT1480 and the virulence of a low-pathogenic H5N1 influenza virus.,,,
+PA-combination_141_1,347E,PA,PMID:29212927,The PA-343S/347E mutations increased the polymerase activity of QT1480 and the virulence of a low-pathogenic H5N1 influenza virus.,,,
+PA,343S,PA,,,,,
+PA,347G,PA,,,,,
+PA,349R,PA,,,,,
+PA,353R,PA,,,,,
+PA,356R,PA,,,,,
+PA,367K,PA,,,,,
+PA,552S,PA,,,,,
+PA,36T,PA,,,,,
+PA-combination_150_0,37S,PA,PMID:28113045,Decreased viral transcription and replication by diminishing virus RNA synthesis activity,,,
+PA-combination_150_1,61T,PA,PMID:28113045,Decreased viral transcription and replication by diminishing virus RNA synthesis activity,,,
+PA-combination_151_0,37S,PA,PMID:28113045,Decreased viral transcription and replication by diminishing virus RNA synthesis activity,,,
+PA-combination_151_1,63I,PA,PMID:28113045,Decreased viral transcription and replication by diminishing virus RNA synthesis activity,,,
+PA,37S,PA,,,,,
+PA,383D,PA,,,,,
+PA-combination_154_0,38M,PA,PMID:25275121,A combination of HA(H156N S263R) with PA(I38M) in the GDK6 backbone led to a significantly more virulent variant. ,,,
+PA-combination_154_1,156N,PA,PMID:25275121,A combination of HA(H156N S263R) with PA(I38M) in the GDK6 backbone led to a significantly more virulent variant. ,,,
+PA-combination_154_2,263R,PA,PMID:25275121,A combination of HA(H156N S263R) with PA(I38M) in the GDK6 backbone led to a significantly more virulent variant. ,,,
+PA,38T,PA,,,,,
+PA,38F,PA,,,,,
+PA,394D,PA,,,,,
+PA,400P,PA,,,,,
+PA,409S,PA,,,,,
+PA-combination_159_0,44I,PA,PMID:25631084,"five amino acid substitutions in PA (V44I, V127A, C241Y, A343T, and I573V) contribute to the replicative efficiency of H5N1 viruses in human lung cells and to high virulence in mice. ",,,
+PA-combination_159_1,127A,PA,PMID:25631084,"five amino acid substitutions in PA (V44I, V127A, C241Y, A343T, and I573V) contribute to the replicative efficiency of H5N1 viruses in human lung cells and to high virulence in mice. ",,,
+PA-combination_159_2,241Y,PA,PMID:25631084,"five amino acid substitutions in PA (V44I, V127A, C241Y, A343T, and I573V) contribute to the replicative efficiency of H5N1 viruses in human lung cells and to high virulence in mice. ",,,
+PA-combination_159_3,343T,PA,PMID:25631084,"five amino acid substitutions in PA (V44I, V127A, C241Y, A343T, and I573V) contribute to the replicative efficiency of H5N1 viruses in human lung cells and to high virulence in mice. ",,,
+PA-combination_159_4,573V,PA,PMID:25631084,"five amino acid substitutions in PA (V44I, V127A, C241Y, A343T, and I573V) contribute to the replicative efficiency of H5N1 viruses in human lung cells and to high virulence in mice. ",,,
+PA,443K,PA,,,,,
+PA,497R,PA,,,,,
+PA,515A,PA,,,,,
+PA,529N,PA,,,,,
+PA,L295P,PA,,,,,
+PA,550L,PA,,,,,
+PA,550L,PA,,,,,
+PA,552S,PA,,,,,
+PA,556R,PA,,,,,
+PA,615N,PA,,,,,
+PA,625A,PA,,,,,
+PA,65Y,PA,,,,,
+PA-combination_172_0,70V,PA,PMID:24522908,"The PA-P224S mutation when combined with PA-A70V in CA04 drastically reduced the virus 50% mouse lethal dose (LD50), by almost 1,000-fold.",,,
+PA-combination_172_1,224S,PA,PMID:24522908,"The PA-P224S mutation when combined with PA-A70V in CA04 drastically reduced the virus 50% mouse lethal dose (LD50), by almost 1,000-fold.",,,
+PA,70V,PA,,,,,
+PA,97I,PA,,,,,
+PA-combination_175_0,448E,PA,,These PA mutations acted cooperatively to increase polymerase activity and viral replication in both avian and human cells and to enable an increase in viral growth and virulence in mice.,https://doi.org/10.1128/jvi.01582-20,"Several of these PA mutations (i.e., A448E, S388R, and E18G) acted cooperatively to increase polymerase activity and viral replication in both avian and human cells and to enable an increase in viral growth and virulence in mice.",
+PA-combination_175_1,388R,PA,,These PA mutations acted cooperatively to increase polymerase activity and viral replication in both avian and human cells and to enable an increase in viral growth and virulence in mice.,https://doi.org/10.1128/jvi.01582-20,"Several of these PA mutations (i.e., A448E, S388R, and E18G) acted cooperatively to increase polymerase activity and viral replication in both avian and human cells and to enable an increase in viral growth and virulence in mice.",
+PA-combination_175_2,18G,PA,,These PA mutations acted cooperatively to increase polymerase activity and viral replication in both avian and human cells and to enable an increase in viral growth and virulence in mice.,https://doi.org/10.1128/jvi.01582-20,"Several of these PA mutations (i.e., A448E, S388R, and E18G) acted cooperatively to increase polymerase activity and viral replication in both avian and human cells and to enable an increase in viral growth and virulence in mice.",
+PA-combination_176_0,44I,PA,,Enhanced the replicative ability of an H5N1 virus in A549 cells and enhanced its pathogenicity in mice.,https://doi.org/10.1128/JVI.03532-14,"we found that five PA amino acid substitutions, namely, V44I, V127A, C241Y, A343T, and I573V, additively enhance the replicative ability of an H5N1 virus in A549 cells and enhance its pathogenicity in mice. Although each of these five PA amino acids alone did not significantly enhance virus replication in A549 cells, our data indicate that in combination, these five amino acids support efficient virus replication in A549 cells and high virulence in mice.",
+PA-combination_176_1,127A,PA,,Enhanced the replicative ability of an H5N1 virus in A549 cells and enhanced its pathogenicity in mice.,https://doi.org/10.1128/JVI.03532-14,"we found that five PA amino acid substitutions, namely, V44I, V127A, C241Y, A343T, and I573V, additively enhance the replicative ability of an H5N1 virus in A549 cells and enhance its pathogenicity in mice. Although each of these five PA amino acids alone did not significantly enhance virus replication in A549 cells, our data indicate that in combination, these five amino acids support efficient virus replication in A549 cells and high virulence in mice.",
+PA-combination_176_2,241Y,PA,,Enhanced the replicative ability of an H5N1 virus in A549 cells and enhanced its pathogenicity in mice.,https://doi.org/10.1128/JVI.03532-14,"we found that five PA amino acid substitutions, namely, V44I, V127A, C241Y, A343T, and I573V, additively enhance the replicative ability of an H5N1 virus in A549 cells and enhance its pathogenicity in mice. Although each of these five PA amino acids alone did not significantly enhance virus replication in A549 cells, our data indicate that in combination, these five amino acids support efficient virus replication in A549 cells and high virulence in mice.",
+PA-combination_176_3,343T,PA,,Enhanced the replicative ability of an H5N1 virus in A549 cells and enhanced its pathogenicity in mice.,https://doi.org/10.1128/JVI.03532-14,"we found that five PA amino acid substitutions, namely, V44I, V127A, C241Y, A343T, and I573V, additively enhance the replicative ability of an H5N1 virus in A549 cells and enhance its pathogenicity in mice. Although each of these five PA amino acids alone did not significantly enhance virus replication in A549 cells, our data indicate that in combination, these five amino acids support efficient virus replication in A549 cells and high virulence in mice.",
+PA-combination_176_4,573V,PA,,Enhanced the replicative ability of an H5N1 virus in A549 cells and enhanced its pathogenicity in mice.,https://doi.org/10.1128/JVI.03532-14,"we found that five PA amino acid substitutions, namely, V44I, V127A, C241Y, A343T, and I573V, additively enhance the replicative ability of an H5N1 virus in A549 cells and enhance its pathogenicity in mice. Although each of these five PA amino acids alone did not significantly enhance virus replication in A549 cells, our data indicate that in combination, these five amino acids support efficient virus replication in A549 cells and high virulence in mice.",
+PA,404S,PA,,,,,
+PA,409N,PA,,,,,
+PA,706E,PA,,,,,
+NS2,16I,NS2,,,,,
+NS2,31I,NS2,,,,,
+NS2,41C,NS2,,,,,
+NS2,47A,NS2,,,,,
+NS2,51I,NS2,,,,,
+NS2,56Y,NS2,,,,,
+NS2,75G,NS2,,,,,
+NS1,"['80-', '81-', '82-', '83-', '84-']",NS1,,,,,
+NS1-combination_188_0,103L,NS1,,Influenza A virus NS1 gene mutations F103L and M106I increase replication and virulence.,,The rWSN-A/Ck/Beijing/1/95-NS1 gene possessing 103L and 106I demonstrated 100 fold enhanced growth and >10 fold enhanced virulence that was associated with increased tropism for lung alveolar and bronchiolar tissues relative to the corresponding L103F and I106M mutant.,
+NS1-combination_188_1,106I,NS1,,Influenza A virus NS1 gene mutations F103L and M106I increase replication and virulence.,,The rWSN-A/Ck/Beijing/1/95-NS1 gene possessing 103L and 106I demonstrated 100 fold enhanced growth and >10 fold enhanced virulence that was associated with increased tropism for lung alveolar and bronchiolar tissues relative to the corresponding L103F and I106M mutant.,
+NS1,200S,NS1,,,,,
+NS1,205R,NS1,,,,,
+NS1,101H,NS1,,,,,
+NS1,101M,NS1,,,,,
+NS1-combination_193_0,103F,NS1,PMID:21593152,"Changing the NS1 amino acids at positions 103 and 106 to F and M enables the 1997 H5N1 virus to replicate more rapidly and to spread throughout the body more efficiently, particularly to the brain, dramatically increasing its virulence.",,,
+NS1-combination_193_1,106M,NS1,PMID:21593152,"Changing the NS1 amino acids at positions 103 and 106 to F and M enables the 1997 H5N1 virus to replicate more rapidly and to spread throughout the body more efficiently, particularly to the brain, dramatically increasing its virulence.",,,
+NS1,106M,NS1,,,,,
+NS1-combination_195_0,108K,NS1,,Increased pathogenicity in the C57BL/6N mice.,https://doi.org/10.3390/v13050905," Using this reverse genetics system, dual R108K/G189D mutations were introduced into NS1 segments, and a recombinant mutant, rXJ49-NS1mut, was rescued successfully.These results suggest that the dual R108K/G189D mutation in the NS1 protein has little effect on viral replication but increases the pathogenicity of the XJ49 virus in mice.",
+NS1-combination_195_1,189D,NS1,,Increased pathogenicity in the C57BL/6N mice.,https://doi.org/10.3390/v13050905," Using this reverse genetics system, dual R108K/G189D mutations were introduced into NS1 segments, and a recombinant mutant, rXJ49-NS1mut, was rescued successfully.These results suggest that the dual R108K/G189D mutation in the NS1 protein has little effect on viral replication but increases the pathogenicity of the XJ49 virus in mice.",
+NS1,172K,NS1,,,,,
+NS1,108R,NS1,,,,,
+NS1,92E,NS1,,,,,
+NS1,121A,NS1,,,,,
+NS1,123V,NS1,,,,,
+NS1,127N,NS1,,,,,
+NS1,149A,NS1,,,,,
+NS1,159E,NS1,,,,,
+NS1,184P,NS1,,,,,
+NS1,189N,NS1,,,,,
+NS1,195T,NS1,,,,,
+NS1,195Y,NS1,,,,,
+NS1,196E,NS1,,,,,
+NS1,200S,NS1,,,,,
+NS1,205N,NS1,,,,,
+NS1,205R,NS1,,,,,
+NS1,228P,NS1,,,,,
+NS1-combination_212_0,3S,NS1,PMID:27405649,"The residues S3, K41 and N74 in the NS1 strongly increase viral genome replication and transcription, thereby contributing to improved virus propagation in a mammalian host.",,,
+NS1-combination_212_1,41K,NS1,PMID:27405649,"The residues S3, K41 and N74 in the NS1 strongly increase viral genome replication and transcription, thereby contributing to improved virus propagation in a mammalian host.",,,
+NS1-combination_212_2,74N,NS1,PMID:27405649,"The residues S3, K41 and N74 in the NS1 strongly increase viral genome replication and transcription, thereby contributing to improved virus propagation in a mammalian host.",,,
+NS1-combination_213_0,38A,NS1,PMID:29587792,The double substitution R38A-K41A in the RBD dramatically reduced the pathogenicity and replication potential of the virus,,,
+NS1-combination_213_1,41A,NS1,PMID:29587792,The double substitution R38A-K41A in the RBD dramatically reduced the pathogenicity and replication potential of the virus,,,
+NS1,42S,NS1,,,,,
+NS1,59H,NS1,,,,,
+NS1,709I,NS1,,,,,
+NS1,139D,NS1,,,,,
+NS1,74N,NS1,,,,,
+NS1,80-,NS1,,,,,
+NS1,84F,NS1,,,,,
+NS1,87E,NS1,,,,,
+NS1,92E,NS1,,,,,
+NS1,92E,NS1,,,,,
+NS1,98F,NS1,,,,,
+NP,100I,NP,,,,,
+NP-combination_226_0,100I,NP,,"Enhanced pathogenicity, increased death and inflammation of host cells, and high mortality in infected mice.",https://doi.org/10.1371/journal.pone.0217691,"The recombinant WSN with the covarying NPV100I-NAD248N pair exhibited enhanced pathogenicity, as characterized by increased viral production, increased death and inflammation of host cells, and high mortality in infected mice",
+NP-combination_226_1,248N,NP,,"Enhanced pathogenicity, increased death and inflammation of host cells, and high mortality in infected mice.",https://doi.org/10.1371/journal.pone.0217691,"The recombinant WSN with the covarying NPV100I-NAD248N pair exhibited enhanced pathogenicity, as characterized by increased viral production, increased death and inflammation of host cells, and high mortality in infected mice",
+NP,105K,NP,,,,,
+NP,105V,NP,,,,,
+NP,133L,NP,,,,,
+NP,184K,NP,,,,,
+NP,194V,NP,,,,,
+NP,198R,NP,,,,,
+NP,210D,NP,,,,,
+NP-combination_234_0,286A,NP,,The mutations A286V and T437M collectively attenuated the virulence of H7N9 viruses in mice by slowing the nuclear import and export of NP in the virus life cycle.,https://doi.org/10.1128/jvi.01530-19,"In summary, we found that the mutations A286V and T437M collectively attenuated the virulence of H7N9 viruses in mice by slowing the nuclear import and export of NP in the virus life cycle, indicating that the amino acids 286A and 437T in NP are prerequisites for the virulence of H7N9 viruses in mice.",
+NP-combination_234_1,437T,NP,,The mutations A286V and T437M collectively attenuated the virulence of H7N9 viruses in mice by slowing the nuclear import and export of NP in the virus life cycle.,https://doi.org/10.1128/jvi.01530-19,"In summary, we found that the mutations A286V and T437M collectively attenuated the virulence of H7N9 viruses in mice by slowing the nuclear import and export of NP in the virus life cycle, indicating that the amino acids 286A and 437T in NP are prerequisites for the virulence of H7N9 viruses in mice.",
+NP,319K,NP,,,,,
+NP,342D,NP,,,,,
+NP,34N,NP,,,,,
+NP,351K,NP,,,,,
+NP,353V,NP,,,,,
+NP-combination_240_0,357K,NP,CDC&PMID:20016035&PMID:31267843,Enhanced virulence in mice (with PB2 627K)~Determine the virulence phenotype of H1N1 swine viruses in mice.,,,
+NP-combination_240_1,627K,NP,CDC&PMID:20016035&PMID:31267843,Enhanced virulence in mice (with PB2 627K)~Determine the virulence phenotype of H1N1 swine viruses in mice.,,,
+NP,373T,NP,,,,,
+NP,385F,NP,,,,,
+NP-combination_243_0,41D,NP,PMID:25940512,"Mutation NP-V41I alone or in combination with D210E, which showed decreased polymerase activity, exhibited little impact on the growth of rescued virus at 37°C. ",,,
+NP-combination_243_1,210V,NP,PMID:25940512,"Mutation NP-V41I alone or in combination with D210E, which showed decreased polymerase activity, exhibited little impact on the growth of rescued virus at 37°C. ",,,
+NP,434K,NP,,,,,
+NP,470R,NP,,,,,
+NP,482S,NP,,,,,
+NP,50N,NP,,,,,
+NP,91R,NP,,,,,
+NP-combination_249_0,99K,NP,CDC&PMID:22723413,H5 virus transmissible among ferrets.,,,1.transimissible
+NP-combination_249_1,345N,NP,CDC&PMID:22723413,H5 virus transmissible among ferrets.,,,1.transimissible
+NP,253I,NP,,,,,
+NP,346S,NP,,,,,
+N9,53-,N9,,,,,
+N9,57-,N9,,,,,
+N9,58T,N9,,,,,
+N9,63T,N9,,,,,
+N7,110E,N7,,,,,
+N2,292K,N2,,,,,
+N3,293K,N3,,,,,
+N2,144C,N2,,,,,
+N2,342A,N2,,,,,
+N2,28S,N2,,,,,
+N2,28L,N2,,,,,
+N2,34-,N2,,,,,
+N2,54-,N2,,,,,
+N2-combination_264_0,368E,N2,25928577,"Four amino acid mutations (D368E, S370L, E313K and G381D) within the head region of the SD01 NA, reduced virus replication in the respiratory tract of chickens, reduced virus NA activity, and resulted in a loss of airborne transmission ability in chickens. . ",,"Four amino acid mutations (D368E, S370L, E313K and G381D) within the head region of the SD01 NA, reduced virus replication in the respiratory tract of chickens, reduced virus NA activity, and resulted in a loss of airborne transmission ability in chickens.",1.chicken
+N2-combination_264_1,370L,N2,25928577,"Four amino acid mutations (D368E, S370L, E313K and G381D) within the head region of the SD01 NA, reduced virus replication in the respiratory tract of chickens, reduced virus NA activity, and resulted in a loss of airborne transmission ability in chickens. . ",,"Four amino acid mutations (D368E, S370L, E313K and G381D) within the head region of the SD01 NA, reduced virus replication in the respiratory tract of chickens, reduced virus NA activity, and resulted in a loss of airborne transmission ability in chickens.",1.chicken
+N2-combination_264_2,313K,N2,25928577,"Four amino acid mutations (D368E, S370L, E313K and G381D) within the head region of the SD01 NA, reduced virus replication in the respiratory tract of chickens, reduced virus NA activity, and resulted in a loss of airborne transmission ability in chickens. . ",,"Four amino acid mutations (D368E, S370L, E313K and G381D) within the head region of the SD01 NA, reduced virus replication in the respiratory tract of chickens, reduced virus NA activity, and resulted in a loss of airborne transmission ability in chickens.",1.chicken
+N2-combination_264_3,381D,N2,25928577,"Four amino acid mutations (D368E, S370L, E313K and G381D) within the head region of the SD01 NA, reduced virus replication in the respiratory tract of chickens, reduced virus NA activity, and resulted in a loss of airborne transmission ability in chickens. . ",,"Four amino acid mutations (D368E, S370L, E313K and G381D) within the head region of the SD01 NA, reduced virus replication in the respiratory tract of chickens, reduced virus NA activity, and resulted in a loss of airborne transmission ability in chickens.",1.chicken
+N1,106I,N1,,,,,
+N1,219Q,N1,,,,,
+N1,36-,N1,,,,,
+N1,44Q,N1,,,,,
+N1,49-,N1,,,,,
+N1,49-,N1,,,,,
+N1,50-,N1,,,,,
+N1,51-,N1,,,,,
+N1,52-,N1,,,,,
+N1,53-,N1,,,,,
+N1,54-,N1,,,,,
+N1,55-,N1,,,,,
+N1,56-,N1,,,,,
+N1,57-,N1,,,,,
+N1,58-,N1,,,,,
+N1,59-,N1,,,,,
+N1,60-,N1,,,,,
+N1,61-,N1,,,,,
+N1,62-,N1,,,,,
+N1,63-,N1,,,,,
+N1,64-,N1,,,,,
+N1,65-,N1,,,,,
+N1,66-,N1,,,,,
+N1,67-,N1,,,,,
+N1,68-,N1,,,,,
+N1,69-,N1,,,,,
+N1,70-,N1,,,,,
+N1,71-,N1,,,,,
+N1,72-,N1,,,,,
+N1,"['49-', '50-', '51-', '52-', '53-', '54-', '55-', '56-', '57-', '58-', '59-', '60-', '61-', '62-', '63-', '64-', '65-', '66-', '67-', '68-', '69-', '70-', '71-', '72-']",N1,,,,,
+N1,72Q,N1,,,,,
+M2,24D,M2,,,,,
+M2,82S,M2,,,,,
+M1,139A,M1,,,,,
+M1,102R,M1,,,,,
+M1,187R,M1,,,,,
+M1,192V,M1,,,,,
+M1,156E,M1,,,,,
+M1,215A,M1,,,,,
+M1,215T,M1,,,,,
+M1,30D,M1,,,,,
+M1,30N,M1,,,,,
+M1,43M,M1,,,,,
+M1,43M,M1,,,,,
+H3-combination_285_0,190V,H3,28148793,The HA double mutation increases pathogenicity in mice.,,HA mutations 190V and 212I enhance viral replication in different culture systems.The HA double mutation increases pathogenicity in mice.(H3 numbering),
+H3-combination_285_1,212I,H3,28148793,The HA double mutation increases pathogenicity in mice.,,HA mutations 190V and 212I enhance viral replication in different culture systems.The HA double mutation increases pathogenicity in mice.(H3 numbering),
+H9,313D,H9,,,,,
+H9,496S,H9,,,,,
+H9,132D,H9,,,,,
+H9,166D,H9,,,,,
+H9,180T,H9,,,,,
+H9,180V,H9,,,,,
+H9,198S,H9,,,,,
+H9,46E,H9,,,,,
+H7,16Q,H7,,,,,
+H7,HA2-119H,H7,,,,,
+H7,HA2-47T,H7,,,,,
+H7,101T,H7,,,,,
+H7,HA2-64E,H7,,,,,
+H7-combination_298_0,123N,H7,30903496,Reduced replication in MDCK cells.,https://doi.org/10.1007/s10517-019-04407-1,A/Shanghai/1/2013-based strain and A/Anhui/1/2013-123N/149N variant were characterized by reduced replication in MDCK cells.,
+H7-combination_298_1,149N,H7,30903496,Reduced replication in MDCK cells.,https://doi.org/10.1007/s10517-019-04407-1,A/Shanghai/1/2013-based strain and A/Anhui/1/2013-123N/149N variant were characterized by reduced replication in MDCK cells.,
+H7,135S,H7,,,,,
+H7,335V,H7,,,,,
+H7,140G,H7,,,,,
+H3-combination_302_0,186V,H3,PMID:24162312&186&226 in paper numbering,"The results indicate that the novel H7N9 viruses have acquired the ability to bind to human-like receptors, for which substitutions at position 186 and 226 are responsible.(H3 numbering)",,,1.receptor binding
+H3-combination_302_1,226L,H3,PMID:24162312&186&226 in paper numbering,"The results indicate that the novel H7N9 viruses have acquired the ability to bind to human-like receptors, for which substitutions at position 186 and 226 are responsible.(H3 numbering)",,,1.receptor binding
+H3,218E,H3,,,,,
+H7,337R,H7,,,,,
+H7,385E,H7,,,,,
+H7,452T,H7,,,,,
+H3-combination_307_0,156N,H3,PMID:25275121&156&263 in paper numbering,"however, a combination of HA(H156N S263R) with PA(I38M) in the GDK6 backbone led to a significantly more virulent variant.",,,
+H3-combination_307_1,263R,H3,PMID:25275121&156&263 in paper numbering,"however, a combination of HA(H156N S263R) with PA(I38M) in the GDK6 backbone led to a significantly more virulent variant.",,,
+H3,156N,H3,,,,,
+H3,186L,H3,,,,,
+H3-combination_310_0,190V,H3,PMID:25940072&190&228 in paper numbering,E190V and G228S substitutions are important to acquire the human receptor-binding capacity,,,1.receptor binding
+H3-combination_310_1,228S,H3,PMID:25940072&190&228 in paper numbering,E190V and G228S substitutions are important to acquire the human receptor-binding capacity,,,1.receptor binding
+H3-combination_311_0,222V,H3,PMID:28400591&228 in paper numbering,"These results were confirmed by the virus glycan-binding assay results, which showed that wild-type H6N6 virus can bind to  α2,3- and  α2,6-linked sialic acids and that substitution G228S (avian to swine) significantly increased the binding affinities of H6N6 IAV to three  α2,6-linked sialic acids that we testedt.The substituions 222V/228S  increased replication efficiency",,,
+H3-combination_311_1,228S,H3,PMID:28400591&228 in paper numbering,"These results were confirmed by the virus glycan-binding assay results, which showed that wild-type H6N6 virus can bind to  α2,3- and  α2,6-linked sialic acids and that substitution G228S (avian to swine) significantly increased the binding affinities of H6N6 IAV to three  α2,6-linked sialic acids that we testedt.The substituions 222V/228S  increased replication efficiency",,,
+H6,222G,H6,,,,,
+H3-combination_313_0,193E,H3,25998916,Attenuated the virus in mice.,,In vivo virulence assessment demonstrated that rVN-K193E/G225E was significantly attenuated in mice. (H3 numbering),
+H3-combination_313_1,225E,H3,25998916,Attenuated the virus in mice.,,In vivo virulence assessment demonstrated that rVN-K193E/G225E was significantly attenuated in mice. (H3 numbering),
+H5,HA2-114K,H5,,,,,
+H5-combination_315_0,103Y,H5,CDC&PMID:22723413,H5 virus transmissible among ferrets.,,,1.transimissible
+H5-combination_315_1,156A,H5,CDC&PMID:22723413,H5 virus transmissible among ferrets.,,,1.transimissible
+H5-combination_315_2,222L,H5,CDC&PMID:22723413,H5 virus transmissible among ferrets.,,,1.transimissible
+H5-combination_315_3,224S,H5,CDC&PMID:22723413,H5 virus transmissible among ferrets.,,,1.transimissible
+H5,103Y,H5,,,,,
+H5,E186G,H5,,,,,
+H5,121N,H5,,,,,
+H5-combination_319_0,123R,H5,PMID:29899102,Crucial for high virulence in avian and mammalian hosts,,,1.frequency
+H5-combination_319_1,124I,H5,PMID:29899102,Crucial for high virulence in avian and mammalian hosts,,,1.frequency
+H5-combination_320_0,123P,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_320_1,193K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_320_2,497K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_321_0,123P,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_321_1,193K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_322_0,123P,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_322_1,497K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5,124S,H5,,,,,
+H5-combination_324_0,129V,H5,CDC&PMID:17626098,Increased virus binding to  α2-6,,,1.receptor binding
+H5-combination_324_1,134V,H5,CDC&PMID:17626098,Increased virus binding to  α2-6,,,1.receptor binding
+H5-combination_325_0,133A,H5,CDC&PMID:17690300,Increased psuedovirus binding to  α2-6.,,,1.receptor binding
+H5-combination_325_1,188I,H5,CDC&PMID:17690300,Increased psuedovirus binding to  α2-6.,,,1.receptor binding
+H5,HA2-58I,H5,,,,,
+H5,133A,H5,,,,,
+H5,134V,H5,,,,,
+H5,138V,H5,,,,,
+H5,138L,H5,,,,,
+H5,138N,H5,,,,,
+H5-combination_331_0,139R,H5,CDC&PMID:17108965&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_331_1,182K,H5,CDC&PMID:17108965&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5,139R,H5,,,,,
+H5,144S,H5,,,,,
+H5-combination_334_0,140S,H5,,RH5N1-N144S-I223V increased replication efficiency in avian and mammalian hosts and pathogenicity in mice.,https://doi.org/10.3390/v11100923, The higher mouse pathogenicity and replication efficiency of rH5N1-N144S-I223V than other H5N1 recombinant viruses in MDCK and A549 cells may indicate a reduction in mammalian pathogenicity during poultry adaptation to evade immune responses.(H3 numbering),
+H5-combination_334_1,219V,H5,,RH5N1-N144S-I223V increased replication efficiency in avian and mammalian hosts and pathogenicity in mice.,https://doi.org/10.3390/v11100923, The higher mouse pathogenicity and replication efficiency of rH5N1-N144S-I223V than other H5N1 recombinant viruses in MDCK and A549 cells may indicate a reduction in mammalian pathogenicity during poultry adaptation to evade immune responses.(H3 numbering),
+H5-combination_335_0,154D,H5,CDC&PMID:22722205,H5 HA virus transmissible among ferrets.,,,1.wrong information
+H5-combination_335_1,220K,H5,CDC&PMID:22722205,H5 HA virus transmissible among ferrets.,,,1.wrong information
+H5-combination_335_2,222L,H5,CDC&PMID:22722205,H5 HA virus transmissible among ferrets.,,,1.wrong information
+H5-combination_335_3,315I,H5,CDC&PMID:22722205,H5 HA virus transmissible among ferrets.,,,1.wrong information
+H5-combination_336_0,154S,H5,CDC&PMID:18404209,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_336_1,222L,H5,CDC&PMID:18404209,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_336_2,244D,H5,CDC&PMID:18404209,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_337_0,154S,H5,CDC&PMID:18404209,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_337_1,222L,H5,CDC&PMID:18404209,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_338_0,155N,H5,CDC&PMID:19116267,"Increased virus binding to  α2-6, reduced lethality and systemic spread in mice.",,,
+H5-combination_338_1,156A,H5,CDC&PMID:19116267,"Increased virus binding to  α2-6, reduced lethality and systemic spread in mice.",,,
+H5-combination_338_2,223N,H5,CDC&PMID:19116267,"Increased virus binding to  α2-6, reduced lethality and systemic spread in mice.",,,
+H5-combination_339_0,155N,H5,CDC&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_339_1,156A,H5,CDC&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
+H5,155N,H5,,,,,
+H5-combination_341_0,156A,H5,CDC&PMID:18672252&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_341_1,222L,H5,CDC&PMID:18672252&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_341_2,224S,H5,CDC&PMID:18672252&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_342_0,156A,H5,CDC&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_342_1,222L,H5,CDC&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_343_0,156A,H5,CDC&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_343_1,223N,H5,CDC&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
+H5,156T,H5,,,,,
+H5,156S,H5,,,,,
+H5,160T,H5,,,,,
+H5-combination_346_0,182K,H5,CDC&PMID:17108965&PMID:20392847,Increased virus binding to  α2-6 and enhanced replication.,,,
+H5-combination_346_1,182D,H5,CDC&PMID:17108965&PMID:20392847,Increased virus binding to  α2-6 and enhanced replication.,,,
+H5-combination_347_0,182K,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_347_1,192R,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_347_2,222L,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_347_3,223N,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_347_4,224S,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_348_0,182K,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_348_1,222L,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_348_2,223N,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_348_3,224S,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_349_0,182K,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_349_1,222L,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_349_2,224S,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_350_0,183G,H5,CDC&PMID:21397290,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_350_1,186D,H5,CDC&PMID:21397290,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_350_2,189S,H5,CDC&PMID:21397290,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_350_3,222L,H5,CDC&PMID:21397290,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_350_4,224S,H5,CDC&PMID:21397290,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_351_0,183G,H5,CDC&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_351_1,222L,H5,CDC&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_351_2,224S,H5,CDC&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_352_0,183G,H5,CDC&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_352_1,223N,H5,CDC&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5,183G,H5,,,,,
+H5-combination_354_0,186G,H5,CDC&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_354_1,222E,H5,CDC&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_354_2,224S,H5,CDC&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5,186G,H5,,,,,
+H5,182K,H5,,,,,
+H5,188I,H5,,,,,
+H5-combination_358_0,189R,H5,CDC&PMID:18672252&PMID:21397290,Increased virus binding to  α2-6.The DSLS and RLS HA mutations attenuated VN1203 virus virulence in ferrets.,,,
+H5-combination_358_1,222L,H5,CDC&PMID:18672252&PMID:21397290,Increased virus binding to  α2-6.The DSLS and RLS HA mutations attenuated VN1203 virus virulence in ferrets.,,,
+H5-combination_358_2,224S,H5,CDC&PMID:18672252&PMID:21397290,Increased virus binding to  α2-6.The DSLS and RLS HA mutations attenuated VN1203 virus virulence in ferrets.,,,
+H5,189R,H5,,,,,
+H5,186A,H5,,,,,
+H5,186K,H5,,,,,
+H5,154N,H5,,,,,
+H5-combination_362_0,192R,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_362_1,222L,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_362_2,223N,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_362_3,224S,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_363_0,192R,H5,CDC&PMID:20392847&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_363_1,222L,H5,CDC&PMID:20392847&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_363_2,224S,H5,CDC&PMID:20392847&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_364_0,192R,H5,CDC&PMID:20392847&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_364_1,223N,H5,CDC&PMID:20392847&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5,192R,H5,,,,,
+H5,192H,H5,,,,,
+H5-combination_366_0,193K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_366_1,497K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5,193K,H5,,,,,
+H5,210I,H5,,,,,
+H5,212E,H5,,,,,
+H5,212R,H5,,,,,
+H5,218E,H5,,,,,
+H5-combination_371_0,222L,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_371_1,223N,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_371_2,224S,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_372_0,222L,H5,CDC&PMID:14671130,Increased virus binding to  α2-6; decreased antiviral response in host; reduced tissue tropism in guinea pigs.,,,1.receptor binding;
+H5-combination_372_1,224S,H5,CDC&PMID:14671130,Increased virus binding to  α2-6; decreased antiviral response in host; reduced tissue tropism in guinea pigs.,,,1.receptor binding;
+H5,222L,H5,,,,,
+H5,223N,H5,,,,,
+H5,219V,H5,,,,,
+H5,224S,H5,,,,,
+H5,224S,H5,,,,,
+H5,221W,H5,,,,,
+H5,222K,H5,,,,,
+H5,223R,H5,,,,,
+H5,235S,H5,,,,,
+H5,251K,H5,,,,,
+H5,263T,H5,,,,,
+H5,388I,H5,,,,,
+H5,435K,H5,,,,,
+H5,444K,H5,,,,,
+H5-combination_387_0,75K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_387_1,123P,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_387_2,193K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_387_3,497K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_388_0,75K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_388_1,123P,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_388_2,497K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_389_0,75K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_389_1,123P,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_390_0,75K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_390_1,193K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_390_2,497K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_391_0,75K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_391_1,193K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_392_0,75K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5-combination_392_1,497K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
+H5,86V,H5,,,,,
+H5,94N,H5,,,,,
+H4-combination_395_0,329I,H4,,Both mutations significantly enhanced virulence.,https://doi.org/10.1099/jgv.0.001192,"Although individual L331I or G453R substitutions in HA did not change the pathogenicity of BJ21 in mice, both mutations significantly enhanced virulence.(H3 numbering)",
+H4-combination_395_1,457R,H4,,Both mutations significantly enhanced virulence.,https://doi.org/10.1099/jgv.0.001192,"Although individual L331I or G453R substitutions in HA did not change the pathogenicity of BJ21 in mice, both mutations significantly enhanced virulence.(H3 numbering)",
+H3,186I,H3,,,,,
+H3,326V,H3,,,,,
+H3,225G,H3,,,,,
+H3,144G,H3,,,,,
+H3,222L,H3,,,,,
+H3-combination_401_0,78P,H3,22258863,Increased virulence of the virus in mice.,,"Positions 78 and 354 also influenced virulence in mice: the virus carrying hvHA(L78P/Q354H) was less virulent than the virus containing wild-type hvHA (Fig. 4a and Table 1). On the other hand, the virus lvHA(P78L/H354Q) showed enhanced virulence compared with the virus encoding wild-type lvHA (Fig. 4b and Table 1). ",
+H3-combination_401_1,354H,H3,22258863,Increased virulence of the virus in mice.,,"Positions 78 and 354 also influenced virulence in mice: the virus carrying hvHA(L78P/Q354H) was less virulent than the virus containing wild-type hvHA (Fig. 4a and Table 1). On the other hand, the virus lvHA(P78L/H354Q) showed enhanced virulence compared with the virus encoding wild-type lvHA (Fig. 4b and Table 1). ",
+H3,62I,H3,,,,,
+H3-combination_403_0,131E,H3,,Increased the virulence of the pandemic H1N1 virus in Balb/c mice.,,"Thus, these single and double mutants clearly demonstrate that the D131E and S186P mutations, alone and in combination, can increase the virulence of the pandemic H1N1 virus in Balb/c mice.",
+H3-combination_403_1,186P,H3,,Increased the virulence of the pandemic H1N1 virus in Balb/c mice.,,"Thus, these single and double mutants clearly demonstrate that the D131E and S186P mutations, alone and in combination, can increase the virulence of the pandemic H1N1 virus in Balb/c mice.",
+H3,81N,H3,,,,,
+H3-combination_405_0,218W,H3,,Both HA1 and HA2 mutations (G218WHA1 and T156NHA2) enhance replication and virulence.,https://doi.org/10.1128/jvi.01187-10,Both HA1 and HA2 mutations (G218WHA1 and T156NHA2) enhance replication and virulence.,
+H3-combination_405_1,156N,HA2,,Both HA1 and HA2 mutations (G218WHA1 and T156NHA2) enhance replication and virulence.,https://doi.org/10.1128/jvi.01187-10,Both HA1 and HA2 mutations (G218WHA1 and T156NHA2) enhance replication and virulence.,
+H3,98F,H3,,,,,
+H3,161F,H3,,,,,
+H18,170R,H18,,,,,
+H18,250S,H18,,,,,
+H10,220L,H10,,,,,
+H1,106V,H1,,,,,
+H1,190R,H1,,,,,
+H1-combination_413_0,163E,H1,PMID:22102733,"The sole introduction of the D222G point mutation within the HA was sufficient to increase pathogenicity in mice as well, although additional introduction of the HA(K163E) mutation further increased virulence.",,,
+H1-combination_413_1,222G,H1,PMID:22102733,"The sole introduction of the D222G point mutation within the HA was sufficient to increase pathogenicity in mice as well, although additional introduction of the HA(K163E) mutation further increased virulence.",,,
+H1,186P,H1,,,,,
+H1,425M,H1,,,,,
+H1,222G,H1,,,,,
+H1,222N,H1,,,,,
+H1,154Q,H1,,,,,
+H1-combination_419_0,222N,H1,,Reducted viral replication.,https://doi.org/10.1016/j.virol.2015.05.012,"Notably, in the MDCK cells, recombinant viruses containing the D222N polymorphism (rEng/195-D222N and rEng/195-S188N+D222N) showed a reduction in viral replication.",
+H1-combination_419_1,188N,H1,,Reducted viral replication.,https://doi.org/10.1016/j.virol.2015.05.012,"Notably, in the MDCK cells, recombinant viruses containing the D222N polymorphism (rEng/195-D222N and rEng/195-S188N+D222N) showed a reduction in viral replication.",
+H1,225S,H1,,,,,
+H1,248D,H1,,,,,
+H1,328L,H1,,,,,
+H1,409H,H1,,,,,
+H1-combination_424_0,409H,H1,,Decreased replication ability and pathogenicity ,https://doi.org/10.1099%2Fjgv.0.001305,"The in vitro and in vivo replication ability and pathogenicity of mutants were comparable (64) or lower (66, D) than those of the wild-type virus.  In summary, the constructed IAV mutants 66 and D had lowered virulence in comparison to the wt.Mutant viruses 64 (T642H substitution in the HA2 subunit; H1 numbering – position 407 in HA); 66 (V662H substitution in the HA2 subunit; H1 numbering – position 409 in HA) and D (T642H and V662H substitutions in the HA2 subunit)",
+H1-combination_424_1,407H,H1,,Decreased replication ability and pathogenicity ,https://doi.org/10.1099%2Fjgv.0.001305,"The in vitro and in vivo replication ability and pathogenicity of mutants were comparable (64) or lower (66, D) than those of the wild-type virus.  In summary, the constructed IAV mutants 66 and D had lowered virulence in comparison to the wt.Mutant viruses 64 (T642H substitution in the HA2 subunit; H1 numbering – position 407 in HA); 66 (V662H substitution in the HA2 subunit; H1 numbering – position 409 in HA) and D (T642H and V662H substitutions in the HA2 subunit)",
+H1-combination_425_0,159D,H1,25135885,"We report that a combination of two mutations (N159D and Q226R) in the haemagglutinin (HA) protein of the representative 2009 H1N1 influenza virus A/California/04/2009 (CA04) caused a switch in receptor binding preference from the α2,6-sialoglycan to the α2,3-sialoglycan receptor, and decreased the binding intensities for both glycans. In conjunction with a significantly decreased replication efficiency in the nasal epithelium, this limited human receptor binding affinity resulted in inefficient direct-contact transmission of CA04 between guinea pigs.",,"We report that a combination of two mutations (N159D and Q226R) in the haemagglutinin (HA) protein of the representative 2009 H1N1 influenza virus A/California/04/2009 (CA04) caused a switch in receptor binding preference from the α2,6-sialoglycan to the α2,3-sialoglycan receptor, and decreased the binding intensities for both glycans. In conjunction with a significantly decreased replication efficiency in the nasal epithelium, this limited human receptor binding affinity resulted in inefficient direct-contact transmission of CA04 between guinea pigs.",
+H1-combination_425_1,226R,H1,25135885,"We report that a combination of two mutations (N159D and Q226R) in the haemagglutinin (HA) protein of the representative 2009 H1N1 influenza virus A/California/04/2009 (CA04) caused a switch in receptor binding preference from the α2,6-sialoglycan to the α2,3-sialoglycan receptor, and decreased the binding intensities for both glycans. In conjunction with a significantly decreased replication efficiency in the nasal epithelium, this limited human receptor binding affinity resulted in inefficient direct-contact transmission of CA04 between guinea pigs.",,"We report that a combination of two mutations (N159D and Q226R) in the haemagglutinin (HA) protein of the representative 2009 H1N1 influenza virus A/California/04/2009 (CA04) caused a switch in receptor binding preference from the α2,6-sialoglycan to the α2,3-sialoglycan receptor, and decreased the binding intensities for both glycans. In conjunction with a significantly decreased replication efficiency in the nasal epithelium, this limited human receptor binding affinity resulted in inefficient direct-contact transmission of CA04 between guinea pigs.",
+H1,409P,H1,,,,,
+H1,425G,H1,,,,,
+H1,434G,H1,,,,,
+H1,445G,H1,,,,,
+H1,458T,H1,,,,,
+H1-combination_431_0,89I,H1,20592084,Increased virulence in mice.,,"Genetic analysis indicated that the increased virulence of the mouse-adapted virus was attributed to incremental acquisition of three mutations in the HA protein (T89I, N125T, and D221G). ",
+H1-combination_431_1,125T,H1,20592084,Increased virulence in mice.,,"Genetic analysis indicated that the increased virulence of the mouse-adapted virus was attributed to incremental acquisition of three mutations in the HA protein (T89I, N125T, and D221G). ",
+H1-combination_431_2,221G,H1,20592084,Increased virulence in mice.,,"Genetic analysis indicated that the increased virulence of the mouse-adapted virus was attributed to incremental acquisition of three mutations in the HA protein (T89I, N125T, and D221G). ",
+combination-combination_432_0,100V,NP,20016035,Attenuated the virus in mice.,,"Two NP mutants, VD5K-NP-100I and VD5K-NP-100V, were attenuated significantly and did not kill any mice, suggesting that the human-like amino acids at position 100 in NP have a negative effect on pathogenicity in mice, even though the viruses could replicate well in eggs. (R100I\R100V)",
+combination-combination_432_1,627K,PB2,20016035,Attenuated the virus in mice.,,"Two NP mutants, VD5K-NP-100I and VD5K-NP-100V, were attenuated significantly and did not kill any mice, suggesting that the human-like amino acids at position 100 in NP have a negative effect on pathogenicity in mice, even though the viruses could replicate well in eggs. (R100I\R100V)",
+combination-combination_433_0,283P,NP,20016035,Attenuated the virus in mice.,,"VD5K-NP-283P was also attenuated and its MLD50 value was 100-fold higher than that of VD5K, whereas the pathogenicity of VD5K-NP-33I was comparable to that of VD5K in mice. ",
+combination-combination_433_1,627K,PB2,20016035,Attenuated the virus in mice.,,"VD5K-NP-283P was also attenuated and its MLD50 value was 100-fold higher than that of VD5K, whereas the pathogenicity of VD5K-NP-33I was comparable to that of VD5K in mice. ",
+combination-combination_434_0,368K,PB2,20016035,Increased pathogenicity in mice.,,"In contrast, all of the PA and PB2 mutants, as well as the NP-357K mutant, had increased pathogenicity in mice: the MLD50 values of VD5K-PB2-368K, VD5K-PA-142N, VD5K-PA-142E and VD5K-NP-357K were reduced by approximately 41, 24, 7.6 and 51 times, respectively.",
+combination-combination_434_1,627K,PB2,20016035,Increased pathogenicity in mice.,,"In contrast, all of the PA and PB2 mutants, as well as the NP-357K mutant, had increased pathogenicity in mice: the MLD50 values of VD5K-PB2-368K, VD5K-PA-142N, VD5K-PA-142E and VD5K-NP-357K were reduced by approximately 41, 24, 7.6 and 51 times, respectively.",
+combination-combination_435_0,142N,PA,20016035,Increased pathogenicity in mice.,,"In contrast, all of the PA and PB2 mutants, as well as the NP-357K mutant, had increased pathogenicity in mice: the MLD50 values of VD5K-PB2-368K, VD5K-PA-142N, VD5K-PA-142E and VD5K-NP-357K were reduced by approximately 41, 24, 7.6 and 51 times, respectively.",
+combination-combination_435_1,627K,PB2,20016035,Increased pathogenicity in mice.,,"In contrast, all of the PA and PB2 mutants, as well as the NP-357K mutant, had increased pathogenicity in mice: the MLD50 values of VD5K-PB2-368K, VD5K-PA-142N, VD5K-PA-142E and VD5K-NP-357K were reduced by approximately 41, 24, 7.6 and 51 times, respectively.",
+combination-combination_436_0,142E,PA,20016035,Increased pathogenicity in mice.,,"In contrast, all of the PA and PB2 mutants, as well as the NP-357K mutant, had increased pathogenicity in mice: the MLD50 values of VD5K-PB2-368K, VD5K-PA-142N, VD5K-PA-142E and VD5K-NP-357K were reduced by approximately 41, 24, 7.6 and 51 times, respectively.",
+combination-combination_436_1,627K,PB2,20016035,Increased pathogenicity in mice.,,"In contrast, all of the PA and PB2 mutants, as well as the NP-357K mutant, had increased pathogenicity in mice: the MLD50 values of VD5K-PB2-368K, VD5K-PA-142N, VD5K-PA-142E and VD5K-NP-357K were reduced by approximately 41, 24, 7.6 and 51 times, respectively.",
+combination-combination_437_0,357K,NP,20016035,Increased pathogenicity in mice.,,"In contrast, all of the PA and PB2 mutants, as well as the NP-357K mutant, had increased pathogenicity in mice: the MLD50 values of VD5K-PB2-368K, VD5K-PA-142N, VD5K-PA-142E and VD5K-NP-357K were reduced by approximately 41, 24, 7.6 and 51 times, respectively.",
+combination-combination_437_1,627K,PB2,20016035,Increased pathogenicity in mice.,,"In contrast, all of the PA and PB2 mutants, as well as the NP-357K mutant, had increased pathogenicity in mice: the MLD50 values of VD5K-PB2-368K, VD5K-PA-142N, VD5K-PA-142E and VD5K-NP-357K were reduced by approximately 41, 24, 7.6 and 51 times, respectively.",
+combination-combination_438_0,144E,H3,,Enhanced viral pathogenicity and virulence in mice.,https://doi.org/10.1038/s41598-019-51877-4,"In summary, we generated a lethal mouse model of seasonal A/H3N2 virus following serial lung-to-lung passages of a wild-type virus in mice and found that both HA (N144E, N246K, and A304T) and PA (K615E) genes co-contribute to enhance viral pathogenicity and virulence in mice.",
+combination-combination_438_1,246K,H3,,Enhanced viral pathogenicity and virulence in mice.,https://doi.org/10.1038/s41598-019-51877-4,"In summary, we generated a lethal mouse model of seasonal A/H3N2 virus following serial lung-to-lung passages of a wild-type virus in mice and found that both HA (N144E, N246K, and A304T) and PA (K615E) genes co-contribute to enhance viral pathogenicity and virulence in mice.",
+combination-combination_438_2,304T,H3,,Enhanced viral pathogenicity and virulence in mice.,https://doi.org/10.1038/s41598-019-51877-4,"In summary, we generated a lethal mouse model of seasonal A/H3N2 virus following serial lung-to-lung passages of a wild-type virus in mice and found that both HA (N144E, N246K, and A304T) and PA (K615E) genes co-contribute to enhance viral pathogenicity and virulence in mice.",
+combination-combination_438_3,615E,PA,,Enhanced viral pathogenicity and virulence in mice.,https://doi.org/10.1038/s41598-019-51877-4,"In summary, we generated a lethal mouse model of seasonal A/H3N2 virus following serial lung-to-lung passages of a wild-type virus in mice and found that both HA (N144E, N246K, and A304T) and PA (K615E) genes co-contribute to enhance viral pathogenicity and virulence in mice.",
+combination-combination_439_0,357K,NP,,Enhanced pathogenicity in mice,https://doi.org/10.1099%2Fvir.0.018143-0,"We also showed that some of the human-like amino acid mutants (i.e. PB2-R368K, PA-K142E and NP-Q357K) enhanced pathogenicity in mice only in combination with PB2-627K. ",
+combination-combination_439_1,627K,PB2,,Enhanced pathogenicity in mice,https://doi.org/10.1099%2Fvir.0.018143-0,"We also showed that some of the human-like amino acid mutants (i.e. PB2-R368K, PA-K142E and NP-Q357K) enhanced pathogenicity in mice only in combination with PB2-627K. ",
+combination-combination_440_0,100I,NP,,Recombinant NPV100I NAD248N WSN exhibits enhanced pathogenicity in mice.The NPV100I and NAD248N combination enhances the binding of viral RNA by NP.,https://doi.org/10.1371/journal.pone.0217691,Recombinant NPV100I NAD248N WSN exhibits enhanced pathogenicity in vivo and in vitro.The NPV100I and NAD248N combination enhances the binding of viral RNA by NP.,
+combination-combination_440_1,248N,N1,,Recombinant NPV100I NAD248N WSN exhibits enhanced pathogenicity in mice.The NPV100I and NAD248N combination enhances the binding of viral RNA by NP.,https://doi.org/10.1371/journal.pone.0217691,Recombinant NPV100I NAD248N WSN exhibits enhanced pathogenicity in vivo and in vitro.The NPV100I and NAD248N combination enhances the binding of viral RNA by NP.,
+combination-combination_441_0,142E,PA,,Enhanced pathogenicity in mice,https://doi.org/10.1099%2Fvir.0.018143-0,"We also showed that some of the human-like amino acid mutants (i.e. PB2-R368K, PA-K142E and NP-Q357K) enhanced pathogenicity in mice only in combination with PB2-627K. ",
+combination-combination_441_1,627K,PB2,,Enhanced pathogenicity in mice,https://doi.org/10.1099%2Fvir.0.018143-0,"We also showed that some of the human-like amino acid mutants (i.e. PB2-R368K, PA-K142E and NP-Q357K) enhanced pathogenicity in mice only in combination with PB2-627K. ",
+combination-combination_442_0,653L,PA,,Increase in polymerase activity,https://doi.org/10.1371/journal.ppat.1008937, P653L only showed an increase in polymerase activity in the presence of K229R.,1.polymerase activity
+combination-combination_442_1,229R,PB1,,Increase in polymerase activity,https://doi.org/10.1371/journal.ppat.1008937, P653L only showed an increase in polymerase activity in the presence of K229R.,1.polymerase activity
+combination-combination_443_0,368K,PB2,,Enhanced pathogenicity in mice,https://doi.org/10.1099%2Fvir.0.018143-0,"We also showed that some of the human-like amino acid mutants (i.e. PB2-R368K, PA-K142E and NP-Q357K) enhanced pathogenicity in mice only in combination with PB2-627K. ",
+combination-combination_443_1,627K,PB2,,Enhanced pathogenicity in mice,https://doi.org/10.1099%2Fvir.0.018143-0,"We also showed that some of the human-like amino acid mutants (i.e. PB2-R368K, PA-K142E and NP-Q357K) enhanced pathogenicity in mice only in combination with PB2-627K. ",
+combination-combination_444_0,627K,PB2,31200112,Enhanced the ability of H7N7 virus to replicate and cause severe disease in mammals.,," Genomic analysis of the adapted variant viruses revealed amino acid changes in the PB2 (E627K), PB1 (R118I), PA (L550M), HA (G214R), and NA (S372N) proteins. Our results suggest that these amino acid substitutions collaboratively enhance the ability of H7N7 virus to replicate and cause severe disease in mammals.",
+combination-combination_444_1,118I,PB1,31200112,Enhanced the ability of H7N7 virus to replicate and cause severe disease in mammals.,," Genomic analysis of the adapted variant viruses revealed amino acid changes in the PB2 (E627K), PB1 (R118I), PA (L550M), HA (G214R), and NA (S372N) proteins. Our results suggest that these amino acid substitutions collaboratively enhance the ability of H7N7 virus to replicate and cause severe disease in mammals.",
+combination-combination_444_2,550M,PA,31200112,Enhanced the ability of H7N7 virus to replicate and cause severe disease in mammals.,," Genomic analysis of the adapted variant viruses revealed amino acid changes in the PB2 (E627K), PB1 (R118I), PA (L550M), HA (G214R), and NA (S372N) proteins. Our results suggest that these amino acid substitutions collaboratively enhance the ability of H7N7 virus to replicate and cause severe disease in mammals.",
+combination-combination_444_3,214R,H7,31200112,Enhanced the ability of H7N7 virus to replicate and cause severe disease in mammals.,," Genomic analysis of the adapted variant viruses revealed amino acid changes in the PB2 (E627K), PB1 (R118I), PA (L550M), HA (G214R), and NA (S372N) proteins. Our results suggest that these amino acid substitutions collaboratively enhance the ability of H7N7 virus to replicate and cause severe disease in mammals.",
+combination-combination_444_4,372N,N7,31200112,Enhanced the ability of H7N7 virus to replicate and cause severe disease in mammals.,," Genomic analysis of the adapted variant viruses revealed amino acid changes in the PB2 (E627K), PB1 (R118I), PA (L550M), HA (G214R), and NA (S372N) proteins. Our results suggest that these amino acid substitutions collaboratively enhance the ability of H7N7 virus to replicate and cause severe disease in mammals.",
+combination-combination_445_0,224A,PB2,36466692,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ,,"Five amino acid substitutions, PB2-T224A/E627K, PB1-K577E, and PA-T97I/D514E, were found in the viral polymerase subunits PB2, PB1, and PA. As shown in Figure 6, the polymerase activity of the RNP from the two MA H6 viruses was significantly higher than corresponding WT viruses, which suggested that the two H6 viruses with these mutations in RNP increased virulence in mice. ",
+combination-combination_445_1,627K,PB2,36466692,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ,,"Five amino acid substitutions, PB2-T224A/E627K, PB1-K577E, and PA-T97I/D514E, were found in the viral polymerase subunits PB2, PB1, and PA. As shown in Figure 6, the polymerase activity of the RNP from the two MA H6 viruses was significantly higher than corresponding WT viruses, which suggested that the two H6 viruses with these mutations in RNP increased virulence in mice. ",
+combination-combination_445_2,577E,PB1,36466692,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ,,"Five amino acid substitutions, PB2-T224A/E627K, PB1-K577E, and PA-T97I/D514E, were found in the viral polymerase subunits PB2, PB1, and PA. As shown in Figure 6, the polymerase activity of the RNP from the two MA H6 viruses was significantly higher than corresponding WT viruses, which suggested that the two H6 viruses with these mutations in RNP increased virulence in mice. ",
+combination-combination_445_3,97I,PA,36466692,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ,,"Five amino acid substitutions, PB2-T224A/E627K, PB1-K577E, and PA-T97I/D514E, were found in the viral polymerase subunits PB2, PB1, and PA. As shown in Figure 6, the polymerase activity of the RNP from the two MA H6 viruses was significantly higher than corresponding WT viruses, which suggested that the two H6 viruses with these mutations in RNP increased virulence in mice. ",
+combination-combination_445_4,514E,PA,36466692,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ,,"Five amino acid substitutions, PB2-T224A/E627K, PB1-K577E, and PA-T97I/D514E, were found in the viral polymerase subunits PB2, PB1, and PA. As shown in Figure 6, the polymerase activity of the RNP from the two MA H6 viruses was significantly higher than corresponding WT viruses, which suggested that the two H6 viruses with these mutations in RNP increased virulence in mice. ",
+PB2-combination_446_0,627V,PB2,,The PB2-E627V/E543D/A655V/K526R mutations all contributed to efficient replication of the G1-A/B reassortant in human cells and increased replication and pathogenicity in mice.,https://doi.org/10.1371%2Fjournal.ppat.1007919,The PB2-E627V/E543D/A655V/K526R mutations all contributed to efficient replication of the G1-A/B reassortant in human cells.The G1-A/B reassortant carrying PB2-E627V/E543D/A655V/K526R had increased replication and pathogenicity in mice.,
+PB2-combination_446_1,543D,PB2,,The PB2-E627V/E543D/A655V/K526R mutations all contributed to efficient replication of the G1-A/B reassortant in human cells and increased replication and pathogenicity in mice.,https://doi.org/10.1371%2Fjournal.ppat.1007919,The PB2-E627V/E543D/A655V/K526R mutations all contributed to efficient replication of the G1-A/B reassortant in human cells.The G1-A/B reassortant carrying PB2-E627V/E543D/A655V/K526R had increased replication and pathogenicity in mice.,
+PB2-combination_446_2,655V,PB2,,The PB2-E627V/E543D/A655V/K526R mutations all contributed to efficient replication of the G1-A/B reassortant in human cells and increased replication and pathogenicity in mice.,https://doi.org/10.1371%2Fjournal.ppat.1007919,The PB2-E627V/E543D/A655V/K526R mutations all contributed to efficient replication of the G1-A/B reassortant in human cells.The G1-A/B reassortant carrying PB2-E627V/E543D/A655V/K526R had increased replication and pathogenicity in mice.,
+PB2-combination_446_3,526R,PB2,,The PB2-E627V/E543D/A655V/K526R mutations all contributed to efficient replication of the G1-A/B reassortant in human cells and increased replication and pathogenicity in mice.,https://doi.org/10.1371%2Fjournal.ppat.1007919,The PB2-E627V/E543D/A655V/K526R mutations all contributed to efficient replication of the G1-A/B reassortant in human cells.The G1-A/B reassortant carrying PB2-E627V/E543D/A655V/K526R had increased replication and pathogenicity in mice.,
+PB2-combination_447_0,292V,PB2,,Enhanced the activity of polymerase in avian and mammalian cells.Increased the pathogenicity and transmissibility in chickens and the virulence of mice. ,https://doi.org/10.1111/tbed.14157,"The combined mutations of PB2-F6 (including PB2-I292V, PB2-R389K, PB2-A588V, PB2-T598M, PB2-L648V, and PB2-T676M) obtained higher adaptability of AIVs in avians and mammals than that of the single mutation of PB2-A588V.",
+PB2-combination_447_1,389K,PB2,,Enhanced the activity of polymerase in avian and mammalian cells.Increased the pathogenicity and transmissibility in chickens and the virulence of mice. ,https://doi.org/10.1111/tbed.14157,"The combined mutations of PB2-F6 (including PB2-I292V, PB2-R389K, PB2-A588V, PB2-T598M, PB2-L648V, and PB2-T676M) obtained higher adaptability of AIVs in avians and mammals than that of the single mutation of PB2-A588V.",
+PB2-combination_447_2,588V,PB2,,Enhanced the activity of polymerase in avian and mammalian cells.Increased the pathogenicity and transmissibility in chickens and the virulence of mice. ,https://doi.org/10.1111/tbed.14157,"The combined mutations of PB2-F6 (including PB2-I292V, PB2-R389K, PB2-A588V, PB2-T598M, PB2-L648V, and PB2-T676M) obtained higher adaptability of AIVs in avians and mammals than that of the single mutation of PB2-A588V.",
+PB2-combination_447_3,598M,PB2,,Enhanced the activity of polymerase in avian and mammalian cells.Increased the pathogenicity and transmissibility in chickens and the virulence of mice. ,https://doi.org/10.1111/tbed.14157,"The combined mutations of PB2-F6 (including PB2-I292V, PB2-R389K, PB2-A588V, PB2-T598M, PB2-L648V, and PB2-T676M) obtained higher adaptability of AIVs in avians and mammals than that of the single mutation of PB2-A588V.",
+PB2-combination_447_4,648V,PB2,,Enhanced the activity of polymerase in avian and mammalian cells.Increased the pathogenicity and transmissibility in chickens and the virulence of mice. ,https://doi.org/10.1111/tbed.14157,"The combined mutations of PB2-F6 (including PB2-I292V, PB2-R389K, PB2-A588V, PB2-T598M, PB2-L648V, and PB2-T676M) obtained higher adaptability of AIVs in avians and mammals than that of the single mutation of PB2-A588V.",
+PB2-combination_447_5,676M,PB2,,Enhanced the activity of polymerase in avian and mammalian cells.Increased the pathogenicity and transmissibility in chickens and the virulence of mice. ,https://doi.org/10.1111/tbed.14157,"The combined mutations of PB2-F6 (including PB2-I292V, PB2-R389K, PB2-A588V, PB2-T598M, PB2-L648V, and PB2-T676M) obtained higher adaptability of AIVs in avians and mammals than that of the single mutation of PB2-A588V.",
+combination-combination_448_0,186T,H3,36189435,Infected mice and effectively replicated in human lung tissue without prior adaption.,,"The ZZ346 strain with HA variation (P186T, H156R, S263G mutations, and amino acid deletion at position 158) and the 11aa (59–69) deletion in the NA stalk region directly infected mice and effectively replicated in human lung tissue without prior adaption.",
+combination-combination_448_1,156R,H3,36189435,Infected mice and effectively replicated in human lung tissue without prior adaption.,,"The ZZ346 strain with HA variation (P186T, H156R, S263G mutations, and amino acid deletion at position 158) and the 11aa (59–69) deletion in the NA stalk region directly infected mice and effectively replicated in human lung tissue without prior adaption.",
+combination-combination_448_2,263G,H3,36189435,Infected mice and effectively replicated in human lung tissue without prior adaption.,,"The ZZ346 strain with HA variation (P186T, H156R, S263G mutations, and amino acid deletion at position 158) and the 11aa (59–69) deletion in the NA stalk region directly infected mice and effectively replicated in human lung tissue without prior adaption.",
+combination-combination_448_3,158-,H3,36189435,Infected mice and effectively replicated in human lung tissue without prior adaption.,,"The ZZ346 strain with HA variation (P186T, H156R, S263G mutations, and amino acid deletion at position 158) and the 11aa (59–69) deletion in the NA stalk region directly infected mice and effectively replicated in human lung tissue without prior adaption.",
+combination-combination_448_4,"['59-', '60-', '61-', '62-', '63-', '64-', '65-', '66-', '67-', '68-', '69-']",N6,36189435,Infected mice and effectively replicated in human lung tissue without prior adaption.,,"The ZZ346 strain with HA variation (P186T, H156R, S263G mutations, and amino acid deletion at position 158) and the 11aa (59–69) deletion in the NA stalk region directly infected mice and effectively replicated in human lung tissue without prior adaption.",
+combination-combination_449_0,158G,PB2,,PB2 E158G/A and PA L295P amino acid substitutions were responsible for the significant enhancement of transcription and replication activity of the mouse-adapted H1N1 variants.,,PB2 E158G/A and PA L295P amino acid substitutions were responsible for the significant enhancement of transcription and replication activity of the mouse-adapted H1N1 variants.,
+combination-combination_449_0,158A,PB2,,PB2 E158G/A and PA L295P amino acid substitutions were responsible for the significant enhancement of transcription and replication activity of the mouse-adapted H1N1 variants.,,PB2 E158G/A and PA L295P amino acid substitutions were responsible for the significant enhancement of transcription and replication activity of the mouse-adapted H1N1 variants.,
+combination-combination_449_1,295P,PA,,PB2 E158G/A and PA L295P amino acid substitutions were responsible for the significant enhancement of transcription and replication activity of the mouse-adapted H1N1 variants.,,PB2 E158G/A and PA L295P amino acid substitutions were responsible for the significant enhancement of transcription and replication activity of the mouse-adapted H1N1 variants.,
+combination-combination_450_0,225G,H3,23019374,Reverse-genetics studies further indicated that the HA(225G) and NA(315N) substitutions contributed to enhance transmissibility in ferrets and virulence in mice. ,,Reverse-genetics studies further indicated that the HA(225G) and NA(315N) substitutions contributed to enhance transmissibility in ferrets and virulence in mice. ,
+combination-combination_450_1,315N,N2,23019374,Reverse-genetics studies further indicated that the HA(225G) and NA(315N) substitutions contributed to enhance transmissibility in ferrets and virulence in mice. ,,Reverse-genetics studies further indicated that the HA(225G) and NA(315N) substitutions contributed to enhance transmissibility in ferrets and virulence in mice. ,
+combination-combination_451_0,177P,H9,36103978,HA-T187P ​+ ​M227L synergized with PB2–627 ​K increases the virulence of H9N2 in mice.,,HA-T187P ​+ ​M227L synergized with PB2–627K increases the virulence of H9N2 in mice.(H3 numbering),
+combination-combination_451_1,217L,H9,36103978,HA-T187P ​+ ​M227L synergized with PB2–627 ​K increases the virulence of H9N2 in mice.,,HA-T187P ​+ ​M227L synergized with PB2–627K increases the virulence of H9N2 in mice.(H3 numbering),
+combination-combination_451_2,627K,PB2,36103978,HA-T187P ​+ ​M227L synergized with PB2–627 ​K increases the virulence of H9N2 in mice.,,HA-T187P ​+ ​M227L synergized with PB2–627K increases the virulence of H9N2 in mice.(H3 numbering),
+combination-combination_452_0,63T,PB2,21367983,Decreased pathogenicity in mice.,,"The PB2 (I63T) or PB1 (T677M) mutations alone did not alter the phenotype of H5N1 virus, whereas recombinant virus with both mutations was less pathogenic than the wild-type recombinant virus.",
+combination-combination_452_1,677M,PB1,21367983,Decreased pathogenicity in mice.,,"The PB2 (I63T) or PB1 (T677M) mutations alone did not alter the phenotype of H5N1 virus, whereas recombinant virus with both mutations was less pathogenic than the wild-type recombinant virus.",
+combination-combination_453_0,150V,H5,29593694,Increased virulence in mice.,,"Amino acid substitutions HA A150V, PA A343T, and PB2 E627K increase the virulence of H5N6 influenza virus in mice.",
+combination-combination_453_1,343T,PA,29593694,Increased virulence in mice.,,"Amino acid substitutions HA A150V, PA A343T, and PB2 E627K increase the virulence of H5N6 influenza virus in mice.",
+combination-combination_453_2,627K,PB2,29593694,Increased virulence in mice.,,"Amino acid substitutions HA A150V, PA A343T, and PB2 E627K increase the virulence of H5N6 influenza virus in mice.",
+N9,73K,N9,,,,,
+N9,300V,N9,,,,,
+N9-combination_456_0,73K,N9,25850788,Attenuated the virus in vitro.,," In line with the drop in NA and polymerase enzymatic activities, rg-A/Anhui/1/2013 (NAE73K+NAI300V), rg-A/Anhui/1/2013 (PB1D76N+NPI365V) and rg-A/Anhui/1/2013 (NAE73K+NAI300V +PB1D76N+NPI365V) influenza viruses replicated to significantly lower titres than the respective WT strain",1.vitro
+N9-combination_456_1,300V,N9,25850788,Attenuated the virus in vitro.,," In line with the drop in NA and polymerase enzymatic activities, rg-A/Anhui/1/2013 (NAE73K+NAI300V), rg-A/Anhui/1/2013 (PB1D76N+NPI365V) and rg-A/Anhui/1/2013 (NAE73K+NAI300V +PB1D76N+NPI365V) influenza viruses replicated to significantly lower titres than the respective WT strain",1.vitro
+combination-combination_457_0,76N,PB1,25850788,Attenuated the virus in vitro.,," In line with the drop in NA and polymerase enzymatic activities, rg-A/Anhui/1/2013 (NAE73K+NAI300V), rg-A/Anhui/1/2013 (PB1D76N+NPI365V) and rg-A/Anhui/1/2013 (NAE73K+NAI300V +PB1D76N+NPI365V) influenza viruses replicated to significantly lower titres than the respective WT strain",1.vitro
+combination-combination_457_1,365V,NP,25850788,Attenuated the virus in vitro.,," In line with the drop in NA and polymerase enzymatic activities, rg-A/Anhui/1/2013 (NAE73K+NAI300V), rg-A/Anhui/1/2013 (PB1D76N+NPI365V) and rg-A/Anhui/1/2013 (NAE73K+NAI300V +PB1D76N+NPI365V) influenza viruses replicated to significantly lower titres than the respective WT strain",1.vitro
+combination-combination_458_0,73K,N9,25850788,Attenuated the virus in vitro.,," In line with the drop in NA and polymerase enzymatic activities, rg-A/Anhui/1/2013 (NAE73K+NAI300V), rg-A/Anhui/1/2013 (PB1D76N+NPI365V) and rg-A/Anhui/1/2013 (NAE73K+NAI300V +PB1D76N+NPI365V) influenza viruses replicated to significantly lower titres than the respective WT strain",1.vitro
+combination-combination_458_1,300V,N9,25850788,Attenuated the virus in vitro.,," In line with the drop in NA and polymerase enzymatic activities, rg-A/Anhui/1/2013 (NAE73K+NAI300V), rg-A/Anhui/1/2013 (PB1D76N+NPI365V) and rg-A/Anhui/1/2013 (NAE73K+NAI300V +PB1D76N+NPI365V) influenza viruses replicated to significantly lower titres than the respective WT strain",1.vitro
+combination-combination_458_2,76N,PB1,25850788,Attenuated the virus in vitro.,," In line with the drop in NA and polymerase enzymatic activities, rg-A/Anhui/1/2013 (NAE73K+NAI300V), rg-A/Anhui/1/2013 (PB1D76N+NPI365V) and rg-A/Anhui/1/2013 (NAE73K+NAI300V +PB1D76N+NPI365V) influenza viruses replicated to significantly lower titres than the respective WT strain",1.vitro
+combination-combination_458_3,365V,NP,25850788,Attenuated the virus in vitro.,," In line with the drop in NA and polymerase enzymatic activities, rg-A/Anhui/1/2013 (NAE73K+NAI300V), rg-A/Anhui/1/2013 (PB1D76N+NPI365V) and rg-A/Anhui/1/2013 (NAE73K+NAI300V +PB1D76N+NPI365V) influenza viruses replicated to significantly lower titres than the respective WT strain",1.vitro
+M1,132A,M1,,,,,
+H3,299R,H3,,,,,
+H3,HA2-107I,H3,,,,,
+N2,35R,N2,,,,,
+M2,41C,M2,,,,,
+combination-combination_464_0,299R,H3,31600274,"With a combination of these mutations, virus growth further increased not only in CRFK cells but also in other feline fcwf-4 cells.",,"With a combination of these mutations, virus growth further increased not only in CRFK cells but also in other feline fcwf-4 cells.",
+combination-combination_464_1,107I,HA2,31600274,"With a combination of these mutations, virus growth further increased not only in CRFK cells but also in other feline fcwf-4 cells.",,"With a combination of these mutations, virus growth further increased not only in CRFK cells but also in other feline fcwf-4 cells.",
+combination-combination_464_2,35R,N2,31600274,"With a combination of these mutations, virus growth further increased not only in CRFK cells but also in other feline fcwf-4 cells.",,"With a combination of these mutations, virus growth further increased not only in CRFK cells but also in other feline fcwf-4 cells.",
+combination-combination_464_3,41C,M2,31600274,"With a combination of these mutations, virus growth further increased not only in CRFK cells but also in other feline fcwf-4 cells.",,"With a combination of these mutations, virus growth further increased not only in CRFK cells but also in other feline fcwf-4 cells.",
+H3,HA2-117S,H3,,,,,
+H3,138S,H3,,,,,
