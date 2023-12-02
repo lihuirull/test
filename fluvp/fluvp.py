@@ -345,8 +345,6 @@ def renumber_proteins(fasta_path, acc_pro_dict, marker_dict):
 
     return renumbering_results
 
-from collections import defaultdict
-from itertools import product
 
 def merge_dicts_with_list(dict_list):
     """
@@ -407,15 +405,16 @@ def generate_protein_dict(grouped_data):
             new_protein_dict[name] = generate_combinations(group)
         else:
             new_protein_dict[name].extend(
-                {row['Protein']: row['Amino acid site'].strip() if isinstance(row['Amino acid site'], str) else row['Amino acid site']}
+                {row['Protein']: row['Amino acid site'].strip() if isinstance(row['Amino acid site'], str) else row[
+                    'Amino acid site']}
                 for _, row in group.iterrows()
             )
     return new_protein_dict
 
 
 def load_total_markers(data):
-    data["Specific Type"] = data["Protein Type"].str.rsplit("_", n=1).str[-1]
-    data['Protein Type'] = data['Protein Type'].str.replace(r'_\d+$', '', regex=True)
+    data["Specific Type"] = data["Protein Type"].str.rsplit("_", n = 1).str[-1]
+    data['Protein Type'] = data['Protein Type'].str.replace(r'_\d+$', '', regex = True)
     return data.groupby('Protein Type')
 
 
@@ -468,7 +467,8 @@ def format_marker(marker, protein_prefix = ''):
         deletion_suffix = ""
 
     # Combine the protein prefix, amino acid, and deletion suffix.
-    formatted_marker = f"{protein_prefix}-{amino_acid}{deletion_suffix}" if protein_prefix else f"{amino_acid}{deletion_suffix}"
+    formatted_marker = f"{protein_prefix}-{amino_acid}{deletion_suffix}"\
+        if protein_prefix else f"{amino_acid}{deletion_suffix}"
     return formatted_marker
 
 
@@ -574,35 +574,6 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
     final_results = merge_dataframes(results, data, markers_type)
     return final_results
 
-# def merge_dataframes(results, data, markers_type):
-#     # 分割 data DataFrame，并去重
-#     data_with_combination = data[data['Protein Type'].str.contains('combination')].drop_duplicates(subset='Protein Type')
-#     data_with_combination.drop(columns=["Amino acid site"], inplace=True)
-#
-#     data_without_combination = data[~data['Protein Type'].str.contains('combination')]
-#
-#     # 分割 results DataFrame
-#     results_with_combination = results[results['Protein Type'].str.contains('combination')]
-#     results_without_combination = results[~results['Protein Type'].str.contains('combination')]
-#
-#     # 合并含有 'combination' 的部分
-#     merged_with_combination = pd.merge(results_with_combination, data_with_combination, on='Protein Type', how='left')
-#
-#     # 合并不含有 'combination' 的部分
-#     merged_without_combination = pd.merge(results_without_combination, data_without_combination,
-#                                           on=['Protein Type', 'Amino acid site'], how='left')
-#
-#     # 纵向合并两个合并结果
-#     final_results = pd.concat([merged_with_combination, merged_without_combination]).reset_index(drop=True)
-#
-#     # 重命名 'Amino acid site' 列
-#     final_results.rename(columns={'Amino acid site': f'{markers_type.title()} Markers'}, inplace=True)
-#
-#     # 清理 'Protein Type' 列，并删除不需要的列
-#     final_results['Protein Type'] = final_results['Protein Type'].str.split('-combination').str[0]
-#     final_results.drop(columns=["Specific Type", "Protein"], inplace=True)
-#
-#     return final_results
 
 def merge_dataframes(results, data, markers_type):
     """
@@ -646,12 +617,12 @@ def merge_dataframes(results, data, markers_type):
     final_results['Protein Type'] = final_results['Protein Type'].str.replace('-combination.*', '', regex = True)
 
     # Drop unnecessary columns and the helper 'HasCombination' column
-    final_results.drop(columns = ["Specific Type", "Protein", "HasCombination"], inplace = True)
-
+    final_results.drop(columns = ["Specific Type", "Protein", "HasCombination_x", "HasCombination_y"], inplace = True)
+    final_results.dropna(how = "all", inplace = True)
     return final_results
 
 
-def identify_virulence_markers(input_file_path, renumbering_results, marker_markers, acc_pro_dic, markers_type, data,
+def identify_markers(input_file_path, renumbering_results, marker_markers, acc_pro_dic, markers_type, data,
                                output_directory = ".", prefix = ""):
     """
     Identifies virulence markers in protein sequences based on the provided marker markers
@@ -665,7 +636,8 @@ def identify_virulence_markers(input_file_path, renumbering_results, marker_mark
         protein, markers = process_protein_sequence(acc_id, renumbered_position, acc_pro_dic, marker_markers)
         if protein:
             results_markers[protein] = markers
-
+    print('---------------')
+    print(results_markers)
     total_markers = generate_protein_dict(load_total_markers(data))
     results_df = check_marker_combinations(total_markers, results_markers, markers_type, input_file_name, data)
 
@@ -684,8 +656,8 @@ def is_fasta_file(filename):
 def find_files_with_string(directory, string):
     all_items = os.listdir(directory)
     files_with_string = [item for item in all_items
-                         if string in item and os.path.isfile(os.path.join(directory, item)) and item.endswith(
-            "_annotated.csv")]
+                         if string in item and os.path.isfile(os.path.join(directory, item))
+                         and item.endswith("_annotated.csv")]
 
     return files_with_string[0]
 
@@ -723,18 +695,18 @@ def parse_args():
     extract_parser.add_argument('-p', '--prefix', type = str, default = '', help = 'Prefix for the output filenames.')
     extract_parser.add_argument('-type', '--markers_type', type = str, default = "virulence",
                                 help = 'Type of markers. Defaults to virulence type.')
-    # # pred command
-    # pred_parser = subparsers.add_parser('pred', help = 'Predict new data labels using a trained model.')
-    # pred_parser.add_argument('-i', '--input', required = True, type = str,
-    #                          help = 'Input CSV file with marker data or directory containing such files.')
-    # pred_parser.add_argument('-m', '--model_path', default = MODEL_PATH + '/random_forest_model.joblib', type = str,
-    #                          help = 'Path to the trained model file.')
-    # pred_parser.add_argument('-th', '--threshold', default = 0.5, type = float,
-    #                          help = 'Probability threshold for model prediction.')
-    # pred_parser.add_argument('-o', '--output_directory', type = str, default = '.',
-    #                          help = 'Directory to save the prediction results. Defaults to the current directory.')
-    # pred_parser.add_argument('-p', '--prefix', type = str, default = '',
-    #                          help = 'Prefix for the output filenames of the predictions.')
+    # pred command
+    pred_parser = subparsers.add_parser('pred', help = 'Predict new data labels using a trained model.')
+    pred_parser.add_argument('-i', '--input', required = True, type = str,
+                             help = 'Input CSV file with marker data or directory containing such files.')
+    pred_parser.add_argument('-m', '--model_path', default = MODEL_PATH + '/random_forest_model.joblib', type = str,
+                             help = 'Path to the trained model file.')
+    pred_parser.add_argument('-th', '--threshold', default = 0.5, type = float,
+                             help = 'Probability threshold for model prediction.')
+    pred_parser.add_argument('-o', '--output_directory', type = str, default = '.',
+                             help = 'Directory to save the prediction results. Defaults to the current directory.')
+    pred_parser.add_argument('-p', '--prefix', type = str, default = '',
+                             help = 'Prefix for the output filenames of the predictions.')
 
     return parser.parse_args()
 
@@ -772,7 +744,7 @@ def process_extract_cmd(input_file, args, is_directory = True):
         acc_pro_dict = acc_pro_dic,
         marker_dict = marker_dict
     )
-    results_df = identify_virulence_markers(
+    results_df = identify_markers(
         input_file_path = str(input_file),
         renumbering_results = renumbering_results,
         marker_markers = marker_dict,
@@ -783,17 +755,6 @@ def process_extract_cmd(input_file, args, is_directory = True):
         data = data,
     )
 
-    # results_df = identify_virulence_markers(
-    #     input_file_path = str(input_file),
-    #     renumbering_results = renumbering_results,
-    #     marker_markers = marker_dict,
-    #     acc_pro_dic = acc_pro_dic,
-    #     output_directory = args.output_directory,
-    #     prefix = args.prefix,
-    #     markers_type = args.markers_type,
-    #     data = data,
-    # )
-    # print(results_df)
     print("\nMarker extracted and saved to file.")
 
 
@@ -828,19 +789,19 @@ def run_other_subcommand(args):
 
 def main():
     args = parse_args()
-    # if args.subcommand == 'pred':
-    #     predictions = predict_virulence.predict_new_data(
-    #         str(Path(args.input)),
-    #         args.model_path,
-    #         args.threshold,
-    #         DATA_PATH,
-    #         args.output_directory,
-    #         args.prefix,
-    #     )
-    #     print(predictions)
-    #     print(f"Predictions completed.")
-    # else:
-    run_other_subcommand(args)
+    if args.subcommand == 'pred':
+        predictions = predict_virulence.predict_new_data(
+            str(Path(args.input)),
+            args.model_path,
+            args.threshold,
+            DATA_PATH,
+            args.output_directory,
+            args.prefix,
+        )
+        print(predictions)
+        print(f"Predictions completed.")
+    else:
+        run_other_subcommand(args)
 
 
 if __name__ == '__main__':

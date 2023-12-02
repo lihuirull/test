@@ -11,6 +11,27 @@ import pandas as pd
 from joblib import load
 
 MAPPING_DICT = {0: 'Virulent', 1: 'Avirulent'}
+HA_TYPES = [f"H{i}" for i in range(1, 17) if i != 3]
+NA_TYPES = [f"N{i}" for i in range(1, 10) if i != 2]
+
+
+def transform_df(df):
+    df = df[~df.loc[:, "Virulence Markers"].str.contains("&")]
+    # 按 'Strain ID' 分组，然后聚合 'Virulence Markers' 并计算数量
+    transformed = df.groupby('Strain ID').agg({
+        'Virulence Markers': lambda x: ','.join(x),
+        'Protein Type': lambda x: ','.join(x)
+    }).reset_index()
+
+    # 计算 'Adaptive Markers' 的数量
+    transformed['Number of Virulence markers'] = transformed['Virulence Markers'].apply(lambda x: len(x.split(',')))
+
+    # 格式化 'Protein Type'
+    transformed['Protein Type'] = transformed['Protein Type'].apply(
+        lambda pt: f'{pt}(H3 numbering)' if pt in HA_TYPES else (f'{pt}(N2 numbering)' if pt in NA_TYPES else pt)
+    )
+
+    return transformed
 
 
 def explode_markers(df, input_marker_path, output_directory, prefix):
@@ -30,6 +51,7 @@ def explode_markers(df, input_marker_path, output_directory, prefix):
     input_marker_filename = os.path.basename(input_marker_path).rsplit(".", 1)[0]
 
     # Read the CSV file into a DataFrame
+    df = transform_df(df)
     df_original = df.copy()
 
     # Group and sum the 'Number of Virulence markers' by 'Strain ID'
