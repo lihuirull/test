@@ -668,7 +668,7 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
             ha_type = pro
         elif pro in NA_TYPES:
             na_type = pro
-    print(results_markers)
+
     ori_markers = generate_protein_dict(load_total_markers(data))
     total_markers = defaultdict(list)
     for pro, lst in ori_markers.items():

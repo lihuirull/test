@@ -148,7 +148,7 @@ def process_human_residues_v3(row, index, other_columns):
             suffix = rest.split(']')[1] if ']' in rest else ''
             for variant in variants:
                 new_residue = f"{prefix}{variant}{suffix}"
-                processed_rows.append((protein, new_residue, protein))
+                processed_rows.append((protein, new_residue, protein, *other_data.values()))
         else:
             # 处理删除类型的残基
             if "Deletion" in residues:

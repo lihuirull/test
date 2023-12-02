@@ -3,8 +3,8 @@ PB2,109V,PB2,,Increased polymerase activity and replication efficiency in mammal
 PB2,133V,PB2,,Increased polymerase activity and replication efficiency in mammalian and avian hosts as well as pathogenicity in mice.,https://doi.org/10.1038/s41598-017-09560-z,"We identified the novel amino acid mutations I66M, I109V, and I133V, which increased polymerase activity and replication efficiency in mammalian and avian hosts as well as pathogenicity in mice both independently and in combination. ",
 PB2-combination_2_0,147L,PB2,PMID:22808250,The combination of M147L and E627K significantly enhanced viral replication ability and virulence in mice. The combination of PB2 amino acids at position 147 and 627 is critical for the increased pathogenicity of H9N2 influenza virus in mammalian host.,,,
 PB2-combination_2_1,627K,PB2,PMID:22808250,The combination of M147L and E627K significantly enhanced viral replication ability and virulence in mice. The combination of PB2 amino acids at position 147 and 627 is critical for the increased pathogenicity of H9N2 influenza virus in mammalian host.,,,
-PB2,147T,PB2,,,,,
-PB2,147L,PB2,,,,,
+PB2,147T,PB2,PMID:29593225,Increased polymerase activity,,,1.polymerase activity
+PB2,147L,PB2,PMID:29593225,Increased polymerase activity,,,1.polymerase activity
 PB2,158G,PB2,PMID:20962098,A glutamate-to-glycine substitution at residue 158 of the PB2 gene (PB2-E158G) increased the morbidity and mortality of the parental H1N1pdm virus.,,,
 PB2,158K,PB2,,"Increased polymerase activity, enhanced replication and virulence in mice.",https://doi.org/10.1099/jgv.0.001192,"Further studies showed that the introduction of E158K and/or E627K substitutions into PB2 significantly increased polymerase activity, which led to the enhanced replication and virulence of BJ21-MA. ",
 PB2,191E,PB2,PMID:29669294,Associated with the fifth wave of H7N9 epidemic.,,,
@@ -34,8 +34,8 @@ PB2,292V,PB2,PMID:31305236,"In human cells, H9N2 virus with PB2-292V mutation ha
 PB2,309D,PB2,PMID:29593225,Increased polymerase activity,,,1.polymerase activity
 PB2,318K,PB2,PMID:19625397,The residue is related to virulence.,,,
 PB2,339T,PB2,,K339T reduced PB2 cap-binding activity and influenza polymerase activity in vitro and also attenuated virulence in mice,https://doi.org/10.1074/jbc.M112.392878,"Further functional studies confirmed that Thr339-PB2-containing ribonucleoprotein complex has a reduced influenza polymerase activity and RNA synthesis activity, and a reconstituted H5N1 virus containing the Thr339 substitution exhibited a lower virulence to mice but more active replication in Madin-Darby canine kidney cells. ",
-PB2,339T,PB2,,,,,
-PB2,339M,PB2,,,,,
+PB2,339T,PB2,PMID:29593225,Increased polymerase activity,,,1.polymerase activity
+PB2,339M,PB2,PMID:29593225,Increased polymerase activity,,,1.polymerase activity
 NS1,205R,NS1,CDC&PMID:20862325,Decreased antiviral response in host (when coupled with NS2 Met51Ile).Both serine at position 200 and arginine at position 205 of NS1 contribute to the enhanced type I IFN antagonistic property of UT3062 that leads to high virulence in ferrets. ,,,
 H3,218E,H3,,Enhanced growth in both cells and eggs.,https://doi.org/10.1128/JVI.00570-19," we introduced G218E into the HA of rgGD17 and achieved significantly improved virus growth in both MDCK cells (68.3% increase, Fig. 1C and D) and eggs (170% increase, Fig. 1E) compared to rgGD17.(H3 numbering)",1.growth
 PB2,631L,PB2,28597818,PB2-M631L was functionally the most dominant mutation in that it strongly upregulated viral polymerase activity and played a critical role in the enhancement of virus replication and disease severity in mice.,,PB2-M631L was functionally the most dominant mutation in that it strongly upregulated viral polymerase activity and played a critical role in the enhancement of virus replication and disease severity in mice.,
@@ -64,18 +64,18 @@ PB2-combination_46_1,288Q,PB2,,Enhanced virus replication in the CK2A background
 H1,222G,H1,PMID:20844044,pdmH1N1 with D222G caused ocular disease in mice without further indications of enhanced virulence in mice and ferrets.,,,
 H5,222L,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
 H3,222L,H3,PMID:23994833,"These data suggest the W to L mutation at position 222 of the HA could facilitate infection of H3N2 IAV in dogs, possibly by increasing the binding affinities of the HA to specific receptors with Neu5Aca2-3Galb1-4(Fuca-) or Neu5Aca2-3Galb1-3(Fuca-)-like structures that are present in dogs.W222L increased infectivity and replication efficiency of H3N2 IAV in vitro.",,,1.receptor binding;2.replication efficiency
-PB2,535T,PB2,,,,,
-PB2,535L,PB2,,,,,
+PB2,535T,PB2,PMID:29593225,Increased polymerase activity.,,,1.polymerase activity
+PB2,535L,PB2,PMID:29593225,Increased polymerase activity.,,,1.polymerase activity
 PB2,559T,PB2,PMID:29669294,Associated with the fifth wave of H7N9 epidemic,,,
 PB2,588V,PB2,,Enhanced the activity of polymerase in avian and mammalian cells.Increased the pathogenicity and transmissibility in chickens and the virulence of mice. ,https://doi.org/10.1111/tbed.14157,"Among them, PB2-A588V significantly enhanced the activity of polymerase in avian and mammalian cells.Notably, animal experiments showed that PB2-A588V substitution increased the pathogenicity and transmissibility in chickens and the virulence of mice. ",
-PB2,588I,PB2,,,,,
-PB2,588T,PB2,,,,,
-PB2,588V,PB2,,,,,
+PB2,588I,PB2,PMID:25289523&PMID:29669294&PMID:24522908,"588I contributes to virus replication in mammalian cells. 588T in PB2 play critical roles in the virulence of avian H5N1 influenza viruses in a mammalian host in vitro and in vivo and  PB2-A588V enhanced the pathogenicity of H7N9, H10N8, and H9N2 viruses in mice",,,
+PB2,588T,PB2,PMID:25289523&PMID:29669294&PMID:24522908,"588I contributes to virus replication in mammalian cells. 588T in PB2 play critical roles in the virulence of avian H5N1 influenza viruses in a mammalian host in vitro and in vivo and  PB2-A588V enhanced the pathogenicity of H7N9, H10N8, and H9N2 viruses in mice",,,
+PB2,588V,PB2,PMID:25289523&PMID:29669294&PMID:24522908,"588I contributes to virus replication in mammalian cells. 588T in PB2 play critical roles in the virulence of avian H5N1 influenza viruses in a mammalian host in vitro and in vivo and  PB2-A588V enhanced the pathogenicity of H7N9, H10N8, and H9N2 viruses in mice",,,
 PB2-combination_54_0,590S,PB2,PMID:29593225,"Increased polymerase activity, enhanced pathogenicity in mice",,,
 PB2-combination_54_1,591R,PB2,PMID:29593225,"Increased polymerase activity, enhanced pathogenicity in mice",,,
 PB2,591K,PB2,CDC&PMID:20700447,Enhanced replication efficiency and increased virulence in mice.,,,
-PB2,598T,PB2,,,,,
-PB2,598I,PB2,,,,,
+PB2,598T,PB2,PMID:27889648,The PB2-V598T/I substitutions substantially increased virus replication and virulence in mice,,,
+PB2,598I,PB2,PMID:27889648,The PB2-V598T/I substitutions substantially increased virus replication and virulence in mice,,,
 PB2,309N,PB2,34963076,PB2D309N and HAL425M enhanced the virulence of rH1N1 virus in mice,,,
 PB2-combination_58_0,627K,PB2,PMID:19625397&PMID:19119420,"When PB2 627 is a glutamic acid residue, the D701N mutation not only improves viral growth in mammalian cells, but enhances transmission between guinea pigs.",,,
 PB2-combination_58_1,701N,PB2,PMID:19625397&PMID:19119420,"When PB2 627 is a glutamic acid residue, the D701N mutation not only improves viral growth in mammalian cells, but enhances transmission between guinea pigs.",,,
@@ -211,8 +211,8 @@ PA,383D,PA,PMID:21177821,The amino acid 383D in PA increased the polymerase acti
 PA-combination_153_0,38M,PA,PMID:25275121,A combination of HA(H156N S263R) with PA(I38M) in the GDK6 backbone led to a significantly more virulent variant. ,,,
 PA-combination_153_1,156N,PA,PMID:25275121,A combination of HA(H156N S263R) with PA(I38M) in the GDK6 backbone led to a significantly more virulent variant. ,,,
 PA-combination_153_2,263R,PA,PMID:25275121,A combination of HA(H156N S263R) with PA(I38M) in the GDK6 backbone led to a significantly more virulent variant. ,,,
-PA,38T,PA,,,,,
-PA,38F,PA,,,,,
+PA,38T,PA,,Decreased replication in cells among all viruses,https://doi.org/10.1073/pnas.1916825117," The 38T/F substitutions decreased replication in cells among all viruses, whereas 38M had minimal impact. ",
+PA,38F,PA,,Decreased replication in cells among all viruses,https://doi.org/10.1073/pnas.1916825117," The 38T/F substitutions decreased replication in cells among all viruses, whereas 38M had minimal impact. ",
 PA,394D,PA,PMID:29669294,Associated with the fifth wave of H7N9 epidemic,,,
 PA,400P,PA,PMID:27105450,Reduced the virulence of H7N3 virus,,,
 PA,409S,PA,PMID:24371069, PA-409S residue resulted in slightly increased replication and/or virulence in human cells and/or mice in the background of Anhui/1.,,,1.replicative ability
@@ -271,8 +271,8 @@ NS1,149A,NS1,,V149A increases virulence in chickens.,https://doi.org/10.1128/JVI
 NS1,159E,NS1,,Increased pathogenicity in mice.,https://doi.org/10.1016/j.meegid.2016.01.022,"The selective accumulation of identical amino acid substitutions in all mouse-adapted variants, including PB2 (K251R), PB1 (V652A), NP (I353V), NA (I106V, N248D) and NS1 (G159E), contributed to increased pathogenicity during the adaptation of the pandemic A(H1N1)pdm09 virus.",1. Amino acid differences
 NS1,184P,NS1,,Reduced pathogenicity.,https://doi.org/10.1016/j.virol.2021.11.001,"In summary, cell viability, cytotoxicity and apoptosis data suggest that the NS1-Q121A and NS1-G184P mutations may potentially reduce the pathogenicity of the resultant recombinant viruses in vitro.",
 NS1,189N,NS1,PMID:19625397,The residue is related to virulence.,,,
-NS1,195T,NS1,,,,,
-NS1,195Y,NS1,,,,,
+NS1,195T,NS1,PMID:19625397,The residue is related to virulence.,,,
+NS1,195Y,NS1,PMID:19625397,The residue is related to virulence.,,,
 NS1,196E,NS1,,The K-196-to-E exchange on interferon induction and virus virulence.Enhanced virulence in vivo.,https://doi.org/10.1099/jgv.0.001422,Our analysis showed a clear additive effect of the two variations in NS1 on viral IFN induction and pathogenicity.  Our analyses showed a clear effect of the K-196-to-E exchange on interferon induction and virus virulence.,
 PA,550L,PA,,"Increased polymerase activity,enhanced pathogenicity in mice",https://doi.org/10.1128/JVI.00212-09,"We found that two conservative mutations, one in PB2 (I504V) and one in PA (I550L), account for the high-virulence phenotype and that each single mutation considerably increases the activity of the reconstituted polymerase complex. ",
 NS1,205N,NS1,,S205N attenuated relative to wild-type (WT) virus replication in a porcine cell line. ,https://doi.org/10.1128/jvi.02369-20," Replication of PR8 NS1 mutants was attenuated relative to wild-type (WT) virus replication in a porcine cell line. However, PR8 NS1 S205N showed remarkably higher attenuation than PR8 NS1 S205G in a human cell line, highlighting a potential host-independent advantage of phosphorylatable S205, while an asparagine at this position led to a potential host-specific attenuation. ",
@@ -335,8 +335,8 @@ N2,292K,N2,32750468,Increased virus titer.,https://doi.org/10.1016/j.antiviral.2
 N3,293K,N3,PMID:26246579&292 in paper numbering,"These findings show that although the R293K substitution contributed significantly to virulence by increasing the IVPI, it only partially enhanced the contact transmission characteristics of the virus.Introducing the R293K mutation into the original low-pathogenicity rH5N3 increased its virulence.",,,
 N2,144C,N2,,Increased the virus titers in three mammalian cell lines .,https://doi.org/10.1128/jvi.01416-19,"To characterize bat influenza H18N11 virus, we propagated a reverse genetics-generated H18N11 virus in Madin-Darby canine kidney subclone II cells and detected two mammal-adapting mutations in the neuraminidase (NA)-like protein (NA-F144C and NA-T342A, N2 numbering) that increased the virus titers in three mammalian cell lines .",
 N2,342A,N2,,Increased the virus titers in three mammalian cell lines .,https://doi.org/10.1128/jvi.01416-19,"To characterize bat influenza H18N11 virus, we propagated a reverse genetics-generated H18N11 virus in Madin-Darby canine kidney subclone II cells and detected two mammal-adapting mutations in the neuraminidase (NA)-like protein (NA-F144C and NA-T342A, N2 numbering) that increased the virus titers in three mammalian cell lines .",
-N2,28S,N2,,,,,
-N2,28L,N2,,,,,
+N2,28S,N2,35632832,Enhance viral growth in A549 cells,,"The NA mutations, NA-I28S/L and NA-Δ3436, that enhanced growth were detected in Aad viruses located in the transmembrane region.",
+N2,28L,N2,35632832,Enhance viral growth in A549 cells,,"The NA mutations, NA-I28S/L and NA-Δ3436, that enhanced growth were detected in Aad viruses located in the transmembrane region.",
 N2,34-,N2,35632832,Enhance viral growth in A549 cells,,"The NA mutations, NA-I28S/L and NA-Δ3436, that enhanced growth were detected in Aad viruses located in the transmembrane region.",
 N2,54-,N2,PMID:20826691,This stalk deletion was shown to be responsible for the change in virus tropism from the intestine to the respiratory tract in chickens.,,,1.chicken
 N2-combination_261_0,368E,N2,25928577,"Four amino acid mutations (D368E, S370L, E313K and G381D) within the head region of the SD01 NA, reduced virus replication in the respiratory tract of chickens, reduced virus NA activity, and resulted in a loss of airborne transmission ability in chickens. . ",,"Four amino acid mutations (D368E, S370L, E313K and G381D) within the head region of the SD01 NA, reduced virus replication in the respiratory tract of chickens, reduced virus NA activity, and resulted in a loss of airborne transmission ability in chickens.",1.chicken
@@ -393,8 +393,8 @@ H9,313D,H9,25782865,Decreased the virulence of mouse-adapted virus.,,"however, t
 H9,496S,H9,25782865,Decreased the virulence of mouse-adapted virus.,,"however, the HA-N313D and N496S substitutions alone decreased the virulence of mouse-adapted virus.",
 H9,132D,H9,,HA-N132D and HA-N198S are involved in mouse pathogenicity.,https://doi.org/10.3390/v10110653,"These data demonstrate that, although both HA-N132D and HA-N198S are involved in mouse pathogenicity, the latter had a stronger role than the former.",
 H9,166D,H9,,The N166D mutation in HA of H9N2 attenuates the viral pathogenesis in mice,https://doi.org/10.3390/v11080709,These observations suggest that the N166D mutation in HA of H9N2 attenuates the viral pathogenesis in mice,
-H9,180T,H9,,,,,
-H9,180V,H9,,,,,
+H9,180T,H9,PMID:30561311,"Causing significant antigenic change facilitating immune escape from vaccination, a 3500-fold increase in binding to avian receptors and over 20-fold increase in binding to the human-like receptor",,,1.receptor binding
+H9,180V,H9,PMID:30561311,"Causing significant antigenic change facilitating immune escape from vaccination, a 3500-fold increase in binding to avian receptors and over 20-fold increase in binding to the human-like receptor",,,1.receptor binding
 H9,198S,H9,,HA-N132D and HA-N198S are involved in mouse pathogenicity.,https://doi.org/10.3390/v10110653,"These data demonstrate that, although both HA-N132D and HA-N198S are involved in mouse pathogenicity, the latter had a stronger role than the former.",
 H9,46E,H9,PMID:26552719&46 in paper numbering,The HA2-D46E substitution enhanced binding to both avian- and human-type receptors.,,,1.receptor binding
 H7,16Q,H7,35632832,Enhanced growth in A549 cells.,,"Among them, the HA1-H16Q mutation displayed the strongest effect on growth enhancement, albeit to a slightly lower level than rAad-1. ",
@@ -450,8 +450,8 @@ H5,HA2-58I,H5,19923184,"The HA-K582I mutant virus had greater growth and virulen
 H5,133A,H5,CDC&PMID:17690300,Increased psuedovirus binding to  α2-6.,,,1.receptor binding
 H5,134V,H5,CDC&PMID:21343450&PMID:18632950,"134V Increased infectivity in SIAT Cellsand enhanced growth on MDCK-SIAT1 cells, emerged in the course of virus replication in a patient (fatal case).",,,
 H5,138V,H5,,"The А138V mutation provides the high virulence, thermostability and enhanced reproduction of the virus in the temperature range from 33 to 40°С. ",https://doi.org/10.1134/s0026893320060126,"The А138V mutation provides the high virulence, thermostability and enhanced reproduction of the virus in the temperature range from 33 to 40°С. The I155T and K156E+V138A mutations contribute to viral reproduction at the lower temperature (33°C) with the maintenance of high virulence. ",
-H5,138L,H5,,,,,
-H5,138N,H5,,,,,
+H5,138L,H5,PMID:19625397,The residue is related to virulence.,,,
+H5,138N,H5,PMID:19625397,The residue is related to virulence.,,,
 H5-combination_328_0,139R,H5,CDC&PMID:17108965&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
 H5-combination_328_1,182K,H5,CDC&PMID:17108965&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
 H5,139R,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
@@ -480,8 +480,8 @@ H5-combination_339_0,156A,H5,CDC&PMID:20427525,Increased virus binding to  α2-6
 H5-combination_339_1,222L,H5,CDC&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
 H5-combination_340_0,156A,H5,CDC&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
 H5-combination_340_1,223N,H5,CDC&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
-H5,156T,H5,,,,,
-H5,156S,H5,,,,,
+H5,156T,H5,PMID:19625397,The residue is related to virulence.,,,
+H5,156S,H5,PMID:19625397,The residue is related to virulence.,,,
 H5,160T,H5,,The other H5N6 reassortant virus Y6-P-160A appeared slightly more pathogenic than its corresponding HA mutant RY6-P-160T. ,https://doi.org/10.1016/j.vetmic.2018.03.018,The other H5N6 reassortant virus Y6-P-160A appeared slightly more pathogenic than its corresponding HA mutant RY6-P-160T as the former caused 100% mortality at a dosage of 106 EID50 within 4 days whereas the latter showed a survival rate of 60%.,
 H5-combination_343_0,182K,H5,CDC&PMID:17108965&PMID:20392847,Increased virus binding to  α2-6 and enhanced replication.,,,
 H5-combination_343_1,182D,H5,CDC&PMID:17108965&PMID:20392847,Increased virus binding to  α2-6 and enhanced replication.,,,
@@ -518,8 +518,8 @@ H5-combination_355_0,189R,H5,CDC&PMID:18672252&PMID:21397290,Increased virus bin
 H5-combination_355_1,222L,H5,CDC&PMID:18672252&PMID:21397290,Increased virus binding to  α2-6.The DSLS and RLS HA mutations attenuated VN1203 virus virulence in ferrets.,,,
 H5-combination_355_2,224S,H5,CDC&PMID:18672252&PMID:21397290,Increased virus binding to  α2-6.The DSLS and RLS HA mutations attenuated VN1203 virus virulence in ferrets.,,,
 H5,189R,H5,CDC&PMID:20427525,Increased virus binding to  α2-6.,,,1.receptor binding
-H5,186A,H5,,,,,
-H5,186K,H5,,,,,
+H5,186A,H5,,Increased the virus titers in MDCK cells.,https://doi.org/10.1128/jvi.00195-20,"In contrast, viruses E190A and E190K showed approximately 10-fold higher virus titers than the WT.(H3 numbering)",
+H5,186K,H5,,Increased the virus titers in MDCK cells.,https://doi.org/10.1128/jvi.00195-20,"In contrast, viruses E190A and E190K showed approximately 10-fold higher virus titers than the WT.(H3 numbering)",
 H5,154N,H5,28100622,Increases its virulence in mice ,,the G158N mutation introduced an N-linked glycosylation at positions 158 to 160 of the HA protein and that this N-linked glycosylation enhanced viral productivity in infected mammalian cells and induced stronger host immune and inflammatory responses to viral infection.,
 H5-combination_359_0,192R,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
 H5-combination_359_1,222L,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
@@ -530,14 +530,14 @@ H5-combination_360_1,222L,H5,CDC&PMID:20392847&PMID:22056389,Increased virus bin
 H5-combination_360_2,224S,H5,CDC&PMID:20392847&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
 H5-combination_361_0,192R,H5,CDC&PMID:20392847&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
 H5-combination_361_1,223N,H5,CDC&PMID:20392847&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
-H5,192R,H5,,,,,
-H5,192H,H5,,,,,
+H5,192R,H5,CDC&PMID:17108965&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
+H5,192H,H5,CDC&PMID:17108965&PMID:22056389,Increased virus binding to  α2-6.,,,1.receptor binding
 H5-combination_363_0,193K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
 H5-combination_363_1,497K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
 H5,193K,H5,CDC&PMID:17108965,Increased virus binding to  α2-6.,,,1.receptor binding
 H5,210I,H5,CDC&PMID:21637809,Increased virus binding to  α2-6.,,,1.receptor binding
-H5,212E,H5,,,,,
-H5,212R,H5,,,,,
+H5,212E,H5,PMID:19625397,The residue is related to virulence.,,,
+H5,212R,H5,PMID:19625397,The residue is related to virulence.,,,
 PB1,709I,PB1,,Increased polymerase activity.,https://doi.org/10.1111/tbed.14161,The PB1 V709I or PB1 V113A/K586R/D619N/V709I induced higher polymerase activity of HK/68 in human cells. And the four mutations acted cooperatively that had an increased replication capacity in vitro and in vivo at an early stage of infection. ,1.polymerase activity
 H5-combination_368_0,222L,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
 H5-combination_368_1,223N,H5,CDC&PMID:20392847,Increased virus binding to  α2-6.,,,1.receptor binding
