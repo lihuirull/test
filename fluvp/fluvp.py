@@ -569,15 +569,13 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
                     'Amino acid site': markers_formated,
                     'Protein Type': marker_protein_type,
                 })
+
     results = pd.DataFrame(results)
 
     # results.set_index('Protein Type', inplace = True)
     # data.set_index('Protein Type', inplace = True)
     # results = results.merge(data, left_index = True, right_index = True, how = 'left')
     # results.reset_index(inplace = True)
-    import pandas as pd
-
-    # 假设 data 和 results 是已经存在的DataFrame
 
     # 分割 data DataFrame，并去重
     data_with_combination = data[data['Protein Type'].str.contains('combination')].drop_duplicates(
