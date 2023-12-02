@@ -556,7 +556,7 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
     results.append(initial_data)
 
     # Splitting the "Protein Type" column in data DataFrame
-    data.loc[:, "Protein Type"] = data.loc[:, "Protein Type"].str.rsplit("-", 1).str[0]
+    data.loc[:, "Protein Type"] = data.loc[:, "Protein Type"].str.rsplit("_", 1).str[0]
 
     # 逐一检查该种表型的每一类型的标志物是否存在于序列中识别到的标志物字典。
     for marker_protein_type, marker_list in total_markers.items():

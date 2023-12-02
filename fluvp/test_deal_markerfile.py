@@ -441,3 +441,7 @@ for i,j in new_protein_dict.items():
 # for s in t:
 #     res = process_dictionary(s)
 #     print(res)
+data = pd.read_csv("../data/markers_for_extract/mammalian_virulence_formated.csv")
+# Splitting the "Protein Type" column in data DataFrame
+data.loc[:, "Protein Type"] = data.loc[:, "Protein Type"].str.rsplit("-", 1).str[0]
+print(data.loc[:,"Protein Type"].tolist())
