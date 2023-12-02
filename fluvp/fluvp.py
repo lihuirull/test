@@ -550,7 +550,7 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
     # Initialize results with empty/default values
     initial_data = {
         'Strain ID': '',  # or some default value
-        f'{markers_type.title()} Markers': '',  # or some default value
+        'Amino acid site': '',  # or some default value
         'Protein Type': ''  # or some default value
     }
     results.append(initial_data)
@@ -566,28 +566,32 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
                 markers_formated = process_dictionary(proba_comb)
                 results.append({
                     'Strain ID': input_file_name.split(".")[0],
-                    f'{markers_type.title()} Markers': markers_formated,
+                    'Amino acid site': markers_formated,
                     'Protein Type': marker_protein_type,
                 })
     results = pd.DataFrame(results)
 
-    results.set_index('Protein Type', inplace = True)
-    data.set_index('Protein Type', inplace = True)
-    results = results.merge(data, left_index = True, right_index = True, how = 'left')
-    results.reset_index(inplace = True)
-    # 假设 'Protein Type' 是原来在第三列的位置
-    # 获取所有列的列表
-    columns = list(results.columns)
+    # results.set_index('Protein Type', inplace = True)
+    # data.set_index('Protein Type', inplace = True)
+    # results = results.merge(data, left_index = True, right_index = True, how = 'left')
+    # results.reset_index(inplace = True)
+    # 分割并去重 data DataFrame
+    data_with_combination = data[data['Protein Type'].str.contains('combination')].drop_duplicates(
+        subset = 'Protein Type')
+    data_without_combination = data[~data['Protein Type'].str.contains('combination')]
 
-    # 移除 'Protein Type'
-    columns.remove('Protein Type')
+    # 使用 pd.merge 合并含有 'combination' 的部分
+    results_with_combination = pd.merge(results, data_with_combination, on = 'Protein Type', how = 'left')
 
-    # 在特定位置插入 'Protein Type'
-    # 这里的 2 表示它将被放置在第三列的位置（因为索引从0开始）
-    columns.insert(2, 'Protein Type')
+    # 使用 pd.merge 合并不含有 'combination' 的部分
+    results_without_combination = pd.merge(results, data_without_combination, on = ['Protein Type', 'Amino acid site'],
+                                           how = 'left')
 
-    # 重新排列DataFrame的列
-    results = results[columns]
+    # 纵向合并两个合并结果
+    results = pd.concat([results_with_combination, results_without_combination])
+
+    # 重命名 'Amino acid site' 列
+    results.rename(columns = {'Amino acid site': f'{markers_type.title()} Markers'}, inplace = True)
 
     return results
 
