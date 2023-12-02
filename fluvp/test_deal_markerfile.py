@@ -155,10 +155,10 @@ def process_human_residues_v3(row, index, other_columns):
                 if "Any" in residues:
                     residues = process_deletion(residues)
                     for single_deletion in residues:
-                        processed_rows.append((protein, single_deletion, protein))
+                        processed_rows.append((protein, single_deletion, protein, *other_data.values()))
                 else:
                     residues = process_deletion(residues)
-            processed_rows.append((protein, residues, protein))
+            processed_rows.append((protein, residues, protein, *other_data.values()))
 
     return processed_rows
 
@@ -312,7 +312,7 @@ def main(input_file, output_file):
 
 # 调用主函数
 if __name__ == '__main__':
-    new_protein_dict = main("../data\markers_for_extract\mammalian_virulence.xlsx", "output_file.csv")
+    new_protein_dict = main("../data\markers_for_extract\mammalian_virulence.xlsx", "../data\markers_for_extract\mammalian_virulence_formated.csv")
 
 t = [{'N1': '106I'}, {'N1': '219Q'}, {'N1': '36-'}, {'N1': '44Q'}, {'N1': '49-'}, {'N1': '49-'}, {'N1': '50-'},
      {'N1': '51-'}, {'N1': '52-'}, {'N1': '53-'}, {'N1': '54-'}, {'N1': '55-'}, {'N1': '56-'}, {'N1': '57-'},

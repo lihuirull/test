@@ -631,8 +631,8 @@ def merge_dataframes(results, data, markers_type, ha_type, na_type):
 
     final_results['Protein Type'] = final_results['Protein Type'].apply(lambda x: get_hana_string(x, ha_type, na_type))
     # Drop unnecessary columns and the helper 'HasCombination' column
-    final_results.drop(columns = ["Specific Type", "Protein", "HasCombination_x", "HasCombination_y"], inplace = True)
-    final_results.dropna(how = "all", inplace = True)
+    final_results.drop(columns = ["Specific Type", "Protein", "HasCombination_x", "HasCombination_y", "HasCombination"], inplace = True)
+    final_results.dropna(how = "all", inplace = True).drop_duplicates(inplace = True)
     return final_results
 
 
