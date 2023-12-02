@@ -463,7 +463,7 @@ def compare_dicts_updated(dict1, dict2):
     return True
 
 
-dic2 = {'H2(H3 numbering)': ['216E', '223V', '146S', '263R', '225G', '229R'], 'M1': ['43M', '215A'],
+dic2 = {'H3': ['216E', '223V', '146S', '263R', '225G', '229R'], 'M1': ['43M', '215A'],
         'M2': ['82S', '24D'], 'N1(N2 numbering)': [],
         'NP': ['482S', '184K', '437T', '105V', '253I', '373T', '133L', '286A'],
         'PA': ['383D', '224S', '190S', '550L', '237E', '321N', '149S', '295P', '409S', '394D', '330I', '100V'],
@@ -561,7 +561,7 @@ print('-'*50)
 print(total_markers)
 for i, j in total_markers.items():
 # print(f"{i}开始了")
-    if i == 'PB1-combination_104':
+#     if i == 'PB1-combination_104':
         for s in j:
             # if (type(s) == str):
             #     print(s)
