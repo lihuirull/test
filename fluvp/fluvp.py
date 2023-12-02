@@ -578,6 +578,7 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
     # 分割并去重 data DataFrame
     data_with_combination = data[data['Protein Type'].str.contains('combination')].drop_duplicates(
         subset = 'Protein Type')
+    data_with_combination.drop("Amino acid site",inplace = True)
     data_without_combination = data[~data['Protein Type'].str.contains('combination')]
 
     # 使用 pd.merge 合并含有 'combination' 的部分
@@ -586,8 +587,10 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
     # 使用 pd.merge 合并不含有 'combination' 的部分
     results_without_combination = pd.merge(results, data_without_combination, on = ['Protein Type', 'Amino acid site'],
                                            how = 'left')
+
     print(results_with_combination)
     print(results_without_combination)
+    print('----------------------------')
     # 纵向合并两个合并结果
     results = pd.concat([results_with_combination, results_without_combination])
 
