@@ -576,13 +576,13 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
         for proba_comb in marker_list:
             # 如果这个字典的键值对在识别到的标志物字典中存在，则返回一个更简洁的格式
             if is_subset_complex(proba_comb, results_markers):
-                print(proba_comb)
-                markers_formated = process_dictionary(proba_comb)
-                results.append({
-                    'Strain ID': input_file_name.split(".")[0],
-                    'Amino acid site': markers_formated,
-                    'Protein Type': marker_protein_type,
-                })
+                if proba_comb and all(proba_comb.values()):
+                    markers_formated = process_dictionary(proba_comb)
+                    results.append({
+                        'Strain ID': input_file_name.split(".")[0],
+                        'Amino acid site': markers_formated,
+                        'Protein Type': marker_protein_type,
+                    })
 
     results = pd.DataFrame(results)
     final_results = merge_dataframes(results, data, markers_type, ha_type, na_type)
