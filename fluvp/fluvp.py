@@ -586,7 +586,8 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
     # 使用 pd.merge 合并不含有 'combination' 的部分
     results_without_combination = pd.merge(results, data_without_combination, on = ['Protein Type', 'Amino acid site'],
                                            how = 'left')
-
+    print(results_with_combination)
+    print(results_without_combination)
     # 纵向合并两个合并结果
     results = pd.concat([results_with_combination, results_without_combination])
 
@@ -612,9 +613,9 @@ def identify_virulence_markers(input_file_path, renumbering_results, marker_mark
             results_markers[protein] = markers
 
     total_markers = generate_protein_dict(load_total_markers(data))
-    results = check_marker_combinations(total_markers, results_markers, markers_type, input_file_name, data)
+    results_df = check_marker_combinations(total_markers, results_markers, markers_type, input_file_name, data)
 
-    results_df = pd.DataFrame(results)
+    # results_df = pd.DataFrame(results)
     add_prefix = prefix + "_" if prefix else ""
     filename = add_prefix + input_file_name.split(".")[0] + "_markers.csv"
     results_df.to_csv(f"{output_directory}/{filename}", index = False)
