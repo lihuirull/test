@@ -578,7 +578,7 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
     # 分割并去重 data DataFrame
     data_with_combination = data[data['Protein Type'].str.contains('combination')].drop_duplicates(
         subset = 'Protein Type')
-    data_with_combination.drop("Amino acid site",inplace = True)
+    data_with_combination.drop(columns = "Amino acid site",inplace = True, axis = 1)
     data_without_combination = data[~data['Protein Type'].str.contains('combination')]
 
     # 使用 pd.merge 合并含有 'combination' 的部分
