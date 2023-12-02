@@ -413,6 +413,14 @@ def generate_protein_dict(grouped_data):
 
 
 def load_total_markers(data):
+    # for row in data.iterrow():
+    #     if row["Protein type"] in HA_TYPES:
+    #         protein = row['Protein type']
+    #         mapping_data = pd.read_csv(f"{STRUCTURE_PATH}/H3_{protein}.txt", sep = "\t", header = None,
+    #                                    names = ['H3', protein])
+    #         convert_to_h3_dict = dict(zip(mapping_data[protein], mapping_data['H3']))
+    #         site = re.search(row['Amino acid site'])
+    #         row['Amino acid site'] = map_residues_to_h3(protein, marker_dict, convert_to_h3_dict)
     data["Specific Type"] = data["Protein Type"].str.rsplit("_", n = 1).str[-1]
     data['Protein Type'] = data['Protein Type'].str.replace(r'_\d+$', '', regex = True)
     return data.groupby('Protein Type')
@@ -428,19 +436,23 @@ def is_subset_complex(dict1, dict2):
     Returns:
     - Boolean: True if dict1 is a subset of dict2, else False.
     """
-    for key, value in dict1.items():
-        # Check if the key exists in dict2
+    for key, value1 in dict1.items():
         if key not in dict2:
             return False
 
-        # If the value is a list, check if it's a subset
-        if isinstance(value, list):
-            if not set(value).issubset(set(dict2[key])):
+        value2 = dict2[key]
+
+        if isinstance(value1, list) and isinstance(value2, list):
+            # 如果两个值都是列表，检查它们是否包含相同的元素（这里不考虑顺序）
+            if sorted(value1) != sorted(value2):
                 return False
-        # If the value is a string or other, compare directly
-        else:
-            if value != dict2[key]:
+        elif isinstance(value1, str) and isinstance(value2, list):
+            # 如果dict1中的值是字符串，而dict2中的值是列表，则检查字符串是否在列表中
+            if value1 not in value2:
                 return False
+        elif value1 != value2:
+            # 其他情况，直接比较值
+            return False
 
     return True
 
@@ -467,7 +479,7 @@ def format_marker(marker, protein_prefix = ''):
         deletion_suffix = ""
 
     # Combine the protein prefix, amino acid, and deletion suffix.
-    formatted_marker = f"{protein_prefix}-{amino_acid}{deletion_suffix}"\
+    formatted_marker = f"{protein_prefix}-{amino_acid}{deletion_suffix}" \
         if protein_prefix else f"{amino_acid}{deletion_suffix}"
     return formatted_marker
 
@@ -538,13 +550,13 @@ def process_protein_sequence(acc_id, renumbered_position, acc_pro_dic, marker_ma
         if match and match.group() in renumbered_position:
             markers.append(match.group())
 
-    protein = f'{protein_type}(H3 numbering)' if protein_type in HA_TYPES else (
-        f'{protein_type}(N2 numbering)' if protein_type in NA_TYPES else protein_type)
+    # protein = f'{protein_type}(H3 numbering)' if protein_type in HA_TYPES else (
+    #     f'{protein_type}(N2 numbering)' if protein_type in NA_TYPES else protein_type)
 
-    return protein, markers
+    return protein_type, markers
 
 
-def check_marker_combinations(total_markers, results_markers, markers_type, input_file_name, data):
+def check_marker_combinations(total_markers, results_markers, markers_type, input_file_name, data, ha_type, na_type):
     results = []
 
     # Initialize results with empty/default values
@@ -571,11 +583,11 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
                 })
 
     results = pd.DataFrame(results)
-    final_results = merge_dataframes(results, data, markers_type)
+    final_results = merge_dataframes(results, data, markers_type, ha_type, na_type)
     return final_results
 
 
-def merge_dataframes(results, data, markers_type):
+def merge_dataframes(results, data, markers_type, ha_type, na_type):
     """
     Merge two DataFrames based on the 'Protein Type' column, handling rows with and without 'combination' differently.
 
@@ -616,14 +628,24 @@ def merge_dataframes(results, data, markers_type):
     final_results.rename(columns = {'Amino acid site': f'{markers_type.title()} Markers'}, inplace = True)
     final_results['Protein Type'] = final_results['Protein Type'].str.replace('-combination.*', '', regex = True)
 
+    final_results['Protein Type'] = final_results['Protein Type'].apply(lambda x: get_hana_string(x, ha_type, na_type))
     # Drop unnecessary columns and the helper 'HasCombination' column
     final_results.drop(columns = ["Specific Type", "Protein", "HasCombination_x", "HasCombination_y"], inplace = True)
     final_results.dropna(how = "all", inplace = True)
     return final_results
 
 
+def get_hana_string(protein_type, ha_type, na_type):
+    if protein_type in HA_TYPES or protein_type == "H3":
+        return f'{ha_type}(H3 numbering)'
+    elif protein_type in NA_TYPES or protein_type == "N2":
+        return f'{na_type}(N2 numbering)'
+    else:
+        return protein_type
+
+
 def identify_markers(input_file_path, renumbering_results, marker_markers, acc_pro_dic, markers_type, data,
-                               output_directory = ".", prefix = ""):
+                     output_directory = ".", prefix = ""):
     """
     Identifies virulence markers in protein sequences based on the provided marker markers
     and the renumbered sequences.
@@ -632,14 +654,28 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
     input_file_name = os.path.split(input_file_path)[1]
     results_markers = defaultdict(list)
 
+    # marker_markers is oen by one dict
     for acc_id, renumbered_position in renumbering_results.items():
         protein, markers = process_protein_sequence(acc_id, renumbered_position, acc_pro_dic, marker_markers)
         if protein:
             results_markers[protein] = markers
-    print('---------------')
-    print(results_markers)
-    total_markers = generate_protein_dict(load_total_markers(data))
-    results_df = check_marker_combinations(total_markers, results_markers, markers_type, input_file_name, data)
+
+    for acc, pro in acc_pro_dic.items():
+        if pro in HA_TYPES:
+            ha_type = pro
+        elif pro in NA_TYPES:
+            na_type = pro
+
+    markers = generate_protein_dict(load_total_markers(data))
+    total_markers = defaultdict(list)
+    for pro, lst in markers:
+        for dic in lst:
+            # 通过convert_HA_residues全部都会变成H3的，没有影响
+            total_markers[pro].append(convert_HA_residues(dic, STRUCTURE_PATH))
+    print("重新映射到H3/N2后的total_markers")
+    print(total_markers)
+    results_df = check_marker_combinations(total_markers, results_markers, markers_type, input_file_name, data, ha_type,
+                                           na_type)
 
     # results_df = pd.DataFrame(results)
     add_prefix = prefix + "_" if prefix else ""

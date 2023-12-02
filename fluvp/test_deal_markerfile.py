@@ -314,7 +314,14 @@ def main(input_file, output_file):
 if __name__ == '__main__':
     new_protein_dict = main("../data\markers_for_extract\mammalian_virulence.xlsx", "output_file.csv")
 
-t =[{'N1': '106I'}, {'N1': '219Q'}, {'N1': '36-'}, {'N1': '44Q'}, {'N1': '49-'}, {'N1': '49-'}, {'N1': '50-'}, {'N1': '51-'}, {'N1': '52-'}, {'N1': '53-'}, {'N1': '54-'}, {'N1': '55-'}, {'N1': '56-'}, {'N1': '57-'}, {'N1': '58-'}, {'N1': '59-'}, {'N1': '60-'}, {'N1': '61-'}, {'N1': '62-'}, {'N1': '63-'}, {'N1': '64-'}, {'N1': '65-'}, {'N1': '66-'}, {'N1': '67-'}, {'N1': '68-'}, {'N1': '69-'}, {'N1': '70-'}, {'N1': '71-'}, {'N1': '72-'}, {'N1': ['49-', '50-', '51-', '52-', '53-', '54-', '55-', '56-', '57-', '58-', '59-', '60-', '61-', '62-', '63-', '64-', '65-', '66-', '67-', '68-', '69-', '70-', '71-', '72-']}, {'N1': '72Q'}]
+t = [{'N1': '106I'}, {'N1': '219Q'}, {'N1': '36-'}, {'N1': '44Q'}, {'N1': '49-'}, {'N1': '49-'}, {'N1': '50-'},
+     {'N1': '51-'}, {'N1': '52-'}, {'N1': '53-'}, {'N1': '54-'}, {'N1': '55-'}, {'N1': '56-'}, {'N1': '57-'},
+     {'N1': '58-'}, {'N1': '59-'}, {'N1': '60-'}, {'N1': '61-'}, {'N1': '62-'}, {'N1': '63-'}, {'N1': '64-'},
+     {'N1': '65-'}, {'N1': '66-'}, {'N1': '67-'}, {'N1': '68-'}, {'N1': '69-'}, {'N1': '70-'}, {'N1': '71-'},
+     {'N1': '72-'}, {
+         'N1': ['49-', '50-', '51-', '52-', '53-', '54-', '55-', '56-', '57-', '58-', '59-', '60-', '61-', '62-', '63-',
+                '64-', '65-', '66-', '67-', '68-', '69-', '70-', '71-', '72-']}, {'N1': '72Q'}]
+
 
 # def format_markers(value, add_protein = ''):
 #     if isinstance(value, str):
@@ -359,7 +366,7 @@ t =[{'N1': '106I'}, {'N1': '219Q'}, {'N1': '36-'}, {'N1': '44Q'}, {'N1': '49-'},
 #                 res += f"{marker_symbol}&"
 #         return res.rsplit("&",1)[0]
 
-def format_marker(marker, protein_prefix=''):
+def format_marker(marker, protein_prefix = ''):
     """
     格式化单个遗传标记。如果标记中包含短横线（'-'），则仅保留短横线之前的部分，并附加'Deletion'。
     如果提供了蛋白质前缀，它将被添加到标记之前。
@@ -384,7 +391,7 @@ def format_marker(marker, protein_prefix=''):
     return formatted_marker
 
 
-def format_marker_list(markers, protein_prefix=''):
+def format_marker_list(markers, protein_prefix = ''):
     """
     格式化标记列表或单个标记字符串。
     如果是列表且所有元素都包含短横线，则返回特殊格式的字符串。
@@ -433,11 +440,44 @@ def process_dictionary(data_dict):
     return '&'.join(format_marker_list(markers, protein) for protein, markers in data_dict.items())
 
 
-for i,j in new_protein_dict.items():
-    # print(f"{i}开始了")
+def compare_dicts_updated(dict1, dict2):
+    for key, value1 in dict1.items():
+        if key not in dict2:
+            return False
+
+        value2 = dict2[key]
+
+        if isinstance(value1, list) and isinstance(value2, list):
+            # 如果两个值都是列表，检查它们是否包含相同的元素（这里不考虑顺序）
+            if sorted(value1) != sorted(value2):
+                return False
+        elif isinstance(value1, str) and isinstance(value2, list):
+            # 如果dict1中的值是字符串，而dict2中的值是列表，则检查字符串是否在列表中
+            if value1 not in value2:
+                return False
+        elif value1 != value2:
+            # 其他情况，直接比较值
+            return False
+
+    return True
+
+
+dic2 = {'H2(H3 numbering)': ['216E', '223V', '146S', '263R', '225G', '229R'], 'M1': ['43M', '215A'],
+        'M2': ['82S', '24D'], 'N1(N2 numbering)': [],
+        'NP': ['482S', '184K', '437T', '105V', '253I', '373T', '133L', '286A'],
+        'PA': ['383D', '224S', '190S', '550L', '237E', '321N', '149S', '295P', '409S', '394D', '330I', '100V'],
+        'PA-X': [], 'PB1': ['298L', '652A', '115Q', '473V', '469T', '598L', '386R', '517I', '13P'],
+        'PB1-F2': ['87E', '56V'],
+        'PB2': ['627E', '715N', '191E', '661A', '504V', '559T', '495V', '283M', '339K', '309D', '66M', '89V', '133V',
+                '389R', '598T', '288Q', '477G', '683T', '109V', '391E', '431M']}
+for i, j in new_protein_dict.items():
+# print(f"{i}开始了")
     for s in j:
-        res = process_dictionary(s)
-        print(res)
+        if compare_dicts_updated(s,dic2 ):
+            print(s)
+
+# res = process_dictionary(s)
+# print(res)
 # for s in t:
 #     res = process_dictionary(s)
 #     print(res)
