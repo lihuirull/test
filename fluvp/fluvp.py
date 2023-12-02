@@ -551,10 +551,10 @@ def process_protein_sequence(acc_id, renumbered_position, acc_pro_dic, marker_ma
         if match and match.group() in renumbered_position:
             markers.append(match.group())
 
-    # protein = f'{protein_type}(H3 numbering)' if protein_type in HA_TYPES else (
-    #     f'{protein_type}(N2 numbering)' if protein_type in NA_TYPES else protein_type)
+    protein = f'H3' if protein_type in HA_TYPES else (
+        f'N2' if protein_type in NA_TYPES else protein_type)
 
-    return protein_type, markers
+    return protein, markers
 
 
 def check_marker_combinations(total_markers, results_markers, markers_type, input_file_name, data, ha_type, na_type):
