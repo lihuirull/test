@@ -660,11 +660,9 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
             na_type = pro
 
     ori_markers = generate_protein_dict(load_total_markers(data))
-    print(ori_markers)
     total_markers = defaultdict(list)
-    for pro, lst in ori_markers:
+    for pro, lst in ori_markers.items():
         for dic in lst:
-            print(dic)
             # 通过convert_HA_residues全部都会变成H3的，没有影响
             total_markers[pro].append(convert_HA_residues(dic, STRUCTURE_PATH))
     print("重新映射到H3/N2后的total_markers")
