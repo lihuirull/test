@@ -575,32 +575,36 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
     # data.set_index('Protein Type', inplace = True)
     # results = results.merge(data, left_index = True, right_index = True, how = 'left')
     # results.reset_index(inplace = True)
-    # 分割并去重 data DataFrame
-    print(data)
+    import pandas as pd
+
+    # 假设 data 和 results 是已经存在的DataFrame
+
+    # 分割 data DataFrame，并去重
     data_with_combination = data[data['Protein Type'].str.contains('combination')].drop_duplicates(
         subset = 'Protein Type')
-    print(data_with_combination)
     data_with_combination.drop(columns = ["Amino acid site"], inplace = True)
 
     data_without_combination = data[~data['Protein Type'].str.contains('combination')]
 
-    # 使用 pd.merge 合并含有 'combination' 的部分
-    results_with_combination = pd.merge(results, data_with_combination, on = 'Protein Type', how = 'left')
+    # 分割 results DataFrame
+    results_with_combination = results[results['Protein Type'].str.contains('combination')]
+    results_without_combination = results[~results['Protein Type'].str.contains('combination')]
 
-    # 使用 pd.merge 合并不含有 'combination' 的部分
-    results_without_combination = pd.merge(results, data_without_combination, on = ['Protein Type', 'Amino acid site'],
-                                           how = 'left')
+    # 合并含有 'combination' 的部分
+    merged_with_combination = pd.merge(results_with_combination, data_with_combination, on = 'Protein Type',
+                                       how = 'left')
 
-    print(results_with_combination)
-    print(results_without_combination)
-    print('----------------------------')
+    # 合并不含有 'combination' 的部分
+    merged_without_combination = pd.merge(results_without_combination, data_without_combination,
+                                          on = ['Protein Type', 'Amino acid site'], how = 'left')
+
     # 纵向合并两个合并结果
-    results = pd.concat([results_with_combination, results_without_combination])
+    final_results = pd.concat([merged_with_combination, merged_without_combination]).reset_index(drop = True)
 
     # 重命名 'Amino acid site' 列
-    results.rename(columns = {'Amino acid site': f'{markers_type.title()} Markers'}, inplace = True)
+    final_results.rename(columns = {'Amino acid site': f'{markers_type.title()} Markers'}, inplace = True)
 
-    return results
+    return final_results
 
 
 def identify_virulence_markers(input_file_path, renumbering_results, marker_markers, acc_pro_dic, markers_type, data,
