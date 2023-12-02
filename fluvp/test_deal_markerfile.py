@@ -551,6 +551,8 @@ def convert_HA_residues(marker_dict, structure_folder):
                 updated_marker_dict["N2"] = residues
             del updated_marker_dict[protein]  # del key
     return updated_marker_dict
+
+
 total_markers = defaultdict(list)
 for pro, lst in new_protein_dict.items():
         for dic in lst:
@@ -559,16 +561,16 @@ for pro, lst in new_protein_dict.items():
 print('-'*50)
 print(total_markers)
 for i, j in total_markers.items():
-# print(f"{i}开始了")
-#     if i == 'PB1-combination_104':
         for s in j:
             # if (type(s) == str):
             #     print(s)
-            if compare_dicts_updated(s,dic2 ):
+            # if compare_dicts_updated(s,dic2 ):
                 if s and all(s.values()):
-                    print('-------------')
-                    print(s.values())
-                    print(s)
+                    markers_formated = process_dictionary(s)
+                    print(markers_formated)
+                    # print('-------------')
+                    # print(s.values())
+                    # print(s)
 
 # res = process_dictionary(s)
 # print(res)

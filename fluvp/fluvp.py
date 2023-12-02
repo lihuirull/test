@@ -576,6 +576,7 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
         for proba_comb in marker_list:
             # 如果这个字典的键值对在识别到的标志物字典中存在，则返回一个更简洁的格式
             if is_subset_complex(proba_comb, results_markers):
+                print(proba_comb)
                 markers_formated = process_dictionary(proba_comb)
                 results.append({
                     'Strain ID': input_file_name.split(".")[0],
