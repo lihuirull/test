@@ -413,14 +413,7 @@ def generate_protein_dict(grouped_data):
 
 
 def load_total_markers(data):
-    # for row in data.iterrow():
-    #     if row["Protein type"] in HA_TYPES:
-    #         protein = row['Protein type']
-    #         mapping_data = pd.read_csv(f"{STRUCTURE_PATH}/H3_{protein}.txt", sep = "\t", header = None,
-    #                                    names = ['H3', protein])
-    #         convert_to_h3_dict = dict(zip(mapping_data[protein], mapping_data['H3']))
-    #         site = re.search(row['Amino acid site'])
-    #         row['Amino acid site'] = map_residues_to_h3(protein, marker_dict, convert_to_h3_dict)
+
     data["Specific Type"] = data["Protein Type"].str.rsplit("_", n = 1).str[-1]
     data['Protein Type'] = data['Protein Type'].str.replace(r'_\d+$', '', regex = True)
     return data.groupby('Protein Type')
@@ -666,10 +659,12 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
         elif pro in NA_TYPES:
             na_type = pro
 
-    markers = generate_protein_dict(load_total_markers(data))
+    ori_markers = generate_protein_dict(load_total_markers(data))
+    print(ori_markers)
     total_markers = defaultdict(list)
-    for pro, lst in markers:
+    for pro, lst in ori_markers:
         for dic in lst:
+            print(dic)
             # 通过convert_HA_residues全部都会变成H3的，没有影响
             total_markers[pro].append(convert_HA_residues(dic, STRUCTURE_PATH))
     print("重新映射到H3/N2后的total_markers")

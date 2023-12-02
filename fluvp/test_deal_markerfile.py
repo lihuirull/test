@@ -473,8 +473,10 @@ dic2 = {'H2(H3 numbering)': ['216E', '223V', '146S', '263R', '225G', '229R'], 'M
 for i, j in new_protein_dict.items():
 # print(f"{i}开始了")
     for s in j:
-        if compare_dicts_updated(s,dic2 ):
+        if (type(s) == str):
             print(s)
+        # if compare_dicts_updated(s,dic2 ):
+        #     print(s)
 
 # res = process_dictionary(s)
 # print(res)
