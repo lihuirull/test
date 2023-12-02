@@ -218,7 +218,8 @@ def convert_HA_residues(marker_dict, structure_folder):
             convert_to_h3_dict = dict(zip(mapping_data[protein], mapping_data['H3']))
 
             residues = map_residues_to_h3(protein, marker_dict, convert_to_h3_dict)
-            # residues = [convert_to_H3_dict.get(re.search(r"\d+", i).group()) + re.search(r"[A-Z]", i).group() for i in
+            # residues = [convert_to_H3_dict.get(re.search(r"\d+", i).group()) +
+            # re.search(r"[A-Z]", i).group() for i in
             #             marker_dict[protein] if convert_to_H3_dict.get(re.search(r"\d+", i).group())]
             if "H3" in updated_marker_dict:
                 updated_marker_dict["H3"].extend(residues)
@@ -344,44 +345,46 @@ def renumber_proteins(fasta_path, acc_pro_dict, marker_dict):
 
     return renumbering_results
 
+from collections import defaultdict
+from itertools import product
 
 def merge_dicts_with_list(dict_list):
     """
-    合并字典列表的函数，如果键重复，则将值合并为列表。
+    Function to merge a list of dictionaries. If keys are repeated, values are merged into a list.
 
-    参数:
-    - dict_list (list): 包含字典的列表。
+    Parameters:
+    - dict_list (list): List containing dictionaries.
 
-    返回:
-    - 合并后的字典。
+    Returns:
+    - Merged dictionary.
     """
     merged_dict = {}
     for d in dict_list:
         for key, value in d.items():
             if key in merged_dict:
-                # 如果键已存在，则合并值为列表
+                # Merge values into a list if the key already exists
                 if not isinstance(merged_dict[key], list):
                     merged_dict[key] = [merged_dict[key]]
                 merged_dict[key].append(value)
             else:
-                # 如果键不存在，则直接添加
+                # Directly add if the key does not exist
                 merged_dict[key] = value
     return merged_dict
 
 
 def generate_combinations(group):
     """
-    根据特定类型对变异进行分组，并生成所有可能的组合。
+    Groups mutations by specific types and generates all possible combinations.
 
-    参数:
-    - group (DataFrameGroupBy): 分组后的DataFrame。
+    Parameters:
+    - group (DataFrameGroupBy): Grouped DataFrame.
 
-    返回:
-    - 所有可能的组合列表。
+    Returns:
+    - List of all possible combinations.
     """
-    # 根据特定类型对变异进行分组
+    # Group mutations by specific type
     spec_type_groups = group.groupby('Specific Type')
-    # 创建字典以存储按特定类型映射到蛋白质的变异列表
+    # Create a dictionary to store lists of mutations mapped to proteins by specific type
     mutation_dict = defaultdict(list)
     for spec_type, g in spec_type_groups:
         for _, row in g.iterrows():
@@ -389,15 +392,15 @@ def generate_combinations(group):
                 mutation_dict[spec_type].append({row['Protein']: row['Amino acid site'].strip()})
             else:
                 mutation_dict[spec_type].append({row['Protein']: row['Amino acid site']})
-    # 提取每个键对应的字典列表
+    # Extract lists of dictionaries for each key
     values_lists = [mutation_dict[key] for key in mutation_dict]
-    # 生成所有可能的组合并合并字典
+    # Generate all possible combinations and merge dictionaries
     combinations = [merge_dicts_with_list(comb) for comb in product(*values_lists)]
     return combinations
 
 
 def generate_protein_dict(grouped_data):
-    """生成蛋白质字典"""
+    """Generate protein dictionary"""
     new_protein_dict = defaultdict(list)
     for name, group in grouped_data:
         if 'combination' in name:
@@ -411,22 +414,31 @@ def generate_protein_dict(grouped_data):
 
 
 def load_total_markers(data):
-    data["Specific Type"] = data["Protein Type"].str.rsplit("_", n = 1).str[-1]
-    data['Protein Type'] = data['Protein Type'].str.replace(r'_\d+$', '', regex = True)
+    data["Specific Type"] = data["Protein Type"].str.rsplit("_", n=1).str[-1]
+    data['Protein Type'] = data['Protein Type'].str.replace(r'_\d+$', '', regex=True)
     return data.groupby('Protein Type')
 
 
 def is_subset_complex(dict1, dict2):
+    """
+    Check if one dictionary is a complex subset of another.
+
+    Parameters:
+    - dict1, dict2: Dictionaries to be compared.
+
+    Returns:
+    - Boolean: True if dict1 is a subset of dict2, else False.
+    """
     for key, value in dict1.items():
-        # 检查键是否存在于dict2中
+        # Check if the key exists in dict2
         if key not in dict2:
             return False
 
-        # 如果值是列表，则检查是否为子集
+        # If the value is a list, check if it's a subset
         if isinstance(value, list):
             if not set(value).issubset(set(dict2[key])):
                 return False
-        # 如果值是字符串或其他，则直接比较
+        # If the value is a string or other, compare directly
         else:
             if value != dict2[key]:
                 return False
@@ -509,84 +521,6 @@ def process_dictionary(data_dict):
     return '&'.join(format_marker_list(markers, protein) for protein, markers in data_dict.items())
 
 
-# def identify_virulence_markers(input_file_path, renumbering_results, marker_markers, acc_pro_dic, markers_type, data,
-#                                output_directory = ".", prefix = ""):
-#     """
-#     Identifies virulence markers in protein sequences based on the provided marker markers
-#     and the renumbered sequences.
-#
-#     Parameters:
-#         input_file_path (str): Path to the input Fasta file or a directory containing Fasta file.
-#         renumbering_results (dict): Dictionary with protein IDs as keys and their renumbered sequences as values.
-#         marker_markers (dict): Dictionary mapping protein types to lists of expected markers.
-#         acc_pro_dic (dict): Dictionary mapping protein accession IDs to their protein types.
-#         output_directory (str): Directory where the output CSV file will be saved. Defaults to the current directory.
-#         prefix (str): Optional prefix for the output CSV filename.
-#
-#     Returns:
-#         pandas.DataFrame: A dataframe with columns for protein IDs, virulence markers, count of virulence markers,
-#         and protein types.
-#     """
-#     results = []
-#     os.makedirs(output_directory, exist_ok = True)
-#     input_file_name = os.path.split(input_file_path)[1]
-#     results_markers = defaultdict(list)
-#     # Process each protein sequence based on renumbering results
-#     for acc_id, renumbered_position in renumbering_results.items():
-#         protein_type = acc_pro_dic[acc_id]
-#
-#         # Skip processing if protein type is unknown
-#         if protein_type == "Unknown":
-#             continue
-#         # Replace other HA subtypes
-#         use_protein = "H3" if protein_type in HA_TYPES else protein_type
-#         # Retrieve the list of expected markers for the protein type
-#         expected_markers = marker_markers.get(use_protein, [])
-#
-#         # Check if markers match the renumbered sequence
-#         markers = []
-#
-#         for marker in expected_markers:
-#             match = re.match(r"(\d+)([A-Z])", marker)
-#             if match and match.group() in renumbered_position:
-#                 markers.append(match.group())
-#
-#         # Calculate the number of virulence markers found
-#         num_markers = len(markers)
-#         protein = f'{protein_type}(H3 numbering)' if protein_type in HA_TYPES else (
-#             f'{protein_type}(N2 numbering)' if protein_type in NA_TYPES else protein_type)
-#
-#         results_markers[protein] = markers
-#         # results.append({
-#         #     'Strain ID': input_file_name.split(".")[0],
-#         #     f'{markers_type.title()} Markers': ','.join(virulence_markers),
-#         #     f'Number of {markers_type.title()} Markers': num_virulence_markers,
-#         #     'Protein Type': protein,
-#         # })
-#
-#
-#     total_markers = generate_protein_dict(load_total_markers(data))
-#     # 逐一检查该种表型的每一类型的标志物是否存在于序列中识别到的标志物字典。
-#     for marker_protein_type, marker_list in total_markers.items():
-#         # proba_comb是每一种类型的标志物的多种组合中的一种，是一个字典。
-#         # 'combination-combination_449': [{'PB2': '158G', 'PA': '295P'}, {'PB2': '158A', 'PA': '295P'}]
-#         # proba_comb则是这两个字典中的其中一个字典，满足该字典则认为存在combination-combination_449这种类型的标志物。
-#         for proba_comb in marker_list:
-#             # 如果这个字典的键值对在识别到的标志物字典中存在，则返回一个更简洁的格式
-#             if is_subset_complex(proba_comb, results_markers):
-#                 markers_formated = process_dictionary(proba_comb)
-#                 results.append({
-#                     'Strain ID': input_file_name.split(".")[0],
-#                     f'{markers_type.title()} Markers': markers_formated,
-#                     'Protein Type': marker_protein_type,
-#                 })
-#
-#     # Convert the results into a pandas DataFrame
-#     results_df = pd.DataFrame(results_markers)
-#     add_prefix = prefix + "_" if prefix else ""
-#     filename = add_prefix + input_file_name.split(".")[0] + "_markers.csv"
-#     results_df.to_csv(f"{output_directory}/{filename}", index = False)
-#     return results_df
 #
 def process_protein_sequence(acc_id, renumbered_position, acc_pro_dic, marker_markers):
     protein_type = acc_pro_dic[acc_id]
@@ -624,9 +558,13 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
     # Splitting the "Protein Type" column in data DataFrame
     data.loc[:, "Protein Type"] = data.loc[:, "Protein Type"].str.split("-", 1).str[0]
 
-    # Your existing loop
+    # 逐一检查该种表型的每一类型的标志物是否存在于序列中识别到的标志物字典。
     for marker_protein_type, marker_list in total_markers.items():
+        # proba_comb是每一种类型的标志物的多种组合中的一种，是一个字典。
+        # 'combination-combination_449': [{'PB2': '158G', 'PA': '295P'}, {'PB2': '158A', 'PA': '295P'}]
+        # proba_comb则是这两个字典中的其中一个字典，满足该字典则认为存在combination-combination_449这种类型的标志物。
         for proba_comb in marker_list:
+            # 如果这个字典的键值对在识别到的标志物字典中存在，则返回一个更简洁的格式
             if is_subset_complex(proba_comb, results_markers):
                 markers_formated = process_dictionary(proba_comb)
                 results.append({
@@ -634,23 +572,25 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
                     f'{markers_type.title()} Markers': markers_formated,
                     'Protein Type': marker_protein_type,
                 })
-    # results = []
-    # data.loc[:,"Protein Type"] = data.loc[:,"Protein Type"].str.split("-", 1).str[0]
-    # for marker_protein_type, marker_list in total_markers.items():
-    #     for proba_comb in marker_list:
-    #         if is_subset_complex(proba_comb, results_markers):
-    #             markers_formated = process_dictionary(proba_comb)
-    #             results.append({
-    #                 'Strain ID': input_file_name.split(".")[0],
-    #                 f'{markers_type.title()} Markers': markers_formated,
-    #                 'Protein Type': marker_protein_type,
-    #             })
-
     results = pd.DataFrame(results)
 
     results.set_index('Protein Type', inplace = True)
     data.set_index('Protein Type', inplace = True)
     results = results.merge(data, left_index = True, right_index = True, how = 'left')
+    results.reset_index(inplace = True)
+    # 假设 'Protein Type' 是原来在第三列的位置
+    # 获取所有列的列表
+    columns = list(results.columns)
+
+    # 移除 'Protein Type'
+    columns.remove('Protein Type')
+
+    # 在特定位置插入 'Protein Type'
+    # 这里的 2 表示它将被放置在第三列的位置（因为索引从0开始）
+    columns.insert(2, 'Protein Type')
+
+    # 重新排列DataFrame的列
+    results = results[columns]
 
     return results
 
