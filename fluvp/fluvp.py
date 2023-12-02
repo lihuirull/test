@@ -571,36 +571,82 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
                 })
 
     results = pd.DataFrame(results)
+    final_results = merge_dataframes(results, data, markers_type)
+    return final_results
 
-    # results.set_index('Protein Type', inplace = True)
-    # data.set_index('Protein Type', inplace = True)
-    # results = results.merge(data, left_index = True, right_index = True, how = 'left')
-    # results.reset_index(inplace = True)
+# def merge_dataframes(results, data, markers_type):
+#     # 分割 data DataFrame，并去重
+#     data_with_combination = data[data['Protein Type'].str.contains('combination')].drop_duplicates(subset='Protein Type')
+#     data_with_combination.drop(columns=["Amino acid site"], inplace=True)
+#
+#     data_without_combination = data[~data['Protein Type'].str.contains('combination')]
+#
+#     # 分割 results DataFrame
+#     results_with_combination = results[results['Protein Type'].str.contains('combination')]
+#     results_without_combination = results[~results['Protein Type'].str.contains('combination')]
+#
+#     # 合并含有 'combination' 的部分
+#     merged_with_combination = pd.merge(results_with_combination, data_with_combination, on='Protein Type', how='left')
+#
+#     # 合并不含有 'combination' 的部分
+#     merged_without_combination = pd.merge(results_without_combination, data_without_combination,
+#                                           on=['Protein Type', 'Amino acid site'], how='left')
+#
+#     # 纵向合并两个合并结果
+#     final_results = pd.concat([merged_with_combination, merged_without_combination]).reset_index(drop=True)
+#
+#     # 重命名 'Amino acid site' 列
+#     final_results.rename(columns={'Amino acid site': f'{markers_type.title()} Markers'}, inplace=True)
+#
+#     # 清理 'Protein Type' 列，并删除不需要的列
+#     final_results['Protein Type'] = final_results['Protein Type'].str.split('-combination').str[0]
+#     final_results.drop(columns=["Specific Type", "Protein"], inplace=True)
+#
+#     return final_results
 
-    # 分割 data DataFrame，并去重
-    data_with_combination = data[data['Protein Type'].str.contains('combination')].drop_duplicates(
-        subset = 'Protein Type')
-    data_with_combination.drop(columns = ["Amino acid site"], inplace = True)
+def merge_dataframes(results, data, markers_type):
+    """
+    Merge two DataFrames based on the 'Protein Type' column, handling rows with and without 'combination' differently.
 
-    data_without_combination = data[~data['Protein Type'].str.contains('combination')]
+    Args:
+    results (pd.DataFrame): DataFrame containing results data.
+    data (pd.DataFrame): DataFrame containing additional data to merge.
+    markers_type (str): String indicating the type of markers to be used for renaming columns.
 
-    # 分割 results DataFrame
-    results_with_combination = results[results['Protein Type'].str.contains('combination')]
-    results_without_combination = results[~results['Protein Type'].str.contains('combination')]
+    Returns:
+    pd.DataFrame: The merged DataFrame after processing.
+    """
+    # Pre-compile the regex pattern for performance
+    combination_pattern = re.compile(r'combination')
 
-    # 合并含有 'combination' 的部分
+    # Split the 'data' DataFrame into two based on 'combination' presence without using str.contains for each row
+    data['HasCombination'] = data['Protein Type'].apply(lambda x: bool(combination_pattern.search(x)))
+    data_with_combination = data[data['HasCombination']].drop_duplicates(subset = 'Protein Type')
+    data_without_combination = data[~data['HasCombination']]
+
+    # Drop the 'Amino acid site' column and the helper 'HasCombination' column to avoid merging them later
+    data_with_combination = data_with_combination.drop(columns = ["Amino acid site", "HasCombination"])
+
+    # Do the same split for the 'results' DataFrame
+    results['HasCombination'] = results['Protein Type'].apply(lambda x: bool(combination_pattern.search(x)))
+    results_with_combination = results[results['HasCombination']]
+    results_without_combination = results[~results['HasCombination']]
+
+    # Merge parts with and without 'combination' separately
     merged_with_combination = pd.merge(results_with_combination, data_with_combination, on = 'Protein Type',
                                        how = 'left')
-
-    # 合并不含有 'combination' 的部分
     merged_without_combination = pd.merge(results_without_combination, data_without_combination,
                                           on = ['Protein Type', 'Amino acid site'], how = 'left')
 
-    # 纵向合并两个合并结果
-    final_results = pd.concat([merged_with_combination, merged_without_combination]).reset_index(drop = True)
+    # Concatenate the merged parts
+    final_results = pd.concat([merged_with_combination, merged_without_combination], ignore_index = True)
 
-    # 重命名 'Amino acid site' 列
+    # Rename the 'Amino acid site' column and cleanup 'Protein Type'
     final_results.rename(columns = {'Amino acid site': f'{markers_type.title()} Markers'}, inplace = True)
+    final_results['Protein Type'] = final_results['Protein Type'].str.replace('-combination.*', '', regex = True)
+
+    # Drop unnecessary columns and the helper 'HasCombination' column
+    final_results.drop(columns = ["Specific Type", "Protein", "HasCombination"], inplace = True)
 
     return final_results
 
