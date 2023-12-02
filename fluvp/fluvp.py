@@ -167,6 +167,7 @@ def load_markers(filepath):
     return data.groupby('Protein')['Amino acid site'].apply(lambda x: list(set(x))).to_dict(), data
 
 
+
 def map_residues_to_h3(protein, marker_dict, convert_to_h3_dict):
     """
     Maps the residue numbers for a given protein to the H3/N2 numbering system.
@@ -179,8 +180,14 @@ def map_residues_to_h3(protein, marker_dict, convert_to_h3_dict):
     Returns:
         list: A list of residues mapped to H3 numbering system.
     """
+    markers = marker_dict[protein]
+
+    # 如果markers是字符串，将其转换为只含一个元素的列表
+    if isinstance(markers, str):
+        markers = [markers]
+
     mapped_residues = []
-    for marker in marker_dict[protein]:
+    for marker in markers:
         # Ensure the marker is in the expected format (e.g., "12A")
         marker_match = re.fullmatch(r"(\d+)([A-Z])", marker)
         if not marker_match:
@@ -197,6 +204,8 @@ def map_residues_to_h3(protein, marker_dict, convert_to_h3_dict):
         mapped_residues.append(h3_position + amino_acid)
 
     return mapped_residues
+
+
 
 
 def convert_HA_residues(marker_dict, structure_folder):
@@ -436,8 +445,7 @@ def is_subset_complex(dict1, dict2):
         value2 = dict2[key]
 
         if isinstance(value1, list) and isinstance(value2, list):
-            # 如果两个值都是列表，检查它们是否包含相同的元素（这里不考虑顺序）
-            if sorted(value1) != sorted(value2):
+            if not set(value1).issubset(set(value2)):
                 return False
         elif isinstance(value1, str) and isinstance(value2, list):
             # 如果dict1中的值是字符串，而dict2中的值是列表，则检查字符串是否在列表中
