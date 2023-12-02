@@ -612,7 +612,19 @@ def process_protein_sequence(acc_id, renumbered_position, acc_pro_dic, marker_ma
 
 def check_marker_combinations(total_markers, results_markers, markers_type, input_file_name, data):
     results = []
-    data.loc[:,"Protein Type"] = data.loc[:,"Protein Type"].str.split("-", 1).str[0]
+
+    # Initialize results with empty/default values
+    initial_data = {
+        'Strain ID': '',  # or some default value
+        f'{markers_type.title()} Markers': '',  # or some default value
+        'Protein Type': ''  # or some default value
+    }
+    results.append(initial_data)
+
+    # Splitting the "Protein Type" column in data DataFrame
+    data.loc[:, "Protein Type"] = data.loc[:, "Protein Type"].str.split("-", 1).str[0]
+
+    # Your existing loop
     for marker_protein_type, marker_list in total_markers.items():
         for proba_comb in marker_list:
             if is_subset_complex(proba_comb, results_markers):
@@ -622,7 +634,20 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
                     f'{markers_type.title()} Markers': markers_formated,
                     'Protein Type': marker_protein_type,
                 })
+    # results = []
+    # data.loc[:,"Protein Type"] = data.loc[:,"Protein Type"].str.split("-", 1).str[0]
+    # for marker_protein_type, marker_list in total_markers.items():
+    #     for proba_comb in marker_list:
+    #         if is_subset_complex(proba_comb, results_markers):
+    #             markers_formated = process_dictionary(proba_comb)
+    #             results.append({
+    #                 'Strain ID': input_file_name.split(".")[0],
+    #                 f'{markers_type.title()} Markers': markers_formated,
+    #                 'Protein Type': marker_protein_type,
+    #             })
+
     results = pd.DataFrame(results)
+
     results.set_index('Protein Type', inplace = True)
     data.set_index('Protein Type', inplace = True)
     results = results.merge(data, left_index = True, right_index = True, how = 'left')
