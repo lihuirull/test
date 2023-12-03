@@ -629,7 +629,6 @@ def merge_dataframes(results, data, markers_type, ha_type, na_type):
     final_results.drop(columns = ["Specific Type", "Protein", "HasCombination_x", "HasCombination_y", "HasCombination"],
                        inplace = True)
 
-
     # Replace empty strings with NaN
     final_results.replace('', np.nan, inplace = True)
 
@@ -677,7 +676,7 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
             if dic and all(dic.values()):
                 # 通过convert_HA_residues全部都会变成H3的，没有影响
                 total_markers[pro].append(convert_HA_residues(dic, STRUCTURE_PATH))
-
+    print(total_markers)
     results_df = check_marker_combinations(total_markers, results_markers, markers_type, input_file_name, data, ha_type,
                                            na_type)
 
