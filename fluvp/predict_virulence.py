@@ -26,7 +26,7 @@ def transform_df(df):
     }).reset_index()
 
     # 计算 'Adaptive Markers' 的数量
-    transformed['Number of Virulence markers'] = transformed['Virulence Markers'].apply(lambda x: len(x.split(',')))
+    transformed['Number of Virulence Markers'] = transformed['Virulence Markers'].apply(lambda x: len(x.split(',')))
 
     # 格式化 'Protein Type'
     transformed['Protein Type'] = transformed['Protein Type'].apply(
