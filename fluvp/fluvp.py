@@ -596,6 +596,7 @@ def merge_dataframes(results, data, markers_type, ha_type, na_type):
     pd.DataFrame: The merged DataFrame after processing.
     """
     # Pre-compile the regex pattern for performance
+    print('merge')
     combination_pattern = re.compile(r'combination')
 
     # Split the 'data' DataFrame into two based on 'combination' presence without using str.contains for each row
@@ -652,6 +653,7 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
     Identifies virulence markers in protein sequences based on the provided marker markers
     and the renumbered sequences.
     """
+    print('开始了')
     os.makedirs(output_directory, exist_ok = True)
     input_file_name = os.path.split(input_file_path)[1]
     results_markers = defaultdict(list)
