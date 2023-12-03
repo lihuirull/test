@@ -612,6 +612,7 @@ for idx, row in data_with_combination.iterrows():
     # 检查 newdic 是否为空
     if list(newdic.values())[0]:
         data_with_combination.loc[idx, "Protein Type"] = list(newdic.keys())[0]
+        data_with_combination.loc[idx, "Protein"] = list(newdic.keys())[0]
         data_with_combination.loc[idx, "Mutation"] = list(newdic.values())[0][0]
     else:
         # 如果 newdic 为空，可以选择跳过或赋予默认值
