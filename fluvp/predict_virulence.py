@@ -69,6 +69,8 @@ def explode_markers(df, input_marker_path, output_directory, prefix):
     # Expand the list into a new DataFrame and merge it back
     df = df.explode('Virulence Markers')
 
+    NA_TYPES.append("N2")
+    HA_TYPES.append("H3")
     # Normalize the protein type for HA
     df['Protein Type'] = df['Protein Type'].apply(
         lambda x: "NA" if x.split("(")[0] in NA_TYPES else ("HA" if x.split("(")[0] in HA_TYPES else x))
