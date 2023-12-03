@@ -16,7 +16,9 @@ NA_TYPES = [f"N{i}" for i in range(1, 10) if i != 2]
 
 
 def transform_df(df):
-    df = df[~df.loc[:, "Virulence Markers"].str.contains("&")]
+    # Replace NaN values with False before applying the ~ operator
+    df = df[~df.loc[:, "Virulence Markers"].str.contains("&", na = False)]
+
     # 按 'Strain ID' 分组，然后聚合 'Virulence Markers' 并计算数量
     transformed = df.groupby('Strain ID').agg({
         'Virulence Markers': lambda x: ','.join(x),
