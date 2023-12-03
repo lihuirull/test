@@ -630,10 +630,12 @@ def merge_dataframes(results, data, markers_type, ha_type, na_type):
     final_results.drop(columns = ["Specific Type", "Protein", "HasCombination_x", "HasCombination_y", "HasCombination"],
                        inplace = True)
 
-    # Replace empty strings with NaN
-    final_results.replace('', np.nan, inplace = True)
+    # # Replace empty strings with NaN
+    # final_results.replace('', np.nan, inplace = True)
 
-    final_results.dropna(how = "all", inplace = True)
+    # Drop rows where specific columns are NaN
+    final_results.dropna(subset = ['Strain ID', 'Virulence Markers', 'Protein Type'], how = "all", inplace = True)
+
     final_results.drop_duplicates(inplace = True)
     return final_results
 
@@ -653,7 +655,6 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
     Identifies virulence markers in protein sequences based on the provided marker markers
     and the renumbered sequences.
     """
-    print('开始了')
     os.makedirs(output_directory, exist_ok = True)
     input_file_name = os.path.split(input_file_path)[1]
     results_markers = defaultdict(list)
