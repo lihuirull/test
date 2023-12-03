@@ -680,7 +680,7 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
 
     # Initialize types
     ha_type = na_type = None
-
+    print(acc_pro_dic)
     # Identify HA and NA types based on acc_pro_dic
     for acc, pro in acc_pro_dic.items():
         if pro in HA_TYPES:
