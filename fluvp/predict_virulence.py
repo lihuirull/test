@@ -70,7 +70,8 @@ def explode_markers(df, input_marker_path, output_directory, prefix):
     df = df.explode('Virulence Markers')
 
     # Normalize the protein type for HA
-    df['Protein Type'] = df['Protein Type'].apply(lambda x: "NA" if x in NA_TYPES else ("HA" if x in HA_TYPES else x))
+    df['Protein Type'] = df['Protein Type'].apply(
+        lambda x: "NA" if x.split("(")[0] in NA_TYPES else ("HA" if x.split("(")[0] in HA_TYPES else x))
 
     # Add a new column with mutations and protein types combined
     df['Marker_Protein'] = df['Virulence Markers'] + '_' + df['Protein Type']
