@@ -411,8 +411,7 @@ def generate_protein_dict(grouped_data):
             new_protein_dict[name] = generate_combinations(group)
         else:
             new_protein_dict[name].extend(
-                {row['Protein']: row['Amino acid site'].strip() if isinstance(row['Amino acid site'], str) else row[
-                    'Amino acid site']}
+                {row['Protein']: row['Amino acid site'].strip() if isinstance(row['Amino acid site'], str) else row['Amino acid site']}
                 for _, row in group.iterrows()
             )
     return new_protein_dict
@@ -528,7 +527,6 @@ def process_dictionary(data_dict):
     return '&'.join(format_marker_list(markers, protein) for protein, markers in data_dict.items())
 
 
-#
 def process_protein_sequence(acc_id, renumbered_position, acc_pro_dic, marker_markers):
     protein_type = acc_pro_dic[acc_id]
 
@@ -562,13 +560,15 @@ def check_marker_combinations(total_markers, results_markers, markers_type, inpu
     }
     results.append(initial_data)
 
-    # 逐一检查该种表型的每一类型的标志物是否存在于序列中识别到的标志物字典。
+    # Sequentially check if each type of marker for the phenotype is present in the identified marker dictionary.
     for marker_protein_type, marker_list in total_markers.items():
-        # proba_comb是每一种类型的标志物的多种组合中的一种，是一个字典。
+        # proba_comb is one of the multiple combinations of markers for each type, which is a dictionary.
         # 'combination-combination_449': [{'PB2': '158G', 'PA': '295P'}, {'PB2': '158A', 'PA': '295P'}]
-        # proba_comb则是这两个字典中的其中一个字典，满足该字典则认为存在combination-combination_449这种类型的标志物。
+        # proba_comb is one of these dictionaries, if the dictionary is satisfied,
+        # it is considered that there is a combination-combination_449 type of marker.
         for proba_comb in marker_list:
-            # 如果这个字典的键值对在识别到的标志物字典中存在，则返回一个更简洁的格式
+            # If the key-value pair in this dictionary exists in the identified marker dictionary,
+            # return a more concise format.
             if is_subset_complex(proba_comb, results_markers):
                 if proba_comb and all(proba_comb.values()):
                     markers_formated = process_dictionary(proba_comb)
@@ -654,38 +654,61 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
     """
     Identifies virulence markers in protein sequences based on the provided marker markers
     and the renumbered sequences.
+
+    Parameters:
+    input_file_path (str): The path to the input file containing sequence data.
+    renumbering_results (dict): Dictionary with accession ID as keys and renumbered positions as values.
+    marker_markers (dict): Dictionary defining the virulence markers to be identified.
+    acc_pro_dic (dict): Dictionary mapping accession IDs to protein types.
+    markers_type (str): Type of markers to be identified (e.g., 'HA', 'NA').
+    data (DataFrame): DataFrame containing additional data for marker identification.
+    output_directory (str, optional): The directory where output files will be saved. Defaults to the current directory.
+    prefix (str, optional): A prefix to be added to the output file names.
+
+    Returns:
+    DataFrame: A DataFrame with identified markers for each sequence.
     """
+    # Ensure the output directory exists
     os.makedirs(output_directory, exist_ok = True)
     input_file_name = os.path.split(input_file_path)[1]
     results_markers = defaultdict(list)
 
-    # marker_markers is oen by one dict
+    # Process each accession ID and its renumbered position
     for acc_id, renumbered_position in renumbering_results.items():
         protein, markers = process_protein_sequence(acc_id, renumbered_position, acc_pro_dic, marker_markers)
         if protein:
             results_markers[protein] = markers
 
+    # Initialize types
+    ha_type = na_type = None
+
+    # Identify HA and NA types based on acc_pro_dic
     for acc, pro in acc_pro_dic.items():
         if pro in HA_TYPES:
             ha_type = pro
         elif pro in NA_TYPES:
             na_type = pro
-    # total_markers = generate_protein_dict(load_total_markers(data))
+
+    # This is to handle each HA/NA, including those present in combinations,
+    # the file only processed single HA/NA markers
     ori_markers = generate_protein_dict(load_total_markers(data))
     total_markers = defaultdict(list)
-    # 这里是处理每一个HA/NA,包括组合中存在的，文件只是处理了单个HA/NA的标志物
     for pro, lst in ori_markers.items():
         for dic in lst:
             if dic and all(dic.values()):
-                # 通过convert_HA_residues全部都会变成H3的，没有影响
+                # After converting through convert_HA_residues, everything will become H3, so there's no impact
                 total_markers[pro].append(convert_HA_residues(dic, STRUCTURE_PATH))
-    results_df = check_marker_combinations(total_markers, results_markers, markers_type, input_file_name, data, ha_type,
-                                           na_type)
 
-    # results_df = pd.DataFrame(results)
+    # Check marker combinations and merge results with data
+    results_df = check_marker_combinations(total_markers, results_markers, markers_type,
+                                           input_file_name, data, ha_type,na_type)
+
+    # Add prefix to filename if provided
     add_prefix = prefix + "_" if prefix else ""
     filename = add_prefix + input_file_name.split(".")[0] + "_markers.csv"
+    # Save the results to a CSV file
     results_df.to_csv(f"{output_directory}/{filename}", index = False)
+
     return results_df
 
 
@@ -778,7 +801,6 @@ def process_extract_cmd(input_file, args, is_directory = True):
     else:
         annotations = pd.read_csv(f"{args.anno_path}")
     acc_pro_dic = dict(zip(annotations.iloc[:, 0], annotations.iloc[:, 1]))
-    # for i in
     marker_dict, data = annotate_markers(MARKER_PATH + "/mammalian_virulence_formated.csv")
     renumbering_results = renumber_proteins(
         fasta_path = str(input_file),
