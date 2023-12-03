@@ -411,7 +411,8 @@ def generate_protein_dict(grouped_data):
             new_protein_dict[name] = generate_combinations(group)
         else:
             new_protein_dict[name].extend(
-                {row['Protein']: row['Amino acid site'].strip() if isinstance(row['Amino acid site'], str) else row['Amino acid site']}
+                {row['Protein']: row['Amino acid site'].strip() if isinstance(row['Amino acid site'], str) else row[
+                    'Amino acid site']}
                 for _, row in group.iterrows()
             )
     return new_protein_dict
@@ -626,8 +627,9 @@ def merge_dataframes(results, data, markers_type, ha_type, na_type):
 
     final_results['Protein Type'] = final_results['Protein Type'].apply(lambda x: get_hana_string(x, ha_type, na_type))
     # Drop unnecessary columns and the helper 'HasCombination' column
-    final_results.drop(columns = ["Specific Type", "Protein", "HasCombination_x", "HasCombination_y", "HasCombination"],
-                       inplace = True)
+    final_results.drop(
+        columns = ["Specific Type", "Protein", "HasCombination_x", "HasCombination_y", "HasCombination"],
+        inplace = True)
 
     # Replace empty strings with NaN
     final_results.replace('', np.nan, inplace = True)
@@ -700,7 +702,7 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
 
     # Check marker combinations and merge results with data
     results_df = check_marker_combinations(total_markers, results_markers, markers_type,
-                                           input_file_name, data, ha_type,na_type)
+                                           input_file_name, data, ha_type, na_type)
 
     # Add prefix to filename if provided
     add_prefix = prefix + "_" if prefix else ""
@@ -756,8 +758,7 @@ def parse_args():
     extract_parser.add_argument('-o', '--output_directory', type = str, default = '.',
                                 help = 'Directory to save the output files. Defaults to the current directory.')
     extract_parser.add_argument('-p', '--prefix', type = str, default = '', help = 'Prefix for the output filenames.')
-    extract_parser.add_argument('-type', '--markers_type', type = str, default = "virulence",
-                                help = 'Type of markers. Defaults to virulence type.')
+
     # pred command
     pred_parser = subparsers.add_parser('pred', help = 'Predict new data labels using a trained model.')
     pred_parser.add_argument('-i', '--input', required = True, type = str,
@@ -813,7 +814,7 @@ def process_extract_cmd(input_file, args, is_directory = True):
         acc_pro_dic = acc_pro_dic,
         output_directory = args.output_directory,
         prefix = args.prefix,
-        markers_type = args.markers_type,
+        markers_type = 'virulence',
         data = data,
     )
 
