@@ -17,21 +17,19 @@ NA_TYPES = [f"N{i}" for i in range(1, 10) if i != 2]
 
 def transform_df(df):
     # Replace NaN values with False before applying the ~ operator
-    df = df[~df.loc[:, "Virulence Markers"].str.contains("&", na=False)]
+    df = df[~df.loc[:, "Virulence Markers"].str.contains("&", na = False)]
 
-    # Group by 'Strain ID', then aggregate 'Virulence Markers' and calculate the count
-    transformed = df.groupby('Strain ID').agg({
-        'Virulence Markers': lambda x: ','.join(x),
-        'Protein Type': lambda x: ','.join(x)
+    # Group by 'Strain ID' and 'Protein Type', then aggregate 'Virulence Markers'
+    transformed = df.groupby(['Strain ID', 'Protein Type']).agg({
+        # Join each item in the series after stripping '&', if necessary
+        'Virulence Markers': lambda x: ','.join(x.astype(str).apply(lambda i: i.replace('&', '')))
     }).reset_index()
 
-    # Calculate the count of 'Adaptive Markers'
+    # Calculate the count of 'Virulence Markers'
     transformed['Number of Virulence Markers'] = transformed['Virulence Markers'].apply(lambda x: len(x.split(',')))
 
-    # Format 'Protein Type'
-    transformed['Protein Type'] = transformed['Protein Type'].apply(
-        lambda pt: f'{pt}(H3 numbering)' if pt in HA_TYPES else (f'{pt}(N2 numbering)' if pt in NA_TYPES else pt)
-    )
+    # Adding empty columns for 'Sequence Type' since it is not provided in the original data
+    transformed['Sequence Type'] = ''
 
     return transformed
 
