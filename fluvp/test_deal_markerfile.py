@@ -586,7 +586,7 @@ for i, j in total_markers.items():
 data = pd.read_csv("../data/markers_for_extract/mammalian_virulence_formated.csv")
 # Splitting the "Protein Type" column in data DataFrame
 # Splitting the "Protein Type" column in data DataFrame
-data.loc[:, "Protein Type"] = data.loc[:, "Protein Type"].str.rsplit("_", 1).str[0]
+
 print(data)
 print(data.loc[:, "Protein Type"].tolist())
 # # 假设 HA_TYPES 和 NA_TYPES 是预定义的列表
