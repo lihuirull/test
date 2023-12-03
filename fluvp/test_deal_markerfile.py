@@ -312,7 +312,8 @@ def main(input_file, output_file):
 
 # 调用主函数
 if __name__ == '__main__':
-    new_protein_dict = main("../data\markers_for_extract\mammalian_virulence.xlsx", "../data\markers_for_extract\mammalian_virulence_formated.csv")
+    new_protein_dict = main("../data\markers_for_extract\mammalian_virulence.xlsx",
+                            "../data\markers_for_extract\mammalian_virulence_formated.csv")
 
 t = [{'N1': '106I'}, {'N1': '219Q'}, {'N1': '36-'}, {'N1': '44Q'}, {'N1': '49-'}, {'N1': '49-'}, {'N1': '50-'},
      {'N1': '51-'}, {'N1': '52-'}, {'N1': '53-'}, {'N1': '54-'}, {'N1': '55-'}, {'N1': '56-'}, {'N1': '57-'},
@@ -472,6 +473,7 @@ dic2 = {'H3': ['216E', '223V', '146S', '263R', '225G', '229R'], 'M1': ['43M', '2
         'PB2': ['627E', '715N', '191E', '661A', '504V', '559T', '495V', '283M', '339K', '309D', '66M', '89V', '133V',
                 '389R', '598T', '288Q', '477G', '683T', '109V', '391E', '431M']}
 
+
 def map_residues_to_h3(protein, marker_dict, convert_to_h3_dict):
     """
     Maps the residue numbers for a given protein to the H3/N2 numbering system.
@@ -508,6 +510,8 @@ def map_residues_to_h3(protein, marker_dict, convert_to_h3_dict):
         mapped_residues.append(h3_position + amino_acid)
 
     return mapped_residues
+
+
 def convert_HA_residues(marker_dict, structure_folder):
     """
     Converts HA/NA residues to H3/N2 numbering.
@@ -555,31 +559,70 @@ def convert_HA_residues(marker_dict, structure_folder):
 
 total_markers = defaultdict(list)
 for pro, lst in new_protein_dict.items():
-        for dic in lst:
-            # 通过convert_HA_residues全部都会变成H3的，没有影响
-            total_markers[pro].append(convert_HA_residues(dic, "../data/structure"))
-print('-'*50)
+    for dic in lst:
+        # 通过convert_HA_residues全部都会变成H3的，没有影响
+        total_markers[pro].append(convert_HA_residues(dic, "../data/structure"))
+print('-' * 50)
 print(total_markers)
 for i, j in total_markers.items():
-        for s in j:
-            # if (type(s) == str):
-            #     print(s)
-            # if compare_dicts_updated(s,dic2 ):
-                if s and all(s.values()):
-                    markers_formated = process_dictionary(s)
-                    print(markers_formated)
-                    # print('-------------')
-                    # print(s.values())
-                    # print(s)
+    for s in j:
+        # if (type(s) == str):
+        #     print(s)
+        # if compare_dicts_updated(s,dic2 ):
+        if s and all(s.values()):
+            markers_formated = process_dictionary(s)
+            print(markers_formated)
+            # print('-------------')
+            # print(s.values())
+            # print(s)
 
 # res = process_dictionary(s)
 # print(res)
 # for s in t:
 #     res = process_dictionary(s)
 #     print(res)
-# data = pd.read_csv("../data/markers_for_extract/mammalian_virulence_formated.csv")
-# # Splitting the "Protein Type" column in data DataFrame
-# # Splitting the "Protein Type" column in data DataFrame
-# data.loc[:, "Protein Type"] = data.loc[:, "Protein Type"].str.rsplit("_", 1).str[0]
-# print(data)
-# print(data.loc[:,"Protein Type"].tolist())
+
+# 把HA NA单个的转变为H3 N2
+data = pd.read_csv("../data/markers_for_extract/mammalian_virulence_formated.csv")
+# Splitting the "Protein Type" column in data DataFrame
+# Splitting the "Protein Type" column in data DataFrame
+data.loc[:, "Protein Type"] = data.loc[:, "Protein Type"].str.rsplit("_", 1).str[0]
+print(data)
+print(data.loc[:, "Protein Type"].tolist())
+# # 假设 HA_TYPES 和 NA_TYPES 是预定义的列表
+# HA_TYPES.append('H3')
+# NA_TYPES.append('N2')
+
+
+data_with_combination = data[
+    data.loc[:, "Protein Type"].isin(HA_TYPES) | data.loc[:, "Protein Type"].isin(NA_TYPES)]
+
+data_without_combination = data[
+    ~(data.loc[:, "Protein Type"].isin(HA_TYPES) | data.loc[:, "Protein Type"].isin(NA_TYPES))]
+# data_with_combination.loc[:, "Residue"] = data_with_combination.loc[:, "Mutation"].apply(
+#     lambda x: re.search('[A-Z-]', x).group())
+# data_with_combination.loc[:, "Mutation"] = data_with_combination.loc[:, "Mutation"].apply(
+#     lambda x: re.search('\d+', x).group())
+print(data_with_combination)
+
+for idx, row in data_with_combination.iterrows():
+    dic = {row["Protein Type"]: row['Mutation']}
+    newdic = convert_HA_residues(dic, "../data/structure")
+    print(newdic)
+    # 检查 newdic 是否为空
+    if list(newdic.values())[0]:
+        data_with_combination.loc[idx, "Protein Type"] = list(newdic.keys())[0]
+        data_with_combination.loc[idx, "Mutation"] = list(newdic.values())[0][0]
+    else:
+        # 如果 newdic 为空，可以选择跳过或赋予默认值
+        # 例如：跳过当前迭代
+        continue
+        # 或者赋予默认值
+        # data_with_combination.loc[idx, "Protein Type"] = 默认值
+        # data_with_combination.loc[idx, "Mutation"] = 默认值
+
+print(data_with_combination)
+
+converted_data = pd.concat([data_with_combination,data_without_combination])
+print(converted_data)
+converted_data.to_csv("../data/markers_for_extract/mammalian_virulence_formated.csv",index = False)

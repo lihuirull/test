@@ -8,7 +8,7 @@ import re
 import sys
 from collections import defaultdict
 from itertools import product
-
+import numpy as np
 import pandas as pd
 import subprocess
 import os
@@ -167,7 +167,6 @@ def load_markers(filepath):
     return data.groupby('Protein')['Amino acid site'].apply(lambda x: list(set(x))).to_dict(), data
 
 
-
 def map_residues_to_h3(protein, marker_dict, convert_to_h3_dict):
     """
     Maps the residue numbers for a given protein to the H3/N2 numbering system.
@@ -204,8 +203,6 @@ def map_residues_to_h3(protein, marker_dict, convert_to_h3_dict):
         mapped_residues.append(h3_position + amino_acid)
 
     return mapped_residues
-
-
 
 
 def convert_HA_residues(marker_dict, structure_folder):
@@ -422,7 +419,6 @@ def generate_protein_dict(grouped_data):
 
 
 def load_total_markers(data):
-
     data["Specific Type"] = data["Protein Type"].str.rsplit("_", n = 1).str[-1]
     data['Protein Type'] = data['Protein Type'].str.replace(r'_\d+$', '', regex = True)
     return data.groupby('Protein Type')
@@ -448,11 +444,9 @@ def is_subset_complex(dict1, dict2):
             if not set(value1).issubset(set(value2)):
                 return False
         elif isinstance(value1, str) and isinstance(value2, list):
-            # 如果dict1中的值是字符串，而dict2中的值是列表，则检查字符串是否在列表中
             if value1 not in value2:
                 return False
         elif value1 != value2:
-            # 其他情况，直接比较值
             return False
 
     return True
@@ -632,7 +626,13 @@ def merge_dataframes(results, data, markers_type, ha_type, na_type):
 
     final_results['Protein Type'] = final_results['Protein Type'].apply(lambda x: get_hana_string(x, ha_type, na_type))
     # Drop unnecessary columns and the helper 'HasCombination' column
-    final_results.drop(columns = ["Specific Type", "Protein", "HasCombination_x", "HasCombination_y", "HasCombination"], inplace = True)
+    final_results.drop(columns = ["Specific Type", "Protein", "HasCombination_x", "HasCombination_y", "HasCombination"],
+                       inplace = True)
+
+
+    # Replace empty strings with NaN
+    final_results.replace('', np.nan, inplace = True)
+
     final_results.dropna(how = "all", inplace = True)
     final_results.drop_duplicates(inplace = True)
     return final_results
@@ -668,9 +668,10 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
             ha_type = pro
         elif pro in NA_TYPES:
             na_type = pro
-
+    # total_markers = generate_protein_dict(load_total_markers(data))
     ori_markers = generate_protein_dict(load_total_markers(data))
     total_markers = defaultdict(list)
+    # 这里是处理每一个HA/NA,包括组合中存在的，文件只是处理了单个HA/NA的标志物
     for pro, lst in ori_markers.items():
         for dic in lst:
             if dic and all(dic.values()):
