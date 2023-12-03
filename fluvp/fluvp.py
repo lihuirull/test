@@ -669,6 +669,7 @@ def identify_markers(input_file_path, renumbering_results, marker_markers, acc_p
             na_type = pro
     # total_markers = generate_protein_dict(load_total_markers(data))
     ori_markers = generate_protein_dict(load_total_markers(data))
+    print(ori_markers)
     total_markers = defaultdict(list)
     # 这里是处理每一个HA/NA,包括组合中存在的，文件只是处理了单个HA/NA的标志物
     for pro, lst in ori_markers.items():
