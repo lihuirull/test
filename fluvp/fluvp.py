@@ -596,7 +596,6 @@ def merge_dataframes(results, data, markers_type, ha_type, na_type):
     pd.DataFrame: The merged DataFrame after processing.
     """
     # Pre-compile the regex pattern for performance
-    print('merge')
     combination_pattern = re.compile(r'combination')
 
     # Split the 'data' DataFrame into two based on 'combination' presence without using str.contains for each row
